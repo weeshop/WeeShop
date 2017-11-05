@@ -1,7 +1,7 @@
 FROM edwinkent/catshop:base-latest
 
 RUN chown -R www-data ./web/sites && \
-    chown -R www-data ./config && \
+    chown -R www-data . && \
     usermod -s /bin/bash www-data
 USER www-data
 WORKDIR /app/web

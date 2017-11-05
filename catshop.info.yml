@@ -77,6 +77,8 @@ dependencies:
   - commerce_checkout
   - commerce_payment
   - commerce_promotion
+  - search_api
+  - search_api_db
   - default_content
   - devel
 

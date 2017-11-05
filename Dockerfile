@@ -1,9 +1,9 @@
 FROM edwinkent/catshop:base-latest
 
-RUN usermod -s /bin/bash www-data
+RUN chmod -R +w ./web/sites \
+    usermod -s /bin/bash www-data
 USER www-data
 WORKDIR /app/web
-RUN chmod -R +w sites
 
 ADD . profiles/custom/catshop
 

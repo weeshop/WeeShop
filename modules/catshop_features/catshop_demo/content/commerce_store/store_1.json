@@ -1,0 +1,95 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/store\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/commerce_store\/online"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/commerce_store\/online\/uid": [
+            {
+                "href": "http:\/\/drupal.org\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "store_id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d48e16a5-9397-43fc-92d2-dfebd3131955"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "online"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/commerce_store\/online\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/drupal.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7c9e4cec-7922-46f3-896c-681be6be72aa"
+                    }
+                ]
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "\u5f20\u5c0f\u767d",
+            "lang": "zh-hans"
+        }
+    ],
+    "mail": [
+        {
+            "value": "12943125@qq.com"
+        }
+    ],
+    "default_currency": [
+        {
+            "target_id": "CNY",
+            "lang": "zh-hans"
+        }
+    ],
+    "address": [
+        {
+            "langcode": "",
+            "country_code": "CN",
+            "administrative_area": "Guangdong Sheng",
+            "locality": "Guangzhou Shi",
+            "dependent_locality": "Tianhe Qu",
+            "postal_code": "510000",
+            "sorting_code": null,
+            "address_line1": "\u516d\u8fd0\u5c0f\u533a8\u680b\u9996\u5c42",
+            "address_line2": "\u5929\u6cb3\u5357\u8857\u9053",
+            "organization": null,
+            "given_name": null,
+            "additional_name": null,
+            "family_name": null
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ]
+}

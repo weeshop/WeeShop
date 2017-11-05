@@ -6,4 +6,10 @@ services:
     image: edwinkent/catshop:latest
     ports:
       - 8080:80
+    volumes:
+      - .:/app/web/profiles/custom/catshop
+      # this takes advantage of the feature in Docker that a new anonymous
+      # volume (which is what we're creating here) will be initialized with the
+      # existing content of the image at the same location
+      # - /app/web/sites
     restart: always

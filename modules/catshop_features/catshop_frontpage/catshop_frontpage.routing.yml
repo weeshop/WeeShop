@@ -1,0 +1,7 @@
+catshop_frontpage.home:
+  path: '/home'
+  defaults:
+    _title: '首页'
+    _controller: '\Drupal\catshop_frontpage\Controller\HomeController::content'
+  requirements:
+    _permission: 'access content'

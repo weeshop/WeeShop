@@ -44,6 +44,7 @@ RUN composer create-project drupalcommerce/project-base \
 
 RUN curl -Ss -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \
     chmod +x drush.phar && \
-    mv drush.phar /usr/local/bin/drush && \
-    drush self-update
+    mv drush.phar /usr/local/bin/drush
+
+RUN drush
 

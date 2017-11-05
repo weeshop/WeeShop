@@ -18,4 +18,5 @@ RUN drush -y site-install catshop \
      --site-name=测试网站 --locale=zh-hans
 
 USER root
+WORKDIR /app
 RUN composer config repo.packagist composer "https://packagist.phpcomposer.com"

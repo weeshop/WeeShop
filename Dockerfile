@@ -1,18 +1,5 @@
 FROM edwinkent/catshop:base-latest
 
-# Install Drupal Commerce 2.x via drupalcommerce/project-base
-RUN composer create-project drupalcommerce/project-base \
- --stability dev \
- --no-interaction \
- . && \
- composer require "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush"
-
-
-RUN curl -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \
-    chmod +x drush.phar && \
-    mv drush.phar /usr/local/bin/drush && \
-    drush self-update
-
 RUN usermod -s /bin/bash www-data
 USER www-data
 

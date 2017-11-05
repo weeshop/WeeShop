@@ -34,3 +34,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Set up the application directory
 WORKDIR /app
 
+# Install Drupal Commerce 2.x via drupalcommerce/project-base
+RUN composer create-project drupalcommerce/project-base \
+ --stability dev \
+ --no-interaction \
+ . && \
+ composer require "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush:9.x-dev"
+
+
+RUN curl -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \
+    chmod +x drush.phar && \
+    mv drush.phar /usr/local/bin/drush && \
+    drush self-update
+

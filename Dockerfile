@@ -18,3 +18,5 @@ RUN drush -y site-install catshop \
      --db-url="sqlite://sites/default/files/.ht.sqlite" \
      --account-name=admin --account-pass=123 --account-mail=164713332@qq.com \
      --site-name=测试网站 --locale=zh-hans
+
+ENV APACHE_DOCUMENT_ROOT /app/web

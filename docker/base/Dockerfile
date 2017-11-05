@@ -39,7 +39,7 @@ RUN composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
  . && \
- composer require "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush:9.x-dev"
+ composer require "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush:^9.0.0-beta8"
 
 
 RUN curl -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

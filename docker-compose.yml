@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+
+  drupal:
+    image: edwinkent/catshop:latest
+    ports:
+      - 8080:80
+    restart: always

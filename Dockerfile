@@ -33,6 +33,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Set up the application directory
 WORKDIR /app
+USER www-data
+
 
 # Install Drupal Commerce 2.x via drupalcommerce/project-base
 RUN composer create-project drupalcommerce/project-base \

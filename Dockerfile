@@ -7,5 +7,6 @@ WORKDIR /app/web
 
 ADD . profiles/custom/catshop
 
+USER root
 
 

@@ -3,7 +3,7 @@ FROM edwinkent/catshop:base-latest
 RUN usermod -s /bin/bash www-data
 USER www-data
 WORKDIR /app/web
-RUN chmod -R +x ./sites
+RUN chmod -R +x ./web/sites
 
 ADD . profiles/custom/catshop
 

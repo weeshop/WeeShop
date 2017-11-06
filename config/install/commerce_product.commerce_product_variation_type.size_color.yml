@@ -1,0 +1,8 @@
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: size_color
+label: 多尺码，多颜色
+orderItemType: default
+generateTitle: true
+traits: {  }

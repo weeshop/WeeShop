@@ -1,0 +1,62 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/size"
+        }
+    },
+    "attribute_value_id": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7ca0dd55-4f15-4427-a2fc-47361f053d39"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "attribute": [
+        {
+            "target_id": "size"
+        }
+    ],
+    "name": [
+        {
+            "value": "L\u7801",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 3
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-11-06T14:08:54+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-06T14:08:54+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/color"
+        }
+    },
+    "attribute_value_id": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b2452ad1-d43a-4319-b910-217dff9205e2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "attribute": [
+        {
+            "target_id": "color"
+        }
+    ],
+    "name": [
+        {
+            "value": "\u7070\u8272",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 4
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-11-06T14:10:29+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-06T14:10:29+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ]
+}

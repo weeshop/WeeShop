@@ -19,6 +19,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   curl \
   git \
   unzip \
+  sqlite3 \
   && docker-php-ext-install mcrypt zip bz2 bcmath pdo_mysql mysqli mbstring opcache \
   && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
   && docker-php-ext-install gd
@@ -42,7 +43,7 @@ RUN composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
  . && \
- composer require "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush:^9.0.0-beta8"
+ composer require "drupal/facets:1.x-dev" "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush:^9.0.0-beta8"
 
 
 RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

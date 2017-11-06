@@ -79,6 +79,7 @@ dependencies:
   - commerce_promotion
   - search_api
   - search_api_db
+  - facets
   - default_content
   - devel
 

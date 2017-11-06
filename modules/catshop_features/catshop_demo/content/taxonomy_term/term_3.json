@@ -1,0 +1,94 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/category\/headphones?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/category\/parent": [
+            {
+                "href": "http:\/\/drupal.org\/category\/accessories?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "f0e40168-8748-4f90-88c5-4c6eb9682529"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "category"
+        }
+    ],
+    "name": [
+        {
+            "value": "\u5934\u6234\u8033\u673a",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "\u5934\u6234\u8033\u673a",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/category\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/drupal.org\/category\/accessories?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c872cbdc-c7ad-46ae-8232-67a6d0feba26"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2017-11-06T08:43:04+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/category\/headphones",
+            "pid": 3,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

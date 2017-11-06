@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/category\/premium?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+        }
+    },
+    "tid": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "884c6129-a158-4751-a49c-a634fca93f8a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "category"
+        }
+    ],
+    "name": [
+        {
+            "value": "\u65d7\u8230\u4f18\u54c1",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "\u65d7\u8230\u4f18\u54c1",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 5
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-06T08:43:04+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/category\/premium",
+            "pid": 10,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

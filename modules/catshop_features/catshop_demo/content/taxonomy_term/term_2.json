@@ -1,0 +1,94 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/category\/accessories\/bags?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/category\/parent": [
+            {
+                "href": "http:\/\/drupal.org\/category\/accessories?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3489c8c9-1376-4e72-9d84-1da0047aa921"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "category"
+        }
+    ],
+    "name": [
+        {
+            "value": "\u5305\u5305",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "\u5305\u5305",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/category\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/drupal.org\/category\/accessories?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c872cbdc-c7ad-46ae-8232-67a6d0feba26"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2017-11-06T08:28:57+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/category\/accessories\/bags",
+            "pid": 2,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

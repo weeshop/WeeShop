@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/brand\/hugo-boss?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/brand"
+        }
+    },
+    "tid": [
+        {
+            "value": 14
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fb99ad4b-1c6b-4537-b99b-2a1039d35cd9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "brand"
+        }
+    ],
+    "name": [
+        {
+            "value": "HUGO BOSS \u4f18\u5ba2\u535a\u58eb",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "HUGO BOSS \u4f18\u5ba2\u535a\u58eb",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-07T11:54:34+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/brand\/hugo-boss",
+            "pid": 14,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

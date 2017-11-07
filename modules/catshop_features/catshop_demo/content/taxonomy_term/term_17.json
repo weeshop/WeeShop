@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/brand\/mont-blanc?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/brand"
+        }
+    },
+    "tid": [
+        {
+            "value": 17
+        }
+    ],
+    "uuid": [
+        {
+            "value": "4ed50315-30ca-4569-93f9-d20478adb88a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "brand"
+        }
+    ],
+    "name": [
+        {
+            "value": "MontBlanc \u4e07\u5b9d\u9f99",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "MontBlanc \u4e07\u5b9d\u9f99",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-07T11:57:08+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/brand\/mont-blanc",
+            "pid": 17,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

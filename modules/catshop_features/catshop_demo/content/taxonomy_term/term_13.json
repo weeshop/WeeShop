@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/brand\/gucci?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/brand"
+        }
+    },
+    "tid": [
+        {
+            "value": 13
+        }
+    ],
+    "uuid": [
+        {
+            "value": "4dfd274e-95c4-4a8c-a668-983bc82bab00"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "brand"
+        }
+    ],
+    "name": [
+        {
+            "value": "GUCCI \u53e4\u9a70",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "GUCCI \u53e4\u9a70",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-07T11:52:48+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/brand\/gucci",
+            "pid": 13,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

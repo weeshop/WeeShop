@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/brand\/annasui?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/brand"
+        }
+    },
+    "tid": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5de07f7f-1ec8-4f7b-9f03-27c0fe3f9760"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "brand"
+        }
+    ],
+    "name": [
+        {
+            "value": "ANNA SUI \u5b89\u5a1c\u82cf",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "ANNA SUI \u5b89\u5a1c\u82cf",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-07T11:55:38+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/brand\/annasui",
+            "pid": 16,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

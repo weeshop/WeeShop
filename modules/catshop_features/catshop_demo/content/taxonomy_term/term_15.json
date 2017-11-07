@@ -1,0 +1,70 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/drupal.org\/brand\/lacoste?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/brand"
+        }
+    },
+    "tid": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "263a2107-0819-43d0-b930-ea36fec6b0dd"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "brand"
+        }
+    ],
+    "name": [
+        {
+            "value": "LACOSTE \u83b1\u683c\u4ed5",
+            "lang": "zh-hans"
+        }
+    ],
+    "description": [
+        {
+            "value": "LACOSTE \u83b1\u683c\u4ed5",
+            "format": "restricted_html",
+            "lang": "zh-hans"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-07T11:55:03+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/brand\/lacoste",
+            "pid": 15,
+            "langcode": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ]
+}

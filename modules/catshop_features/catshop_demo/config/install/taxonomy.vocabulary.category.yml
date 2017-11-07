@@ -1,6 +1,8 @@
 langcode: zh-hans
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - taxonomy
 name: 产品分类
 vid: category
 description: 网站的产品总分类，显示在首页左侧，以及商品检索页的左侧。

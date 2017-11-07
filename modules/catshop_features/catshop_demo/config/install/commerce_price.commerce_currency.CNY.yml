@@ -1,6 +1,8 @@
 langcode: zh-hans
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - commerce_price
 currencyCode: CNY
 name: 人民币
 numericCode: '156'

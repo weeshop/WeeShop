@@ -1,6 +1,8 @@
 langcode: zh-hans
 status: true
-dependencies: {  }
-id: color
-label: 颜色
+dependencies:
+  module:
+    - commerce_product
+id: size
+label: 尺码
 elementType: commerce_product_rendered_attribute

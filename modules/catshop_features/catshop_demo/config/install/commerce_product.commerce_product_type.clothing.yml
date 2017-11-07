@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.size_color
+  module:
+    - commerce_product
 id: clothing
 label: 服饰
 description: 服饰

@@ -4,6 +4,8 @@ dependencies:
   config:
     - commerce_product.commerce_product_attribute.size
     - commerce_product.commerce_product_attribute.color
+  module:
+    - commerce_product
 id: size_color
 label: 多尺码，多颜色
 orderItemType: default

@@ -40,7 +40,7 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 
 # Install Drupal Commerce 2.x via drupalcommerce/project-base
 RUN composer create-project drupalcommerce/project-base \
- --stability dev \
+# --stability dev \
  --no-interaction \
  . && \
  composer require "drupal/facets:1.x-dev" "drupal/devel:1.x-dev" "drupal/default_content" "drush/drush:^9.0.0-beta8"

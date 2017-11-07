@@ -2,9 +2,10 @@ name: 'CatShop Demo data'
 description: 'Provide default demo data for your CatShop site.'
 type: module
 dependencies:
-  - node
-  - user
-  - views
+  - commerce
+  - commerce_price
+  - commerce_product
+  - taxonomy
 package: Catshop
 version: 8.x-1.x-dev
 core: 8.x

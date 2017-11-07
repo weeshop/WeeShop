@@ -4,7 +4,9 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.clothing
     - field.field.commerce_product.clothing.body
-    - field.field.commerce_product.clothing.image
+    - field.field.commerce_product.clothing.field_brand
+    - field.field.commerce_product.clothing.field_category
+    - field.field.commerce_product.clothing.field_image
     - field.field.commerce_product.clothing.stores
     - field.field.commerce_product.clothing.variations
   module:
@@ -12,7 +14,7 @@ dependencies:
     - image
     - text
 _core:
-  default_config_hash: zHLICR6nqI-T0uJ79-aJnD2QBnDNR-ZmLxxK5KIZ-nU
+  default_config_hash: OC202NVOguSrRSCNoHGRvzp32a4Py0ami0p8PM0rfmU
 id: commerce_product.clothing.default
 targetEntityType: commerce_product
 bundle: clothing
@@ -25,7 +27,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  image:
+  field_brand:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_category:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
     weight: 0
     label: above
     settings:

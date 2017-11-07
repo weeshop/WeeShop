@@ -5,9 +5,9 @@ dependencies:
     - commerce_product
     - file
     - image
-id: commerce_product_variation.image
-field_name: image
-entity_type: commerce_product_variation
+id: commerce_product.field_image
+field_name: field_image
+entity_type: commerce_product
 type: image
 settings:
   uri_scheme: public

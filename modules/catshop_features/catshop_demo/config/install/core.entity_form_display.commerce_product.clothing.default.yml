@@ -4,7 +4,9 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.clothing
     - field.field.commerce_product.clothing.body
-    - field.field.commerce_product.clothing.image
+    - field.field.commerce_product.clothing.field_brand
+    - field.field.commerce_product.clothing.field_category
+    - field.field.commerce_product.clothing.field_image
     - field.field.commerce_product.clothing.stores
     - field.field.commerce_product.clothing.variations
     - image.style.thumbnail
@@ -15,7 +17,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: 7MEPy-CW_HgM_aA5ePrmg58u7-jm1sPPfOrLeoZ876c
+  default_config_hash: vDZzQx423Et2Q6uyrnlldFdD8UB-fIScYzGun9xMWrI
 id: commerce_product.clothing.default
 targetEntityType: commerce_product
 bundle: clothing
@@ -36,7 +38,25 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  image:
+  field_brand:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_category:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_image:
     weight: 2
     settings:
       progress_indicator: throbber

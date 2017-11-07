@@ -2,22 +2,22 @@ langcode: zh-hans
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_variation_type.size_color
-    - field.storage.commerce_product_variation.image
+    - commerce_product.commerce_product_type.clothing
+    - field.storage.commerce_product.field_image
   module:
     - image
-id: commerce_product_variation.size_color.image
-field_name: image
-entity_type: commerce_product_variation
-bundle: size_color
-label: 图片
-description: 产品变体图，即具体属性值所对应的产品图片。
-required: false
+id: commerce_product.clothing.field_image
+field_name: field_image
+entity_type: commerce_product
+bundle: clothing
+label: 主图
+description: 产品的主图用于显示在产品列表中或搜索结果中，同时也是产品详情页的默认显示图片。
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'product_variation_image/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'product_image/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: 200KB
   max_resolution: 422x535
@@ -25,7 +25,7 @@ settings:
   alt_field: false
   alt_field_required: true
   title_field: false
-  title_field_required: false
+  title_field_required: true
   default_image:
     uuid: ''
     alt: ''

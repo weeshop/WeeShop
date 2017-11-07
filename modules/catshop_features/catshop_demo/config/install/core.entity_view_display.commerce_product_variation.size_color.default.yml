@@ -5,7 +5,7 @@ dependencies:
     - commerce_product.commerce_product_variation_type.size_color
     - field.field.commerce_product_variation.size_color.attribute_color
     - field.field.commerce_product_variation.size_color.attribute_size
-    - field.field.commerce_product_variation.size_color.image
+    - field.field.commerce_product_variation.size_color.field_image
   module:
     - commerce_price
     - image
@@ -14,7 +14,7 @@ targetEntityType: commerce_product_variation
 bundle: size_color
 mode: default
 content:
-  image:
+  field_image:
     weight: 1
     label: above
     settings:

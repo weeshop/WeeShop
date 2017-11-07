@@ -1,6 +1,8 @@
 langcode: zh-hans
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.size_color
 id: clothing
 label: 服饰
 description: 服饰

@@ -1,0 +1,49 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothing
+    - field.field.commerce_product.clothing.body
+    - field.field.commerce_product.clothing.image
+    - field.field.commerce_product.clothing.stores
+    - field.field.commerce_product.clothing.variations
+  module:
+    - commerce_product
+    - image
+    - text
+_core:
+  default_config_hash: zHLICR6nqI-T0uJ79-aJnD2QBnDNR-ZmLxxK5KIZ-nU
+id: commerce_product.clothing.default
+targetEntityType: commerce_product
+bundle: clothing
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    weight: 2
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  langcode: true
+  stores: true
+  uid: true

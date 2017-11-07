@@ -1,13 +1,13 @@
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.default
+    - commerce_product.commerce_product_type.clothing
     - field.storage.commerce_product.stores
 id: commerce_product.clothing.stores
 field_name: stores
 entity_type: commerce_product
-bundle: default
+bundle: clothing
 label: Stores
 description: ''
 required: true

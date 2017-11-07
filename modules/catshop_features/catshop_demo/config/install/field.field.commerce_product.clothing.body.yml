@@ -1,4 +1,4 @@
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ dependencies:
 id: commerce_product.clothing.body
 field_name: body
 entity_type: commerce_product
-bundle: default
+bundle: clothing
 label: Body
 description: ''
 required: false

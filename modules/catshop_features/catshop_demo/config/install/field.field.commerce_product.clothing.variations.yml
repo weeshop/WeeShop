@@ -1,4 +1,4 @@
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
 id: commerce_product.clothing.variations
 field_name: variations
 entity_type: commerce_product
-bundle: default
+bundle: clothing
 label: Variations
 description: ''
 required: true
@@ -19,5 +19,5 @@ settings:
   handler: 'default:commerce_product_variation'
   handler_settings:
     target_bundles:
-      - default
+      - size_color
 field_type: entity_reference

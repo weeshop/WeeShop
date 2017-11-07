@@ -81,6 +81,7 @@ dependencies:
   - search_api_db
   - facets
   - default_content
+  - file_entity
   - devel
 
   # Custom modules

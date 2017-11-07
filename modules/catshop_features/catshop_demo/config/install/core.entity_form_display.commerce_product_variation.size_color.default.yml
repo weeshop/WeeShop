@@ -29,7 +29,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_product_variation_image:
+  image:
     weight: 11
     settings:
       progress_indicator: throbber

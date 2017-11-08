@@ -1,0 +1,192 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_variation\/size_color"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "zh-hans"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
+            {
+                "href": "http:\/\/default\/product\/6?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_color": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_size": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+            {
+                "href": "http:\/\/default\/file\/29?_format=hal_json"
+            }
+        ]
+    },
+    "variation_id": [
+        {
+            "value": 22
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0ed41747-9df6-4c70-86d5-ba725576a288"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "size_color"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7ced0c8e-9228-49b9-8b2e-658d32db3645"
+                    }
+                ],
+                "lang": "zh-hans"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/product\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product\/clothing"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0cc6b1bd-7e50-4d6b-b468-c5b3ef9a05a3"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_color": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/color"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "55b5cce9-9f69-4ceb-903e-8807272a3e29"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_size": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/size"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7ca0dd55-4f15-4427-a2fc-47361f053d39"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/29?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "caeb152f-e86a-47fb-8647-c54a081de21b"
+                    }
+                ],
+                "alt": "",
+                "title": "",
+                "width": "422",
+                "height": "535"
+            }
+        ]
+    },
+    "sku": [
+        {
+            "value": "6-l-red"
+        }
+    ],
+    "title": [
+        {
+            "value": "Open Back Maxi Dress - L\u7801, \u7ea2\u8272",
+            "lang": "zh-hans"
+        }
+    ],
+    "price": [
+        {
+            "number": "345.0",
+            "currency_code": "CNY"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-11-08T03:03:57+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-08T03:05:33+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_variation\/size_color"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "zh-hans"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
+            {
+                "href": "http:\/\/default\/product\/4?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_color": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_size": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+            {
+                "href": "http:\/\/default\/file\/20?_format=hal_json"
+            }
+        ]
+    },
+    "variation_id": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ca842336-1a93-4f52-b4ca-2e654a2473ca"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "size_color"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7ced0c8e-9228-49b9-8b2e-658d32db3645"
+                    }
+                ],
+                "lang": "zh-hans"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/product\/4?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product\/clothing"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7314959b-f495-40ba-b9e9-c53dfe5dd78f"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_color": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/color"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7e716cda-4989-4f26-8745-56bbc9082bdc"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_size": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/size"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7ca0dd55-4f15-4427-a2fc-47361f053d39"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/20?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b4b6e23c-d235-4319-88b8-39f0bfe67e9a"
+                    }
+                ],
+                "alt": "",
+                "title": "",
+                "width": "422",
+                "height": "535"
+            }
+        ]
+    },
+    "sku": [
+        {
+            "value": "4-l-black"
+        }
+    ],
+    "title": [
+        {
+            "value": "Hilfiger Denim Flag T-Shirt - L\u7801, \u9ed1\u8272",
+            "lang": "zh-hans"
+        }
+    ],
+    "price": [
+        {
+            "number": "235.0",
+            "currency_code": "CNY"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-11-08T02:54:22+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-08T02:55:18+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ]
+}

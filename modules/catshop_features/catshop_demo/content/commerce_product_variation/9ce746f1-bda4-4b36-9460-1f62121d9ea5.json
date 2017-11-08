@@ -1,0 +1,192 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_variation\/size_color"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "zh-hans"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
+            {
+                "href": "http:\/\/default\/product\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_color": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_size": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+            {
+                "href": "http:\/\/default\/file\/14?_format=hal_json"
+            }
+        ]
+    },
+    "variation_id": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "9ce746f1-bda4-4b36-9460-1f62121d9ea5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "zh-hans",
+            "lang": "zh-hans"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "size_color"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7ced0c8e-9228-49b9-8b2e-658d32db3645"
+                    }
+                ],
+                "lang": "zh-hans"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/product\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product\/clothing"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3b11d8aa-ea0a-4d67-ad6c-ab33f4eef4d3"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_color": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/color"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "50622a90-eccb-474b-aa70-1a806ef3da22"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/attribute_size": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/commerce_product_attribute_value\/size"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "47badadb-7cb2-4b34-99fc-566dbe855a0e"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/14?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "694dfafb-2bc0-4945-8052-2cb225c8e1c5"
+                    }
+                ],
+                "alt": "",
+                "title": "",
+                "width": "422",
+                "height": "535"
+            }
+        ]
+    },
+    "sku": [
+        {
+            "value": "3-m-white"
+        }
+    ],
+    "title": [
+        {
+            "value": "DGK Hustle Jersey T-Shirt - M\u7801, \u767d\u8272",
+            "lang": "zh-hans"
+        }
+    ],
+    "price": [
+        {
+            "number": "168.0",
+            "currency_code": "CNY"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-11-08T02:41:09+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2017-11-08T02:42:24+00:00",
+            "lang": "zh-hans",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "zh-hans"
+        }
+    ]
+}

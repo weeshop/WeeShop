@@ -18,10 +18,10 @@ function catshop_entity_bundle_create($entity_type_id, $bundle) {
 
     switch ($entity_type_id) {
         case 'commerce_product':
-            catshop_product_add_image_field(ProductType::load($bundle), 'commerce_product');
+            catshop_product_add_image_field(ProductType::load($bundle), $entity_type_id);
             break;
         case 'commerce_product_variation':
-            catshop_product_add_image_field(ProductVariationType::load($bundle), 'commerce_product_variation');
+            catshop_product_add_image_field(ProductVariationType::load($bundle), $entity_type_id);
             break;
     }
 }

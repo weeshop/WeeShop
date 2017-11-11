@@ -85,6 +85,8 @@ dependencies:
   - devel
 
   # Custom modules
+  - catshop_frontpage
+  - catshop_product
 
 
 # List any themes that should be installed as part of the installation

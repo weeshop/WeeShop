@@ -10,6 +10,7 @@ use Drupal\commerce_product\Entity\ProductType;
 use Drupal\commerce_product\Entity\ProductVariationType;
 use Drupal\commerce\BundleFieldDefinition;
 use Drupal\commerce\Entity\CommerceBundleEntityInterface;
+use Drupal\commerce_product\Entity\ProductTypeInterface;
 
 /**
  * Implements hook_entity_bundle_create().
@@ -18,7 +19,10 @@ function catshop_entity_bundle_create($entity_type_id, $bundle) {
 
     switch ($entity_type_id) {
         case 'commerce_product':
-            catshop_product_add_image_field(ProductType::load($bundle), $entity_type_id);
+            $product_type = ProductType::load($bundle);
+            catshop_product_add_image_field($product_type, $entity_type_id);
+            catshop_product_add_categories_field($product_type);
+            catshop_product_add_brand_field($product_type);
             break;
         case 'commerce_product_variation':
             catshop_product_add_image_field(ProductVariationType::load($bundle), $entity_type_id);
@@ -81,4 +85,58 @@ function catshop_product_add_image_field(CommerceBundleEntityInterface $entity, 
 
     $configurable_field_manager = \Drupal::service('commerce.configurable_field_manager');
     $configurable_field_manager->createField($field_definition, FALSE);
+}
+
+/**
+ * Adds the default categories field to a product.
+ *
+ * A product can belong to multiple categories.
+ *
+ * @param \Drupal\commerce_product\Entity\ProductTypeInterface $product_type
+ *   The product type.
+ */
+function catshop_product_add_categories_field(ProductTypeInterface $product_type) {
+    $field_definition = BundleFieldDefinition::create('entity_reference')
+        ->setTargetEntityTypeId('commerce_product')
+        ->setTargetBundle($product_type->id())
+        ->setName('categories')
+        ->setLabel('Categories')
+        ->setCardinality(BundleFieldDefinition::CARDINALITY_UNLIMITED)
+        ->setRequired(false)
+        ->setSetting('target_type', 'taxonomy_term')
+        ->setSetting('handler', 'default')
+        ->setDisplayOptions('form', [
+            'type' => 'entity_reference_autocomplete',
+            'weight' => 50,
+        ]);
+
+    $configurable_field_manager = \Drupal::service('commerce.configurable_field_manager');
+    $configurable_field_manager->createField($field_definition);
+}
+
+/**
+ * Adds the default brand field to a product.
+ *
+ * A product only can belong to one brand.
+ *
+ * @param \Drupal\commerce_product\Entity\ProductTypeInterface $product_type
+ *   The product type.
+ */
+function catshop_product_add_brand_field(ProductTypeInterface $product_type) {
+    $field_definition = BundleFieldDefinition::create('entity_reference')
+        ->setTargetEntityTypeId('commerce_product')
+        ->setTargetBundle($product_type->id())
+        ->setName('brand')
+        ->setLabel('Brand')
+        ->setCardinality(1)
+        ->setRequired(false)
+        ->setSetting('target_type', 'taxonomy_term')
+        ->setSetting('handler', 'default')
+        ->setDisplayOptions('form', [
+            'type' => 'entity_reference_autocomplete',
+            'weight' => 51,
+        ]);
+
+    $configurable_field_manager = \Drupal::service('commerce.configurable_field_manager');
+    $configurable_field_manager->createField($field_definition);
 }

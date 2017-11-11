@@ -4,9 +4,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.clothing
     - field.field.commerce_product.clothing.body
-    - field.field.commerce_product.clothing.field_brand
-    - field.field.commerce_product.clothing.field_category
-    - field.field.commerce_product.clothing.field_image
     - field.field.commerce_product.clothing.stores
     - field.field.commerce_product.clothing.variations
     - image.style.thumbnail
@@ -37,32 +34,6 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_brand:
-    weight: 11
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_category:
-    weight: 10
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_image:
-    weight: 2
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   langcode:
     type: language_select

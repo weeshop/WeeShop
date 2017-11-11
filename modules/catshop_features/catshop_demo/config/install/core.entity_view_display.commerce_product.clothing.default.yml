@@ -27,31 +27,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_brand:
-    weight: 4
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_category:
-    weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_image:
-    weight: 0
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   variations:
     type: commerce_add_to_cart
     weight: 2

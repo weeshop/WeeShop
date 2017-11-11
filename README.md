@@ -14,6 +14,13 @@
 - [用户指南](docs/user-guide/index.md)
 - [开发者指南](docs/dev-guide/index.md)
 
+## 特性
+- 灵活的商品属性系统，可表达任意类型的商品，包括虚拟商品。
+- 完备的多语言系统，支持全球100多种语言。
+- 支持全球流行的各种支付手段，Paypal、支持宝、微信、银行卡等。
+- 支持全球的物流信息对接。
+- 使用全文检索技术，可以选择使用各种流行的全文检索方案，如Apache solr等。
+
 ## 快速体验
 
 使用docker-compose启动容器（请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)）

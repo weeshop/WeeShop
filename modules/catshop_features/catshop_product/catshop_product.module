@@ -7,34 +7,41 @@
  */
 
 use Drupal\commerce_product\Entity\ProductType;
-use Drupal\commerce_product\Entity\ProductTypeInterface;
+use Drupal\commerce_product\Entity\ProductVariationType;
 use Drupal\commerce\BundleFieldDefinition;
+use Drupal\commerce\Entity\CommerceBundleEntityInterface;
 
 /**
  * Implements hook_entity_bundle_create().
  */
 function catshop_entity_bundle_create($entity_type_id, $bundle) {
 
-    catshop_product_add_image_field(ProductType::load($bundle));
+    switch ($entity_type_id) {
+        case 'commerce_product':
+            catshop_product_add_image_field(ProductType::load($bundle), 'commerce_product');
+            break;
+        case 'commerce_product_variation':
+            catshop_product_add_image_field(ProductVariationType::load($bundle), 'commerce_product_variation');
+            break;
+    }
 }
 
 /**
- * Adds the default image field to a product type.
+ * Adds the default image field to a CommerceBundleEntity.
  *
- * @param \Drupal\commerce_product\Entity\ProductTypeInterface $product_type
+ * @param \Drupal\commerce\Entity\CommerceBundleEntityInterface $entity
  *   The product type.
- * @param string $label
- *   (optional) The label for the body instance. Defaults to 'Body'.
+ * @param $target_entity_type_id
+ * @internal param string $label (optional) The label for the body instance. Defaults to 'Body'.*   (optional) The label for the body instance. Defaults to 'Body'.
  */
-function catshop_product_add_image_field(ProductTypeInterface $product_type, $label = 'Image') {
+function catshop_product_add_image_field(CommerceBundleEntityInterface $entity, $target_entity_type_id) {
     $field_definition = BundleFieldDefinition::create('image')
-        ->setTargetEntityTypeId('commerce_product')
-        ->setTargetBundle($product_type->id())
+        ->setTargetEntityTypeId($target_entity_type_id)
+        ->setTargetBundle($entity->id())
         ->setName('image')
-        ->setLabel($label)
+        ->setLabel(t('Image'))
         ->setRequired(true)
         ->setTranslatable(false)
-        ->setDescription('产品的主图用于显示在产品列表中或搜索结果中，同时也是产品详情页的默认显示图片。')
         ->setSettings([
             'file_directory'=>'product_image/[date:custom:Y]-[date:custom:m]',
             'file_extensions'=>'png gif jpg jpeg',

@@ -27,7 +27,7 @@
                 "href": ""
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/image": [
             {
                 "href": "http:\/\/default\/file\/15?_format=hal_json"
             }
@@ -124,7 +124,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/image": [
             {
                 "_links": {
                     "self": {

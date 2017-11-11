@@ -12,12 +12,12 @@
                 "lang": "zh-hans"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/field_brand": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/brand": [
             {
                 "href": "http:\/\/default\/brand\/annasui?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/field_category": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/categories": [
             {
                 "href": "http:\/\/default\/category\/women?_format=hal_json"
             },
@@ -28,7 +28,7 @@
                 "href": "http:\/\/default\/category\/clothing\/hoodies?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/image": [
             {
                 "href": "http:\/\/default\/file\/1?_format=hal_json"
             }
@@ -99,7 +99,7 @@
                 "lang": "zh-hans"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/field_brand": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/brand": [
             {
                 "_links": {
                     "self": {
@@ -116,7 +116,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/field_category": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/categories": [
             {
                 "_links": {
                     "self": {
@@ -163,7 +163,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/image": [
             {
                 "_links": {
                     "self": {

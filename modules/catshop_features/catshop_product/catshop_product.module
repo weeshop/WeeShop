@@ -1,0 +1,77 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: kent
+ * Date: 2017/11/10
+ * Time: 13:41
+ */
+
+use Drupal\commerce_product\Entity\ProductType;
+use Drupal\commerce_product\Entity\ProductTypeInterface;
+use Drupal\commerce\BundleFieldDefinition;
+
+/**
+ * Implements hook_entity_bundle_create().
+ */
+function catshop_entity_bundle_create($entity_type_id, $bundle) {
+
+    catshop_product_add_image_field(ProductType::load($bundle));
+}
+
+/**
+ * Adds the default image field to a product type.
+ *
+ * @param \Drupal\commerce_product\Entity\ProductTypeInterface $product_type
+ *   The product type.
+ * @param string $label
+ *   (optional) The label for the body instance. Defaults to 'Body'.
+ */
+function catshop_product_add_image_field(ProductTypeInterface $product_type, $label = 'Image') {
+    $field_definition = BundleFieldDefinition::create('image')
+        ->setTargetEntityTypeId('commerce_product')
+        ->setTargetBundle($product_type->id())
+        ->setName('image')
+        ->setLabel($label)
+        ->setRequired(true)
+        ->setTranslatable(false)
+        ->setDescription('产品的主图用于显示在产品列表中或搜索结果中，同时也是产品详情页的默认显示图片。')
+        ->setSettings([
+            'file_directory'=>'product_image/[date:custom:Y]-[date:custom:m]',
+            'file_extensions'=>'png gif jpg jpeg',
+            'max_filesize'=>'200KB',
+            'max_resolution'=>'422x535',
+            'min_resolution'=>'422x535',
+            'alt_field'=> false,
+            'alt_field_required'=> true,
+            'title_field'=> false,
+            'title_field_required'=> true,
+            'default_image'=>[
+                'uuid'=> '',
+                'alt'=> '',
+                'title'=> '',
+                'width'=> null,
+                'height'=> null
+            ],
+            'handler'=> 'default:file',
+            'handler_settings'=>[]
+        ])
+        ->setDisplayOptions('form', [
+            'weight' => 2,
+            'type' => 'image_image',
+            'region'=> 'content',
+            'settings'=>[
+                'progress_indicator'=> 'throbber',
+                'preview_image_style'=> 'thumbnail'
+            ],
+
+        ])
+        ->setDisplayOptions('view', [
+            'weight' => 0,
+            'label' => 'above',
+            'type' => 'image',
+            'region'=> 'content'
+        ]);
+
+    $configurable_field_manager = \Drupal::service('commerce.configurable_field_manager');
+    $configurable_field_manager->createField($field_definition, FALSE);
+}

@@ -1,0 +1,10 @@
+name: 'CatShop Product '
+description: 'Provide features for drupal commerce_product.'
+type: module
+dependencies:
+  - commerce
+  - commerce_price
+  - commerce_product
+  - taxonomy
+package: Catshop
+core: 8.x

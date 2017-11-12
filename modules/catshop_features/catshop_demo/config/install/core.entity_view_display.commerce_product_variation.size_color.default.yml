@@ -13,6 +13,15 @@ targetEntityType: commerce_product_variation
 bundle: size_color
 mode: default
 content:
+  image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   price:
     label: above
     type: commerce_price_default

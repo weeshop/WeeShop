@@ -4,9 +4,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.clothing
     - field.field.commerce_product.clothing.body
-    - field.field.commerce_product.clothing.field_brand
-    - field.field.commerce_product.clothing.field_category
-    - field.field.commerce_product.clothing.field_image
     - field.field.commerce_product.clothing.stores
     - field.field.commerce_product.clothing.variations
   module:
@@ -26,6 +23,31 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
+  brand:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  categories:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   variations:
     type: commerce_add_to_cart

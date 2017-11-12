@@ -27,13 +27,13 @@
 使用docker-compose启动容器（请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)）
 ```bash
 cd path-to-catshop
-docker-compose up -d
+docker-compose up -d --force-recreate --remove-orphans --build
 ```
 
 安装示例数据
 ```bash
 # 进入docker容器
-docker-compose exec drupal -T
+docker-compose exec drupal bash -T
 # 通过drush的方式安装示例数据模块
 su - www-data -c "drush -vvv en catshop_demo --root=/app/web"
 ```

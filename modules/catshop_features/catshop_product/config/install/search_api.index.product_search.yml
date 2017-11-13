@@ -1,0 +1,146 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - field.storage.commerce_product.body
+    - field.storage.commerce_product.brand
+    - field.storage.commerce_product.categories
+    - field.storage.commerce_product.variations
+    - field.storage.commerce_product_variation.attribute_size
+    - field.storage.commerce_product_variation.attribute_color
+    - search_api.server.db_search
+  module:
+    - taxonomy
+    - commerce_product
+    - search_api
+id: product_search
+name: 产品搜索
+description: 对产品数据进行全文检索
+read_only: false
+field_settings:
+  title:
+    label: Title
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: text
+  body:
+    label: Body
+    datasource_id: 'entity:commerce_product'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.body
+  brand_name:
+    label: 'Brand » Taxonomy term » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'brand:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.brand
+      module:
+        - taxonomy
+  category_name:
+    label: 'Categories » Taxonomy term » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'categories:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.categories
+      module:
+        - taxonomy
+  category_parent_name:
+    label: 'Categories » Taxonomy term » Term Parents » Taxonomy term » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'categories:entity:parent:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.categories
+      module:
+        - taxonomy
+        - taxonomy
+  brand:
+    label: Brand
+    datasource_id: 'entity:commerce_product'
+    property_path: brand
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.brand
+  categories:
+    label: Categories
+    datasource_id: 'entity:commerce_product'
+    property_path: categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.categories
+  attribute_size:
+    label: 'Variations » Product variation » 尺码'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:attribute_size'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+        - field.storage.commerce_product_variation.attribute_size
+      module:
+        - commerce_product
+  attribute_color:
+    label: 'Variations » Product variation » 颜色'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:attribute_color'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+        - field.storage.commerce_product_variation.attribute_color
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  aggregated_field: {  }
+  add_url: {  }
+  rendered_item: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - title
+      - body
+      - brand_name
+      - category_name
+      - category_parent_name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  tokenizer:
+    all_fields: true
+    fields:
+      - title
+      - body
+      - brand_name
+      - category_name
+      - category_parent_name
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '1'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  entity_status: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: db_search

@@ -1,0 +1,27 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - facets.facet.color
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: colors
+theme: bartik
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:color'
+settings:
+  id: 'facet_block:color'
+  label: 颜色
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/product
+    negate: false
+    context_mapping: {  }

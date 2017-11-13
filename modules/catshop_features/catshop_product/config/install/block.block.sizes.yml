@@ -1,0 +1,27 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - facets.facet.size
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: sizes
+theme: bartik
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:size'
+settings:
+  id: 'facet_block:size'
+  label: 尺码
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/product
+    negate: false
+    context_mapping: {  }

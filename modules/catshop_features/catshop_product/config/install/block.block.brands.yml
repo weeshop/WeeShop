@@ -1,0 +1,27 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - facets.facet.brands
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: brands
+theme: bartik
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:brands'
+settings:
+  id: 'facet_block:brands'
+  label: 品牌
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/product
+    negate: false
+    context_mapping: {  }

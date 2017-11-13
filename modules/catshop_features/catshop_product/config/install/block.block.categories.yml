@@ -1,0 +1,27 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - facets.facet.categories
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: categories
+theme: bartik
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'facet_block:categories'
+settings:
+  id: 'facet_block:categories'
+  label: 分类
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search/product
+    negate: false
+    context_mapping: {  }

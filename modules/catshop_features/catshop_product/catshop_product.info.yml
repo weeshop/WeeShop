@@ -6,5 +6,8 @@ dependencies:
   - commerce_price
   - commerce_product
   - taxonomy
+  - search_api
+  - search_api_db
+  - facets
 package: Catshop
 core: 8.x

@@ -88,7 +88,6 @@ dependencies:
   - catshop_frontpage
   - catshop_product
   - catshop_product_clothing
-  - catshop_product_search
 
 
 # List any themes that should be installed as part of the installation

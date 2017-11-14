@@ -1,0 +1,29 @@
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+    - image
+id: commerce_product_variation.image
+field_name: image
+entity_type: commerce_product_variation
+type: image
+settings:
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

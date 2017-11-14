@@ -1,0 +1,20 @@
+langcode: zh-hans
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothing
+    - field.storage.commerce_product.categories
+id: commerce_product.clothing.categories
+field_name: categories
+entity_type: commerce_product
+bundle: clothing
+label: Categories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

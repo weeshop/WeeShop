@@ -9,5 +9,6 @@ dependencies:
   - search_api
   - search_api_db
   - facets
+  - bartik
 package: Catshop
 core: 8.x

@@ -1,0 +1,7 @@
+name: 'CatShop Product Clothing'
+description: 'Provide a product type of clothing.'
+type: module
+dependencies:
+  - catshop_product
+package: Catshop
+core: 8.x

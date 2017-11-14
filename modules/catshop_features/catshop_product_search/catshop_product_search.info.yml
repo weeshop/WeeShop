@@ -3,5 +3,6 @@ description: 'Provide fulltext search for products.'
 type: module
 dependencies:
   - catshop_product
+  - catshop_product_clothing
 package: Catshop
 core: 8.x

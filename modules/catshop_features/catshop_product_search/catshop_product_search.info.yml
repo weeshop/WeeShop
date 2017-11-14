@@ -3,6 +3,5 @@ description: 'Provide fulltext search for products.'
 type: module
 dependencies:
   - catshop_product
-  - bartik
 package: Catshop
 core: 8.x

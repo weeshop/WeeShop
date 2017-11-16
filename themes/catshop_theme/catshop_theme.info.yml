@@ -5,39 +5,3 @@ base theme: bartik
 name: Catshop theme
 description: Catshop main theme.
 package: 'Catshop'
-
-regions:
-  # 页顶 页底 （不能放置block，在page级）
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-
-  # 页头 主菜单 副菜单
-  secondary_menu: 'Secondary menu'
-  header: Header
-  primary_menu: 'Primary menu'
-
-  # 页脚
-  footer_first: 'Footer first'
-  footer_second: 'Footer second'
-  footer_third: 'Footer third'
-  footer_fourth: 'Footer fourth'
-  footer_fifth: 'Footer fifth'
-
-  # 正文区
-  content: Content
-
-  # 首页区块
-  index_catalog: 'Index Catalog'
-  index_gallery: 'Index Gallery'
-
-  # 商品详情页
-  product_sidebar: 'Product Sidebar'
-
-  # 商品列表页（搜索结果页）
-  list_sidebar: 'List Sidebar'
-
-  # 购物车页
-  # 结算流程
-  # 个人中心页
-  # 我的订单
-  # 订单收银台

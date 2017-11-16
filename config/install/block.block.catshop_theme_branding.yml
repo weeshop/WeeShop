@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_branding
-theme: bartik
+    - catshop_theme
+id: catshop_theme_branding
+theme: catshop_theme
 region: header
 weight: 0
 provider: null

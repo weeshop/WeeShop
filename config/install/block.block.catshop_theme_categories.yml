@@ -2,21 +2,21 @@ langcode: zh-hans
 status: true
 dependencies:
   config:
-    - facets.facet.brands
+    - facets.facet.categories
   module:
     - facets
     - system
   theme:
-    - bartik
-id: brands
-theme: bartik
+    - catshop_theme
+id: catshop_theme_categories
+theme: catshop_theme
 region: sidebar_first
-weight: -7
+weight: -8
 provider: null
-plugin: 'facet_block:brands'
+plugin: 'facet_block:categories'
 settings:
-  id: 'facet_block:brands'
-  label: 品牌
+  id: 'facet_block:categories'
+  label: 分类
   provider: facets
   label_display: visible
 visibility:

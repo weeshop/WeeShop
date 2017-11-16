@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_main_menu
-theme: bartik
+    - catshop_theme
+id: catshop_theme_main_menu
+theme: catshop_theme
 region: primary_menu
 weight: 0
 provider: null

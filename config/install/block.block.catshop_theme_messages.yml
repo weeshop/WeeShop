@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_messages
-theme: bartik
+    - catshop_theme
+id: catshop_theme_messages
+theme: catshop_theme
 region: highlighted
 weight: 0
 provider: null

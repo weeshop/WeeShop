@@ -1,4 +1,4 @@
-langcode: en
+langcode: zh-hans
 status: true
 dependencies:
   config:
@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_account_menu
-theme: bartik
+    - catshop_theme
+id: catshop_theme_account_menu
+theme: catshop_theme
 region: secondary_menu
 weight: 0
 provider: null

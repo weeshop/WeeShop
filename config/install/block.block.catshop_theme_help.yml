@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - bartik
-id: bartik_help
-theme: bartik
+    - catshop_theme
+id: catshop_theme_help
+theme: catshop_theme
 region: content
 weight: -30
 provider: null

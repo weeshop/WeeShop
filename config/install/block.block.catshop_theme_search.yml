@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - bartik
-id: bartik_search
-theme: bartik
+    - catshop_theme
+id: catshop_theme_search
+theme: catshop_theme
 region: sidebar_first
 weight: -1
 provider: null

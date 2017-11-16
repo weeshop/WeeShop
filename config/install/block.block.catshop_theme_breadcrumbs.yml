@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_breadcrumbs
-theme: bartik
+    - catshop_theme
+id: catshop_theme_breadcrumbs
+theme: catshop_theme
 region: breadcrumb
 weight: 0
 provider: null

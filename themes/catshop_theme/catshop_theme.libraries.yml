@@ -1,0 +1,10 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/base/elements.css: {}
+    component:
+      css/components/secondary-menu.css: {}
+    layout:
+      css/layout.css: {}
+

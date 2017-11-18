@@ -7,9 +7,9 @@ dependencies:
     - facets
     - system
   theme:
-    - bartik
-id: sizes
-theme: bartik
+    - catshop_theme
+id: catshop_theme_sizes
+theme: catshop_theme
 region: sidebar_first
 weight: -6
 provider: null

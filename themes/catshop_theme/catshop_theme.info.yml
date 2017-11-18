@@ -5,7 +5,8 @@ base theme: classy
 name: Catshop theme
 description: Catshop main theme.
 package: 'Catshop'
-
+libraries:
+  - catshop_theme/global-styling
 regions:
   header: Header
   primary_menu: 'Primary menu'

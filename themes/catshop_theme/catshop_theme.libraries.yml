@@ -5,6 +5,8 @@ global-styling:
       css/base/elements.css: {}
     component:
       css/components/secondary-menu.css: {}
+      css/components/header.css: {}
+      css/components/primary-menu.css: {}
     layout:
       css/layout.css: {}
 

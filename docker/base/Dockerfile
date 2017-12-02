@@ -13,7 +13,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   libfreetype6-dev \
   libjpeg62-turbo-dev \
   libmcrypt-dev \
-  libpng12-dev \
+  libpng-dev \
   libbz2-dev \
   php-pear \
   curl \

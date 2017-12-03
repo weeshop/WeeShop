@@ -13,4 +13,14 @@ RUN mkdir web/sites/default/files/translations && \
 WORKDIR /app/web
 ADD . profiles/custom/catshop
 
-RUN service mysql start && sleep 10 && mysqladmin -u root password '123'
+RUN service mysql start && sleep 10 && \
+    mysqladmin -u root password '123' && \
+    mysqladmin -u root -p123 create drupal && \
+    mysql -u root -p123 -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;FLUSH PRIVILEGES;" && \
+    drush -y -vvv --root=/app/web site-install catshop \
+    install_configure_form.site_default_country=CN \
+    install_configure_form.enable_update_status_emails=NULL \
+    --db-url=mysql://root:123@127.0.0.1:3306/drupal \
+    --account-name=admin --account-pass=123 \
+    --account-mail=164713332@qq.com --site-name=测试网站 \
+    --locale=zh-hans

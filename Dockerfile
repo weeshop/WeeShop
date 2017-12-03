@@ -17,7 +17,7 @@ RUN sed -i '/bind-address/d' /etc/mysql/mariadb.conf.d/50-server.cnf && \
     sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini && \
     service mysql start && sleep 10 && \
     mysqladmin -u root password 123 && \
-    mysql -u root -p123 -e "update user set plugin='' where User='root';" && \
+    mysql -u root -p123 -e "update mysql.user set plugin='' where User='root';" && \
     mysql -u root -p123 -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;" && \
     mysql -u root -p123 -e "FLUSH PRIVILEGES;"
 

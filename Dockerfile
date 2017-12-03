@@ -13,7 +13,7 @@ RUN mkdir web/sites/default/files/translations && \
 WORKDIR /app/web
 ADD . profiles/custom/catshop
 
-RUN sed -i '/bind-address/d' /etc/mysql/mariadb.conf.d/50-server.cnf && \
+RUN ls /etc/mysql && sed -i '/bind-address/d' /etc/mysql/mariadb.conf.d/50-server.cnf && \
     sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini && \
     service mysql start && sleep 10 && \
     mysqladmin -u root password 123 && \

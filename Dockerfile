@@ -8,10 +8,13 @@ RUN composer config repo.packagist composer "https://packagist.phpcomposer.com"
 
 RUN mkdir web/sites/default/files/translations && \
     curl -o web/sites/default/files/translations/drupal-8.4.2.zh-hans.po https://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.4.2.zh-hans.po
+
+USER mysql
+RUN service mysql start && sleep 10
+
 USER www-data
 WORKDIR /app/web
-RUN su - mysql -c "service mysql start" && sleep 10 && \
-    drush -y -vvv --root=/app/web site-install catshop \
+RUN drush -y -vvv --root=/app/web site-install catshop \
     install_configure_form.site_default_country=CN \
     install_configure_form.enable_update_status_emails=NULL \
     --db-url=mysql://root:@localhost:3306/drupal \

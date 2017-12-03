@@ -14,3 +14,13 @@ services:
       # existing content of the image at the same location
       # - /app/web/sites
     restart: always
+
+  db:
+    image: mysql
+    ports:
+      - "3388:3306"
+    volumes:
+      - "./data/mysql/data:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123

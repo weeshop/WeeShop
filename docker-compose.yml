@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   drupal:
-    image: edwinkent/catshop:latest
+    image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:latest
     ports:
       - 8080:80
     volumes:
@@ -13,16 +13,3 @@ services:
       # existing content of the image at the same location
       # - /app/web/sites
     restart: always
-
-  mysql:
-    image:  mysql
-    ports:
-          - "3308:3306"
-    volumes:
-      - "./data/mysql:/var/lib/mysql"
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: 123
-      MYSQL_DATABASE: drupal
-      MYSQL_USER: drupal
-      MYSQL_PASSWORD: drupal

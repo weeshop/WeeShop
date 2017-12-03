@@ -12,3 +12,9 @@ RUN mkdir web/sites/default/files/translations && \
 
 WORKDIR /app/web
 ADD . profiles/custom/catshop
+
+RUN sed -i '/bind-address/d' /etc/mysql/mariadb.conf.d/50-server.cnf && \
+    service mysql start && sleep 10 && \
+    mysqladmin -u root password 123 && \
+    mysql -u root -p123 -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;" && \
+    mysql -u root -p123 -e "FLUSH PRIVILEGES;"

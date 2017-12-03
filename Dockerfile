@@ -13,8 +13,7 @@ RUN mkdir web/sites/default/files/translations && \
 WORKDIR /app/web
 ADD . profiles/custom/catshop
 
-RUN ls /etc/mysql && sed -i '/bind-address/d' /etc/mysql/mariadb.conf.d/50-server.cnf && \
-    sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini && \
+RUN sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini && \
     service mysql start && sleep 10 && \
     mysqladmin -u root password 123 && \
     mysql -u root -p123 -e "update mysql.user set plugin='' where User='root';" && \

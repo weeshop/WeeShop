@@ -13,7 +13,8 @@ RUN mkdir web/sites/default/files/translations && \
 WORKDIR /app/web
 ADD . profiles/custom/catshop
 
-RUN sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini
+RUN sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini && \
+    cp -aRT /app/web/sites /app/web/sites_bak
 #    service mysql start && sleep 10 && \
 #    mysqladmin -u root password 123 && \
 #    mysql -u root -p123 -e "update mysql.user set plugin='' where User='root';" && \

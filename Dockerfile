@@ -13,7 +13,7 @@ RUN mkdir web/sites/default/files/translations && \
 WORKDIR /app/web
 ADD . profiles/custom/catshop
 
-RUN service mysql start && sleep 10 && mysqladmin -u root password '123'\
+RUN service mysql start && sleep 10 && mysqladmin -u root password '123' && \
     drush -y -vvv --root=/app/web site-install catshop \
     install_configure_form.site_default_country=CN \
     install_configure_form.enable_update_status_emails=NULL \

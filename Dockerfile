@@ -11,6 +11,8 @@ RUN mkdir web/sites/default/files/translations && \
     curl -o web/sites/default/files/translations/drupal-8.4.2.zh-hans.po https://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.4.2.zh-hans.po
 
 WORKDIR /app/web
+ADD . profiles/custom/catshop
+
 RUN service mysql start && sleep 10 && \
     drush -y -vvv --root=/app/web site-install catshop \
     install_configure_form.site_default_country=CN \

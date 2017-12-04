@@ -43,7 +43,13 @@ RUN composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
  . && \
- composer require "drupal/facets:1.x-dev" "drupal/devel:1.x-dev" "drupal/default_content" "drupal/file_entity:2.x-dev" "drush/drush:^9.0.0-beta8"
+ composer require "drupal/facets:1.x-dev" \
+                  "drupal/devel:1.x-dev" \
+                  "drupal/default_content" \
+                  "drupal/file_entity:2.x-dev" \
+                  "drupal/commerce_alipay:1.x-dev" \
+                  "drupal/commerce_wechat_pay:1.x-dev" \
+                  "drush/drush:^9.0.0-beta8"
 
 
 RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

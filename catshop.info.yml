@@ -77,8 +77,8 @@ dependencies:
   - commerce_checkout
   - commerce_payment
   - commerce_promotion
-  - commerce_alipay
-  - commerce_wechat_pay
+#  - commerce_alipay
+#  - commerce_wechat_pay
   - search_api
   - search_api_db
   - facets

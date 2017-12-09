@@ -1,0 +1,5 @@
+catshop_hotel.configuration:
+  title: 'Hotels'
+  route_name: 'catshop_hotel.configuration'
+  parent: 'commerce.configuration'
+  weight: -14

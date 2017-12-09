@@ -1,0 +1,9 @@
+name: 'CatShop hotel'
+description: 'Provide hotel booking solution for CatShop.'
+type: module
+dependencies:
+  - catshop
+  - commerce_product
+package: Catshop
+core: 8.x
+project: catshop

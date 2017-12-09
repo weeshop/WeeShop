@@ -1,0 +1,7 @@
+catshop_hotel.configuration:
+  path: '/admin/commerce/config/hotels'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Hotels'
+  requirements:
+    _permission: 'access commerce administration pages'

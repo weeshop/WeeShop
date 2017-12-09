@@ -6,7 +6,7 @@
  * Time: 13:41
  */
 
-use Drupal\commerce_product\Entity\ProductType;
+use Drupal\commerce_product\Entity\HotelType;
 use Drupal\commerce_product\Entity\ProductVariationType;
 use Drupal\commerce\BundleFieldDefinition;
 use Drupal\commerce\Entity\CommerceBundleEntityInterface;
@@ -19,7 +19,7 @@ function catshop_entity_bundle_create($entity_type_id, $bundle) {
 
     switch ($entity_type_id) {
         case 'commerce_product':
-            $product_type = ProductType::load($bundle);
+            $product_type = HotelType::load($bundle);
             catshop_product_add_image_field($product_type, $entity_type_id);
             catshop_product_add_categories_field($product_type);
             catshop_product_add_brand_field($product_type);

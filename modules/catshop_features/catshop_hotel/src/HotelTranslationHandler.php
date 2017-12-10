@@ -52,7 +52,7 @@ class HotelTranslationHandler extends ContentTranslationHandler {
    * {@inheritdoc}
    */
   public function entityFormEntityBuild($entity_type, EntityInterface $entity, array $form, FormStateInterface $form_state) {
-    /** @var \Drupal\commerce_product\Entity\ProductInterface $entity */
+    /** @var \Drupal\catshop_hotel\Entity\HotelInterface $entity */
     if ($form_state->hasValue('content_translation')) {
       $translation = &$form_state->getValue('content_translation');
       $translation['status'] = $entity->isPublished();

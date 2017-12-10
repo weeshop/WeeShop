@@ -47,7 +47,7 @@ use Drupal\user\UserInterface;
  *   }
  * )
  */
-class Room extends CommerceContentEntityBase implements RoomInterface {
+class HotelRoom extends CommerceContentEntityBase implements HotelRoomInterface {
 
   use EntityChangedTrait;
 
@@ -148,7 +148,7 @@ class Room extends CommerceContentEntityBase implements RoomInterface {
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Author'))
-      ->setDescription(t('The room author.'))
+      ->setDescription(t('The hotel room author.'))
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
       ->setDefaultValueCallback('Drupal\catshop_hotel\Entity\Room::getCurrentUserId')
@@ -165,7 +165,7 @@ class Room extends CommerceContentEntityBase implements RoomInterface {
 
     $fields['title'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Title'))
-      ->setDescription(t('The room title.'))
+      ->setDescription(t('The hotel room title.'))
       ->setRequired(TRUE)
       ->setTranslatable(TRUE)
       ->setSettings([
@@ -181,7 +181,7 @@ class Room extends CommerceContentEntityBase implements RoomInterface {
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Active'))
-      ->setDescription(t('Whether the room is active.'))
+      ->setDescription(t('Whether the hotel room is active.'))
       ->setDefaultValue(TRUE)
       ->setTranslatable(TRUE)
       ->setDisplayOptions('form', [
@@ -192,7 +192,7 @@ class Room extends CommerceContentEntityBase implements RoomInterface {
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
-      ->setDescription(t('The time when the room was created.'))
+      ->setDescription(t('The time when the hotel room was created.'))
       ->setTranslatable(TRUE)
       ->setDisplayConfigurable('form', TRUE);
 

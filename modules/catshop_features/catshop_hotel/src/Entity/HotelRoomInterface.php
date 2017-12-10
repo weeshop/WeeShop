@@ -8,7 +8,7 @@ use Drupal\user\EntityOwnerInterface;
 /**
  * Defines the interface for rooms.
  */
-interface RoomInterface extends EntityChangedInterface, EntityOwnerInterface {
+interface HotelRoomInterface extends EntityChangedInterface, EntityOwnerInterface {
 
   /**
    * Gets the parent hotel.

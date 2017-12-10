@@ -2,4 +2,16 @@ catshop_hotel.configuration:
   title: 'Hotels'
   route_name: 'catshop_hotel.configuration'
   parent: 'commerce.configuration'
-  weight: -14
+  weight: -15
+
+entity.catshop_hotel.collection:
+  title: 'Hotels'
+  route_name: 'entity.catshop_hotel.collection'
+  parent: 'commerce.admin_commerce'
+  description: 'Manage your hotels.'
+
+entity.catshop_hotel_type.collection:
+  title: 'Hotel types'
+  route_name: 'entity.catshop_hotel_type.collection'
+  parent: 'catshop_hotel.configuration'
+  description: 'Manage fields, form and display settings for your hotels.'

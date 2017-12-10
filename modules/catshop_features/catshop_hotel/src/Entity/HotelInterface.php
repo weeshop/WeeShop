@@ -50,79 +50,79 @@ interface HotelInterface extends ContentEntityInterface, EntityChangedInterface,
   public function setCreatedTime($timestamp);
 
   /**
-   * Gets the room IDs.
+   * Gets the hotel room IDs.
    *
    * @return int[]
-   *   The room IDs.
+   *   The hotel room IDs.
    */
-  public function getRoomIds();
+  public function getHotelRoomIds();
 
   /**
-   * Gets the rooms.
+   * Gets the hotel rooms.
    *
-   * @return \Drupal\catshop_hotel\Entity\RoomInterface[]
-   *   The rooms.
+   * @return \Drupal\catshop_hotel\Entity\HotelRoomInterface[]
+   *   The hotel rooms.
    */
-  public function getRooms();
+  public function getHotelRooms();
 
   /**
-   * Sets the rooms.
+   * Sets the hotel rooms.
    *
-   * @param \Drupal\catshop_hotel\Entity\RoomInterface[] $rooms
-   *   The rooms.
+   * @param \Drupal\catshop_hotel\Entity\HotelRoomInterface[] $hotel_rooms
+   *   The hotel rooms.
    *
    * @return $this
    */
-  public function setRooms(array $rooms);
+  public function setHotelRooms(array $hotel_rooms);
 
   /**
-   * Gets whether the hotel has rooms.
+   * Gets whether the hotel has hotel rooms.
    *
-   * A hotel must always have at least one room, but a newly initialized
+   * A hotel must always have at least one hotel room, but a newly initialized
    * (or invalid) hotel entity might not have any.
    *
    * @return bool
-   *   TRUE if the hotel has rooms, FALSE otherwise.
+   *   TRUE if the hotel has hotel rooms, FALSE otherwise.
    */
-  public function hasRooms();
+  public function hasHotelRooms();
 
   /**
-   * Adds a room.
+   * Adds a hotel room.
    *
-   * @param \Drupal\catshop_hotel\Entity\RoomInterface $room
-   *   The room.
+   * @param \Drupal\catshop_hotel\Entity\HotelRoomInterface $hotel_room
+   *   The hotel room.
    *
    * @return $this
    */
-  public function addRoom(RoomInterface $room);
+  public function addHotelRoom(HotelRoomInterface $hotel_room);
 
   /**
-   * Removes a room.
+   * Removes a hotel room.
    *
-   * @param \Drupal\catshop_hotel\Entity\RoomInterface $room
-   *   The room.
+   * @param \Drupal\catshop_hotel\Entity\HotelRoomInterface $hotel_room
+   *   The hotel room.
    *
    * @return $this
    */
-  public function removeRoom(RoomInterface $room);
+  public function removeHotelRoom(HotelRoomInterface $hotel_room);
 
   /**
-   * Checks whether the hotel has a given room.
+   * Checks whether the hotel has a given hotel room.
    *
-   * @param \Drupal\catshop_hotel\Entity\RoomInterface $room
-   *   The room.
+   * @param \Drupal\catshop_hotel\Entity\HotelRoomInterface $hotel_room
+   *   The hotel room.
    *
    * @return bool
-   *   TRUE if the room was found, FALSE otherwise.
+   *   TRUE if the hotel room was found, FALSE otherwise.
    */
-  public function hasRoom(RoomInterface $room);
+  public function hasHotelRoom(HotelRoomInterface $hotel_room);
 
   /**
-   * Gets the default room.
+   * Gets the default hotel room.
    *
-   * @return \Drupal\catshop_hotel\Entity\RoomInterface|null
-   *   The default room, or NULL if none found.
+   * @return \Drupal\catshop_hotel\Entity\HotelRoomInterface|null
+   *   The default hotel room, or NULL if none found.
    */
-  public function getDefaultRoom();
+  public function getDefaultHotelRoom();
 
 }

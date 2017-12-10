@@ -60,15 +60,6 @@ class HotelForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    // Skip building the form if there are no available stores.
-    $store_query = $this->entityManager->getStorage('commerce_store')->getQuery();
-    if ($store_query->count()->execute() == 0) {
-      $link = Link::createFromRoute('Add a new store.', 'entity.commerce_store.add_page');
-      $form['warning'] = [
-        '#markup' => t("Products can't be created until a store has been added. @link", ['@link' => $link->toString()]),
-      ];
-      return $form;
-    }
 
     return parent::buildForm($form, $form_state);
   }
@@ -77,7 +68,7 @@ class HotelForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
-    /* @var \Drupal\commerce_product\Entity\Product $product */
+    /* @var \Drupal\catshop_hotel\Entity\Hotel $product */
     $product = $this->entity;
     $form = parent::form($form, $form_state);
 
@@ -184,33 +175,6 @@ class HotelForm extends ContentEntityForm {
     if (isset($form['path'])) {
       $form['path']['#group'] = 'path_settings';
     }
-    if (isset($form['stores'])) {
-      $form['stores']['#group'] = 'visibility_settings';
-      $form['#after_build'][] = [get_class($this), 'hideEmptyVisibilitySettings'];
-    }
-
-    return $form;
-  }
-
-  /**
-   * Hides the visibility settings if the stores widget is a hidden element.
-   *
-   * @param array $form
-   *   The form.
-   *
-   * @return array
-   *   The modified visibility_settings element.
-   */
-  public static function hideEmptyVisibilitySettings(array $form) {
-    if (isset($form['stores']['widget']['target_id'])) {
-      $stores_element = $form['stores']['widget']['target_id'];
-      if (!Element::getVisibleChildren($stores_element)) {
-        $form['visibility_settings']['#printed'] = TRUE;
-        // Move the stores widget out of the visibility_settings group to
-        // ensure that its hidden element is still present in the HTML.
-        unset($form['stores']['#group']);
-      }
-    }
 
     return $form;
   }
@@ -219,11 +183,11 @@ class HotelForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function save(array $form, FormStateInterface $form_state) {
-    /** @var \Drupal\commerce_product\Entity\ProductInterface $product */
+    /** @var \Drupal\catshop_hotel\Entity\HotelInterface $product */
     $product = $this->getEntity();
     $product->save();
     drupal_set_message($this->t('The product %label has been successfully saved.', ['%label' => $product->label()]));
-    $form_state->setRedirect('entity.commerce_product.canonical', ['commerce_product' => $product->id()]);
+    $form_state->setRedirect('entity.catshop_hotel.canonical', ['catshop_hotel' => $product->id()]);
   }
 
 }

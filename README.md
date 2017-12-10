@@ -38,7 +38,7 @@ docker-compose exec drupal bash -T
 # 进入应用程序目录
 cd /app/web
 # 初始化数据目录
-cp -r /app/web/sites_bak /app/web/sites
+cp -r /app/web/sites_bak/* /app/web/sites
 
 # 安装实例
 su - www-data -c "drush -y -vvv --root=/app/web site-install catshop install_configure_form.site_default_country=CN install_configure_form.enable_update_status_emails=NULL --db-url=mysql://root:123@db:3306/drupal --account-name=admin --account-pass=123 --account-mail=164713332@qq.com --site-name=测试网站 --locale=zh-hans"

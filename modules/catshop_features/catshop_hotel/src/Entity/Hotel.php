@@ -33,9 +33,9 @@ use Drupal\user\UserInterface;
  *     "list_builder" = "Drupal\catshop_hotel\HotelListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
  *     "form" = {
- *       "default" = "Drupal\catshop_hotel\Form\ProductForm",
- *       "add" = "Drupal\catshop_hotel\Form\ProductForm",
- *       "edit" = "Drupal\catshop_hotel\Form\ProductForm",
+ *       "default" = "Drupal\catshop_hotel\Form\HotelForm",
+ *       "add" = "Drupal\catshop_hotel\Form\HotelForm",
+ *       "edit" = "Drupal\catshop_hotel\Form\HotelForm",
  *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm"
  *     },
  *     "route_provider" = {
@@ -173,42 +173,42 @@ class Hotel extends CommerceContentEntityBase implements HotelInterface {
   /**
    * {@inheritdoc}
    */
-  public function getRoomIds() {
-    $room_ids = [];
-    foreach ($this->get('rooms') as $field_item) {
-      $room_ids[] = $field_item->target_id;
+  public function getHotelRoomIds() {
+    $hotel_room_ids = [];
+    foreach ($this->get('hotel_rooms') as $field_item) {
+      $hotel_room_ids[] = $field_item->target_id;
     }
-    return $room_ids;
+    return $hotel_room_ids;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getRooms() {
-    return $this->getTranslatedReferencedEntities('rooms');
+  public function getHotelRooms() {
+    return $this->getTranslatedReferencedEntities('hotel_rooms');
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setRooms(array $rooms) {
-    $this->set('rooms', $rooms);
+  public function setHotelRooms(array $hotel_rooms) {
+    $this->set('hotel_rooms', $hotel_rooms);
     return $this;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function hasRooms() {
-    return !$this->get('rooms')->isEmpty();
+  public function hasHotelRooms() {
+    return !$this->get('hotel_rooms')->isEmpty();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function addRoom(RoomInterface $room) {
-    if (!$this->hasRoom($room)) {
-      $this->get('rooms')->appendItem($room);
+  public function addHotelRoom(HotelRoomInterface $hotel_room) {
+    if (!$this->hasHotelRoom($hotel_room)) {
+      $this->get('hotel_rooms')->appendItem($hotel_room);
     }
     return $this;
   }
@@ -216,10 +216,10 @@ class Hotel extends CommerceContentEntityBase implements HotelInterface {
   /**
    * {@inheritdoc}
    */
-  public function removeRoom(RoomInterface $room) {
-    $index = $this->getVariationIndex($room);
+  public function removeHotelRoom(HotelRoomInterface $hotel_room) {
+    $index = $this->getVariationIndex($hotel_room);
     if ($index !== FALSE) {
-      $this->get('rooms')->offsetUnset($index);
+      $this->get('hotel_rooms')->offsetUnset($index);
     }
     return $this;
   }
@@ -227,31 +227,31 @@ class Hotel extends CommerceContentEntityBase implements HotelInterface {
   /**
    * {@inheritdoc}
    */
-  public function hasRoom(RoomInterface $room) {
-    return in_array($room->id(), $this->getRoomIds());
+  public function hasHotelRoom(HotelRoomInterface $hotel_room) {
+    return in_array($hotel_room->id(), $this->getHotelRoomIds());
   }
 
   /**
-   * Gets the index of the given room.
+   * Gets the index of the given hotel_room.
    *
-   * @param \Drupal\catshop_hotel\Entity\RoomInterface $room
-   *   The room.
+   * @param \Drupal\catshop_hotel\Entity\HotelRoomInterface $hotel_room
+   *   The hotel_room.
    *
    * @return int|bool
-   *   The index of the given room, or FALSE if not found.
+   *   The index of the given hotel_room, or FALSE if not found.
    */
-  protected function getRoomIndex(RoomInterface $room) {
-    return array_search($room->id(), $this->getRoomIds());
+  protected function getHotelRoomIndex(HotelRoomInterface $hotel_room) {
+    return array_search($hotel_room->id(), $this->getHotelRoomIds());
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getDefaultRoom() {
-    foreach ($this->getRooms() as $room) {
-      // Return the first active room.
-      if ($room->isActive() && $room->access('view')) {
-        return $room;
+  public function getDefaultHotelRoom() {
+    foreach ($this->getHotelRooms() as $hotel_room) {
+      // Return the first active hotel_room.
+      if ($hotel_room->isActive() && $hotel_room->access('view')) {
+        return $hotel_room;
       }
     }
   }
@@ -278,12 +278,12 @@ class Hotel extends CommerceContentEntityBase implements HotelInterface {
   public function postSave(EntityStorageInterface $storage, $update = TRUE) {
     parent::postSave($storage, $update);
 
-    // Ensure there's a back-reference on each hotel room.
-    foreach ($this->rooms as $item) {
-      $room = $item->entity;
-      if ($room->hotel_id->isEmpty()) {
-        $room->hotel_id = $this->id();
-        $room->save();
+    // Ensure there's a back-reference on each hotel hotel_room.
+    foreach ($this->hotel_rooms as $item) {
+      $hotel_room = $item->entity;
+      if ($hotel_room->hotel_id->isEmpty()) {
+        $hotel_room->hotel_id = $this->id();
+        $hotel_room->save();
       }
     }
   }
@@ -292,18 +292,18 @@ class Hotel extends CommerceContentEntityBase implements HotelInterface {
    * {@inheritdoc}
    */
   public static function postDelete(EntityStorageInterface $storage, array $entities) {
-    // Delete the hotel rooms of a deleted hotel.
-    $rooms = [];
+    // Delete the hotel hotel_rooms of a deleted hotel.
+    $hotel_rooms = [];
     foreach ($entities as $entity) {
-      if (empty($entity->rooms)) {
+      if (empty($entity->hotel_rooms)) {
         continue;
       }
-      foreach ($entity->rooms as $item) {
-        $rooms[$item->target_id] = $item->entity;
+      foreach ($entity->hotel_rooms as $item) {
+        $hotel_rooms[$item->target_id] = $item->entity;
       }
     }
-    $room_storage = \Drupal::service('entity_type.manager')->getStorage('catshop_hotel_room');
-    $room_storage->delete($rooms);
+    $hotel_room_storage = \Drupal::service('entity_type.manager')->getStorage('catshop_hotel_room');
+    $hotel_room_storage->delete($hotel_rooms);
   }
 
   /**

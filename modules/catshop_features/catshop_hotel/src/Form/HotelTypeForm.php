@@ -15,13 +15,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class HotelTypeForm extends CommerceBundleEntityFormBase {
 
   /**
-   * The variation type storage.
-   *
-   * @var \Drupal\Core\Entity\EntityStorageInterface
-   */
-  protected $variationTypeStorage;
-
-  /**
    * The entity field manager.
    *
    * @var \Drupal\Core\Entity\EntityFieldManagerInterface
@@ -41,7 +34,6 @@ class HotelTypeForm extends CommerceBundleEntityFormBase {
   public function __construct(EntityTraitManagerInterface $trait_manager, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $entity_field_manager) {
     parent::__construct($trait_manager);
 
-    $this->variationTypeStorage = $entity_type_manager->getStorage('commerce_product_variation_type');
     $this->entityFieldManager = $entity_field_manager;
   }
 
@@ -61,52 +53,40 @@ class HotelTypeForm extends CommerceBundleEntityFormBase {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $form = parent::form($form, $form_state);
-    /** @var \Drupal\commerce_product\Entity\ProductTypeInterface $product_type */
-    $product_type = $this->entity;
-    $variation_types = $this->variationTypeStorage->loadMultiple();
+    /** @var \Drupal\catshop_hotel\Entity\HotelType $hotel_type */
+    $hotel_type = $this->entity;
+
     // Create an empty product to get the default status value.
     // @todo Clean up once https://www.drupal.org/node/2318187 is fixed.
     if ($this->operation == 'add') {
-      $product = $this->entityTypeManager->getStorage('commerce_product')->create(['type' => $product_type->uuid()]);
+      $product = $this->entityTypeManager->getStorage('catshop_hotel')->create(['type' => $hotel_type->uuid()]);
     }
     else {
-      $product = $this->entityTypeManager->getStorage('commerce_product')->create(['type' => $product_type->id()]);
+      $product = $this->entityTypeManager->getStorage('catshop_hotel')->create(['type' => $hotel_type->id()]);
     }
 
     $form['label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Label'),
       '#maxlength' => 255,
-      '#default_value' => $product_type->label(),
+      '#default_value' => $hotel_type->label(),
       '#required' => TRUE,
     ];
     $form['id'] = [
       '#type' => 'machine_name',
-      '#default_value' => $product_type->id(),
+      '#default_value' => $hotel_type->id(),
       '#machine_name' => [
-        'exists' => '\Drupal\commerce_product\Entity\ProductType::load',
+        'exists' => '\Drupal\catshop_hotel\Entity\HotelType::load',
       ],
       '#maxlength' => EntityTypeInterface::BUNDLE_MAX_LENGTH,
     ];
     $form['description'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Description'),
-      '#description' => $this->t('This text will be displayed on the <em>Add product</em> page.'),
-      '#default_value' => $product_type->getDescription(),
+      '#description' => $this->t('This text will be displayed on the <em>Add hotel</em> page.'),
+      '#default_value' => $hotel_type->getDescription(),
     ];
-    $form['variationType'] = [
-      '#type' => 'select',
-      '#title' => $this->t('Product variation type'),
-      '#default_value' => $product_type->getVariationTypeId(),
-      '#options' => EntityHelper::extractLabels($variation_types),
-      '#required' => TRUE,
-      '#disabled' => !$product_type->isNew(),
-    ];
-    $form['injectVariationFields'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Inject product variation fields into the rendered product.'),
-      '#default_value' => $product_type->shouldInjectVariationFields(),
-    ];
+
     $form['product_status'] = [
       '#type' => 'checkbox',
       '#title' => t('Publish new products of this type by default.'),
@@ -123,10 +103,10 @@ class HotelTypeForm extends CommerceBundleEntityFormBase {
       $form['language']['language_configuration'] = [
         '#type' => 'language_configuration',
         '#entity_information' => [
-          'entity_type' => 'commerce_product',
-          'bundle' => $product_type->id(),
+          'entity_type' => 'catshop_hotel',
+          'bundle' => $hotel_type->id(),
         ],
-        '#default_value' => ContentLanguageSettings::loadByEntityTypeBundle('commerce_product', $product_type->id()),
+        '#default_value' => ContentLanguageSettings::loadByEntityTypeBundle('catshop_hotel', $hotel_type->id()),
       ];
       $form['#submit'][] = 'language_configuration_element_submit';
     }
@@ -147,22 +127,17 @@ class HotelTypeForm extends CommerceBundleEntityFormBase {
   public function save(array $form, FormStateInterface $form_state) {
     $status = $this->entity->save();
     // Update the default value of the status field.
-    $product = $this->entityTypeManager->getStorage('commerce_product')->create(['type' => $this->entity->id()]);
+    $product = $this->entityTypeManager->getStorage('catshop_hotel')->create(['type' => $this->entity->id()]);
     $value = (bool) $form_state->getValue('product_status');
     if ($product->status->value != $value) {
-      $fields = $this->entityFieldManager->getFieldDefinitions('commerce_product', $this->entity->id());
+      $fields = $this->entityFieldManager->getFieldDefinitions('catshop_hotel', $this->entity->id());
       $fields['status']->getConfig($this->entity->id())->setDefaultValue($value)->save();
       $this->entityFieldManager->clearCachedFieldDefinitions();
     }
     $this->submitTraitForm($form, $form_state);
 
-    drupal_set_message($this->t('The product type %label has been successfully saved.', ['%label' => $this->entity->label()]));
-    $form_state->setRedirect('entity.commerce_product_type.collection');
-    if ($status == SAVED_NEW) {
-      commerce_product_add_stores_field($this->entity);
-      commerce_product_add_body_field($this->entity);
-      commerce_product_add_variations_field($this->entity);
-    }
+    drupal_set_message($this->t('The hotel type %label has been successfully saved.', ['%label' => $this->entity->label()]));
+    $form_state->setRedirect('entity.catshop_hotel_type.collection');
   }
 
 }

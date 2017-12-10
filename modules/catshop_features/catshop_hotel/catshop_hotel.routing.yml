@@ -5,3 +5,4 @@ catshop_hotel.configuration:
     _title: 'Hotels'
   requirements:
     _permission: 'access commerce administration pages'
+

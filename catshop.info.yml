@@ -84,6 +84,7 @@ dependencies:
   - facets
   - default_content
   - file_entity
+  - restui
   - devel
 
   # Custom modules

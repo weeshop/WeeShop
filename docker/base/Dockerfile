@@ -47,6 +47,7 @@ RUN composer create-project drupalcommerce/project-base \
                   "drupal/devel:1.x-dev" \
                   "drupal/default_content" \
                   "drupal/file_entity:2.x-dev" \
+                  "drupal/restui" \
                   "drush/drush:^9.0.0-beta8"
 
 

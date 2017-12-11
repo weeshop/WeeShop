@@ -1,0 +1,14 @@
+entity.catshop_hotel.canonical:
+  route_name: entity.catshop_hotel.canonical
+  base_route: entity.catshop_hotel.canonical
+  title: 'View'
+
+entity.catshop_hotel.page_edit:
+  route_name: entity.catshop_hotel.edit_form
+  base_route: entity.catshop_hotel.canonical
+  title: Edit
+
+entity.catshop_hotel_type.edit_form:
+  route_name: entity.catshop_hotel_type.edit_form
+  base_route: entity.catshop_hotel_type.edit_form
+  title: Edit

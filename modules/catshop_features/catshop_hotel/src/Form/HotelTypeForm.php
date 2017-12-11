@@ -138,6 +138,11 @@ class HotelTypeForm extends CommerceBundleEntityFormBase {
 
     drupal_set_message($this->t('The hotel type %label has been successfully saved.', ['%label' => $this->entity->label()]));
     $form_state->setRedirect('entity.catshop_hotel_type.collection');
+
+    if ($status == SAVED_NEW) {
+        catshop_hotel_add_body_field($this->entity);
+        catshop_hotel_add_rooms_field($this->entity);
+    }
   }
 
 }

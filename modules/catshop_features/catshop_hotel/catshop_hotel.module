@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Defines the Product entity and associated features.
+ */
+
+use Drupal\entity\BundleFieldDefinition;
+use Drupal\catshop_hotel\Entity\HotelType;
+
+/**
+ * Adds the default body field to a hotel type.
+ *
+ * @param \Drupal\catshop_hotel\Entity\HotelType $hotel_type
+ *   The hotel type.
+ * @param string $label
+ *   (optional) The label for the body instance. Defaults to 'Body'.
+ */
+function catshop_hotel_add_body_field(HotelType $hotel_type, $label = 'Body') {
+  $field_definition = BundleFieldDefinition::create('text_with_summary')
+    ->setTargetEntityTypeId('catshop_hotel')
+    ->setTargetBundle($hotel_type->id())
+    ->setName('body')
+    ->setLabel($label)
+    ->setSetting('display_summary', FALSE)
+    ->setDisplayOptions('form', [
+      'type' => 'text_textarea_with_summary',
+      'weight' => 1,
+    ])
+    ->setDisplayOptions('view', [
+      'label' => 'hidden',
+      'type' => 'text_default',
+    ]);
+
+  $configurable_field_manager = \Drupal::service('commerce.configurable_field_manager');
+  $configurable_field_manager->createField($field_definition, FALSE);
+}
+
+/**
+ * Adds the default variations field to a hotel type.
+ *
+ * Variations can't be a base field because the Views integration is broken.
+ * Instead, it is created as a configurable field for each hotel type.
+ *
+ * @param \Drupal\catshop_hotel\Entity\HotelType $hotel_type
+ *   The hotel type.
+ */
+function catshop_hotel_add_rooms_field(HotelType $hotel_type) {
+  $field_definition = BundleFieldDefinition::create('entity_reference')
+    ->setTargetEntityTypeId('catshop_hotel')
+    ->setTargetBundle($hotel_type->id())
+    ->setName('rooms')
+    ->setLabel('Rooms')
+    ->setCardinality(BundleFieldDefinition::CARDINALITY_UNLIMITED)
+    ->setRequired(TRUE)
+    ->setSetting('target_type', 'catshop_hotel_room')
+    ->setSetting('handler', 'default')
+    ->setDisplayOptions('form', [
+      'type' => 'inline_entity_form_complex',
+      'weight' => 10,
+      'settings' => [
+        'override_labels' => TRUE,
+        'label_singular' => 'room',
+        'label_plural' => 'rooms',
+      ],
+    ]);
+
+  $configurable_field_manager = \Drupal::service('commerce.configurable_field_manager');
+  $configurable_field_manager->createField($field_definition);
+}

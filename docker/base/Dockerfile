@@ -43,15 +43,14 @@ RUN composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
  . && \
+ composer config repositories.catworking_drush vcs https://github.com/catworking/drush && \
  composer require "drupal/core:8.4.2" \
                   "drupal/facets:1.x-dev" \
                   "drupal/devel:1.x-dev" \
                   "drupal/default_content" \
                   "drupal/file_entity:2.x-dev" \
                   "drupal/restui" \
-                  "drush/drush:^9.0.0-rc1" \
- && composer why symfony/cache
-#
+                  "catworking/drush:9.0.0-rc2"
 
 
 RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

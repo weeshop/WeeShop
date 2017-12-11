@@ -48,8 +48,9 @@ RUN composer create-project drupalcommerce/project-base \
                   "drupal/default_content" \
                   "drupal/file_entity:2.x-dev" \
                   "drupal/restui" \
+                  "drush/drush:^9.0.0-rc1" \
  && composer why symfony/cache
-#                  "drush/drush:^9.0.0-rc1"
+#
 
 
 RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

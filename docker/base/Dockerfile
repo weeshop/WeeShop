@@ -47,7 +47,7 @@ RUN composer create-project drupalcommerce/project-base \
                   "drupal/devel:1.x-dev" \
                   "drupal/default_content" \
                   "drupal/file_entity:2.x-dev" \
-                  "drupal/restui:8.x-1.x-dev" \
+                  "drupal/restui" \
  && composer why symfony/cache
 #                  "drush/drush:^9.0.0-rc1"
 

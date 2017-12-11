@@ -43,7 +43,8 @@ RUN composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
  . && \
- composer require "drupal/facets:1.x-dev" \
+ composer require "drupal/core:8.4.2" \
+                  "drupal/facets:1.x-dev" \
                   "drupal/devel:1.x-dev" \
                   "drupal/default_content" \
                   "drupal/file_entity:2.x-dev" \

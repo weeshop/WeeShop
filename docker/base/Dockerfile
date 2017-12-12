@@ -47,7 +47,7 @@ RUN composer create-project drupalcommerce/project-base \
 
 RUN composer config repositories.catworking_drush vcs https://github.com/catworking/drush && \
     cat composer.json && \
-    composer require "drupal/core:8.4.2" \
+    composer require "drupal/core:8.4.3" \
                     "drupal/facets:1.x-dev" \
                     "drupal/devel:1.x-dev" \
                     "drupal/default_content" \

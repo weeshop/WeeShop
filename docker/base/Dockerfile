@@ -45,16 +45,13 @@ RUN composer create-project drupalcommerce/project-base \
  --no-interaction \
  .
 
-RUN composer config repositories.catworking_drush vcs https://github.com/catworking/drush && \
-    cat composer.json && \
-    composer require "drupal/core:8.4.3" \
+RUN composer require "drupal/core:8.4.3" \
                     "drupal/facets:1.x-dev" \
                     "drupal/devel:1.x-dev" \
                     "drupal/default_content" \
                     "drupal/file_entity:2.x-dev" \
                     "drupal/restui" \
-                    "drupal/openapi" \
-                    "catworking/drush:9.0.0-rc2"
+                    "drupal/openapi"
 
 
 RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

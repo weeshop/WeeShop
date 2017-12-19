@@ -7,27 +7,18 @@ RUN chown -R www-data ./web/sites && \
 
 RUN composer config repo.packagist composer "https://packagist.phpcomposer.com"
 
-RUN mkdir web/sites/default/files/translations && \
-    curl -o web/sites/default/files/translations/drupal-8.4.3.zh-hans.po http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.4.3.zh-hans.po
+RUN mkdir -p web/sites/default/files/translations && \
+    curl -Lo web/sites/default/files/translations/drupal-8.4.3.zh-hans.po http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.4.3.zh-hans.po && \
+    mkdir -p web/libraries && \
+    cd web/libraries && \
+    curl -LO https://github.com/swagger-api/swagger-ui/archive/v3.0.17.zip && \
+    unzip v3.0.17.zip && \
+    ln -s swagger-ui-3.0.17 swagger-ui
 
 WORKDIR /app/web
 ADD . profiles/custom/catshop
 
 RUN sed -e 's/256/512/' /usr/local/etc/php/conf.d/memory-limit.ini && \
     cp -aRT /app/web/sites /app/web/sites_bak
-#    service mysql start && sleep 10 && \
-#    mysqladmin -u root password 123 && \
-#    mysql -u root -p123 -e "update mysql.user set plugin='' where User='root';" && \
-#    mysql -u root -p123 -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;" && \
-#    mysql -u root -p123 -e "FLUSH PRIVILEGES;"
-#
-#RUN service mysql start && sleep 10 && \
-#    drush -y -vvv --root=/app/web site-install catshop \
-#        install_configure_form.site_default_country=CN \
-#        install_configure_form.enable_update_status_emails=NULL \
-#        --db-url=mysql://root:123@127.0.0.1:3306/drupal \
-#        --account-name=admin --account-pass=123 \
-#        --account-mail=164713332@qq.com --site-name=测试网站 \
-#        --locale=zh-hans
 
 VOLUME ["/app/web/sites"]

@@ -85,6 +85,8 @@ dependencies:
   - default_content
   - file_entity
   - restui
+  - openapi
+  - openapi_swagger_ui
   - devel
 
   # Custom modules

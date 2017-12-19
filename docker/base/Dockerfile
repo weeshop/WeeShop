@@ -53,6 +53,7 @@ RUN composer config repositories.catworking_drush vcs https://github.com/catwork
                     "drupal/default_content" \
                     "drupal/file_entity:2.x-dev" \
                     "drupal/restui" \
+                    "drupal/openapi" \
                     "catworking/drush:9.0.0-rc2"
 
 

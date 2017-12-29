@@ -37,29 +37,3 @@ WORKDIR /app
 ENV APACHE_DOCUMENT_ROOT /app/web
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf && \
     sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
-
-# Install Drupal Commerce 2.x via drupalcommerce/project-base
-RUN composer create-project drupalcommerce/project-base \
- --stability dev \
- --no-interaction \
- .
-
-RUN composer require "drupal/core:8.4.3" \
-                    "drupal/facets:1.x-dev" \
-                    "drupal/devel:1.x-dev" \
-                    "drupal/default_content" \
-                    "drupal/file_entity:2.x-dev" \
-                    "drupal/restui" \
-                    "drupal/openapi" \
-                    "drupal/erd"
-
-
-RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \
-    chmod +x drush.phar && \
-    mv drush.phar /usr/local/bin/drush && \
-    drush self-update
-
-RUN curl https://drupalconsole.com/installer -L -o drupal.phar && \
-    mv drupal.phar /usr/local/bin/drupal && \
-    chmod +x /usr/local/bin/drupal && \
-    drupal self-update

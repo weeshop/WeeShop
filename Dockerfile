@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/catshop/catshop:base-latest
+FROM registry.cn-hangzhou.aliyuncs.com/catshop/catshop:catshop_base
 
 RUN chown -R www-data ./web/sites && \
     chown www-data . && \

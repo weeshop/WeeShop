@@ -88,6 +88,7 @@ dependencies:
   - openapi
   - openapi_swagger_ui
   - devel
+  - erd
 
   # Custom modules
   - catshop_frontpage

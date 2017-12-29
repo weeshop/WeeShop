@@ -51,7 +51,8 @@ RUN composer require "drupal/core:8.4.3" \
                     "drupal/default_content" \
                     "drupal/file_entity:2.x-dev" \
                     "drupal/restui" \
-                    "drupal/openapi"
+                    "drupal/openapi" \
+                    "drupal/erd"
 
 
 RUN curl -L -o drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \

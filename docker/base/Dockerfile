@@ -15,7 +15,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   libmcrypt-dev \
   libpng-dev \
   libbz2-dev \
-  php-pear \
   curl \
   git \
   unzip \

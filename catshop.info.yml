@@ -59,6 +59,7 @@ dependencies:
   - tour
   - automated_cron
   - basic_auth
+  - simple_oauth
   - rest
 
   # Contrib modules

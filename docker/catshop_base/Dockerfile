@@ -6,6 +6,7 @@ RUN composer require "drupal/core:8.4.3" \
                     "drupal/default_content" \
                     "drupal/file_entity:2.x-dev" \
                     "drupal/restui" \
+                    "drupal/simple_oauth" \
                     "drupal/openapi" \
                     "drupal/erd" \
                     "drupal/commerce_shipping"

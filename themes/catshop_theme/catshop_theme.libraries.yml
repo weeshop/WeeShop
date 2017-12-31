@@ -7,6 +7,10 @@ global-styling:
       css/components/secondary-menu.css: {}
       css/components/header.css: {}
       css/components/primary-menu.css: {}
+      css/components/site-footer.css: {}
+      css/components/featured-top.css: {}
+      css/components/featured-bottom.css: {}
+      css/components/sidebar.css: {}
     layout:
       css/layout.css: {}
 

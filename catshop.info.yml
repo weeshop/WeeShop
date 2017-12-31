@@ -77,6 +77,7 @@ dependencies:
   - commerce_checkout
   - commerce_payment
   - commerce_promotion
+  - commerce_shipping
 #  - commerce_alipay
 #  - commerce_wechat_pay
   - search_api

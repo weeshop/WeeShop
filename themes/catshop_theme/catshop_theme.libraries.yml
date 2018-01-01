@@ -11,6 +11,7 @@ global-styling:
       css/components/featured-top.css: {}
       css/components/featured-bottom.css: {}
       css/components/sidebar.css: {}
+      css/components/highlighted.css: {}
     layout:
       css/layout.css: {}
 

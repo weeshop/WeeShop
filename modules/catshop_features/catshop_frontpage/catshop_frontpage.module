@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Defines the frontpage theme
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function catshop_frontpage_theme($existing, $type, $theme, $path)
+{
+    $variables = array(
+        'catshop_home' => array(
+            'variables' => array(
+                'content' => 'I am data!!!!!!!!!!!!',
+            ),
+            'template' => 'catshop_home',
+        ),
+    );
+    return $variables;
+}
+

@@ -16,8 +16,12 @@ class HomeController extends ControllerBase
      */
     public function content() {
         return array(
-            '#type' => 'markup',
-            '#markup' => $this->t('Hello, World!!!'),
+            '#theme' => 'catshop_home',
+            '#attached' => [
+                'library' => [
+                    'catshop_frontpage/catshop_home'
+                ]
+            ]
         );
     }
 }

@@ -1,6 +1,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/catshop/catshop:base
 
-RUN composer config repo.packagist composer "https://packagist.phpcomposer.com"
+RUN cd /app && composer config repo.packagist composer "https://packagist.phpcomposer.com"
 
 RUN mkdir -p /app/web/sites/default/files/translations && \
     curl -Lo /app/web/sites/default/files/translations/drupal-8.4.4.zh-hans.po http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.4.4.zh-hans.po && \

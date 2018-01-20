@@ -1,6 +1,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/catshop/catshop:commerce
 
-RUN composer require "drupal/core:8.4.3" \
+RUN composer require "drupal/core:^8.4" \
                     "drupal/facets:1.x-dev" \
                     "drupal/devel:1.x-dev" \
                     "drupal/default_content" \

@@ -11,7 +11,7 @@ RUN cd /app && composer create-project drupalcommerce/project-base \
  --no-interaction \
  .
 
-RUN composer require  "drupal/facets" \
+RUN cd /app && composer require  "drupal/facets:1.x-dev" \
                     "drupal/devel:1.x-dev" \
                     "drupal/default_content" \
                     "drupal/file_entity:2.x-dev" \

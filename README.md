@@ -51,3 +51,7 @@ su - www-data -c "drush -vvv en catshop_demo --root=/app/web"
 ```
 
 浏览器访问 `http://localhost:8080`
+
+
+## 重要Issuse 
+- 订单打印 https://www.drupal.org/project/commerce/issues/2831952 

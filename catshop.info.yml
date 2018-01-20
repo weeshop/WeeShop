@@ -18,7 +18,6 @@ distribution:
   # profiles. Note that this language code will also be used when installing
   # the site via Drush.
   langcode: zh-hans
-features: true
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.

@@ -6,10 +6,10 @@ RUN curl https://drupalconsole.com/installer -L -o drupal.phar && \
     drupal self-update
 
 # Install Drupal Commerce 2.x via drupalcommerce/project-base
-RUN composer create-project drupalcommerce/project-base \
+RUN cd /app && composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
- /app
+ .
 
 RUN composer require "drupal/core:^8.4" \
                     "drupal/facets:1.x-dev" \

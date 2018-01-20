@@ -9,7 +9,7 @@ RUN curl https://drupalconsole.com/installer -L -o drupal.phar && \
 RUN composer create-project drupalcommerce/project-base \
  --stability dev \
  --no-interaction \
- .
+ /app
 
 RUN composer require "drupal/core:^8.4" \
                     "drupal/facets:1.x-dev" \

@@ -19,4 +19,4 @@ RUN composer require  "drupal/facets" \
                     "drupal/simple_oauth" \
                     "drupal/openapi" \
                     "drupal/erd" \
-                    "drupal/commerce_shipping"
+                    "drupal/commerce_shipping" -vvv

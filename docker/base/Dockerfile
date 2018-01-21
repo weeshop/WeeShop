@@ -12,7 +12,8 @@ RUN cd /app && composer create-project drupalcommerce/project-base \
  .
 
 RUN cd /app && composer remove "drupalcommerce/commerce_base" && \
-               composer require  "drupal/facets:1.x-dev" \
+               composer require "drupal/features" \
+                    "drupal/facets:1.x-dev" \
                     "drupal/devel:1.x-dev" \
                     "drupal/default_content" \
                     "drupal/file_entity:2.x-dev" \

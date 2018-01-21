@@ -10,6 +10,8 @@ RUN mkdir -p /app/web/sites/default/files/translations && \
     unzip v3.0.17.zip && rm -f v3.0.17.zip && \
     ln -s swagger-ui-3.0.17 swagger-ui
 
-RUN cp -aR /app/web/sites /app/web/sites_bak
+RUN cp -aR /app/web/sites /app/web/sites_bak && \
+    chown -R application:application /app/web/sites_bak && \
+    chmod -R 0777 /app/web/sites_bak
 
 VOLUME ["/app/web/sites"]

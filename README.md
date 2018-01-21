@@ -53,4 +53,9 @@ su - application -c "cd /app/web/sites && /usr/local/bin/drupal moi catshop_demo
 
 
 ## 重要Issuse 
-- 订单打印 https://www.drupal.org/project/commerce/issues/2831952 
+- Docker for windows, volume默认权限是755，而无法更改 [#issues39](https://github.com/docker/for-win/issues/39)
+  
+  - 解决办法，使用Mac或Linux系统
+  - 在 `docker-compose.yml` 中把 `/app/web/sites` 目录的volume注掉，让文件留在容器内
+
+- 订单打印 [#2831952](https://www.drupal.org/project/commerce/issues/2831952)

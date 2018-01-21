@@ -13,7 +13,7 @@ services:
       # existing content of the image at the same location
       - ./data/drupal:/app/web/sites
       # 使用本地版本，直到 https://www.drupal.org/project/erd/issues/2933522 被合并
-      - /d/DrupalProjects/erd:/app/web/modules/contrib/erd
+      # - /d/DrupalProjects/erd:/app/web/modules/contrib/erd
     restart: always
     environment:
       WEB_DOCUMENT_ROOT: /app/web

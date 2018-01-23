@@ -19,8 +19,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "attribute": [
@@ -30,8 +30,8 @@
     ],
     "name": [
         {
-            "value": "XL\u7801",
-            "lang": "zh-hans"
+            "value": "XL size",
+            "lang": "en"
         }
     ],
     "weight": [
@@ -42,21 +42,21 @@
     "created": [
         {
             "value": "2017-11-06T14:08:54+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
             "value": "2017-11-06T14:08:54+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ]
 }

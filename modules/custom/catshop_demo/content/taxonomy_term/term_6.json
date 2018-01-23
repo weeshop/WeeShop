@@ -24,8 +24,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -35,15 +35,15 @@
     ],
     "name": [
         {
-            "value": "T\u6064",
-            "lang": "zh-hans"
+            "value": "T-shirts",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "T\u6064",
+            "value": "T-shirts",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -73,22 +73,22 @@
     "changed": [
         {
             "value": "2017-11-06T08:34:49+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/category\/clothing\/t-shirts",
             "pid": 6,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

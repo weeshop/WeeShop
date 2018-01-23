@@ -19,8 +19,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,15 +30,15 @@
     ],
     "name": [
         {
-            "value": "LACOSTE \u83b1\u683c\u4ed5",
-            "lang": "zh-hans"
+            "value": "LACOSTE",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "LACOSTE \u83b1\u683c\u4ed5",
+            "value": "LACOSTE",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -49,22 +49,22 @@
     "changed": [
         {
             "value": "2017-11-07T11:55:03+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/brand\/lacoste",
             "pid": 15,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

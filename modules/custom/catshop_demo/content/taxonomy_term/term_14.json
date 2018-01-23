@@ -19,8 +19,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,15 +30,15 @@
     ],
     "name": [
         {
-            "value": "HUGO BOSS \u4f18\u5ba2\u535a\u58eb",
-            "lang": "zh-hans"
+            "value": "HUGO BOSS",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "HUGO BOSS \u4f18\u5ba2\u535a\u58eb",
+            "value": "HUGO BOSS",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -49,22 +49,22 @@
     "changed": [
         {
             "value": "2017-11-07T11:54:34+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/brand\/hugo-boss",
             "pid": 14,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

@@ -9,7 +9,7 @@
         "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/uid": [
             {
                 "href": "http:\/\/default\/user\/1?_format=hal_json",
-                "lang": "zh-hans"
+                "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/brand": [
@@ -65,8 +65,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "type": [
@@ -77,7 +77,7 @@
     "status": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "_embedded": {
@@ -96,7 +96,7 @@
                         "value": "7ced0c8e-9228-49b9-8b2e-658d32db3645"
                     }
                 ],
-                "lang": "zh-hans"
+                "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/commerce_product\/clothing\/brand": [
@@ -267,35 +267,35 @@
     "title": [
         {
             "value": "Beyond Top NLY Trend",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": null,
             "pid": null,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ],
     "created": [
         {
             "value": "2017-11-08T02:22:54+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
             "value": "2017-11-08T02:27:33+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "body": [
@@ -303,7 +303,7 @@
             "value": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.\r\n\r\nDonec sed tincidunt lacus. Duis vehicula aliquam vestibulum. Aenean at mollis mi. Cras ac urna sed nisi auctor venenatis ut id sapien. Vivamus commodo lacus lorem, a tristique sapien tempus non. Donec fringilla cursus porttitor. Morbi quis massa id mi pellentesque placerat. Nam scelerisque sit amet diam id blandit. Nullam ultrices ligula at ligula tincidunt, sit amet aliquet mi pellentesque. Aenean eget fermentum risus. Aenean eu ultricies nulla, id bibendum libero. Vestibulum dui augue, malesuada nec tellus vel, egestas condimentum ipsum. Vestibulum ut.\r\n\r\nInteger semper quam turpis, id dapibus nunc ultrices at. Vestibulum eget orci lobortis, imperdiet diam a, ornare eros. Nam porttitor rutrum massa, eu varius velit facilisis at. Quisque porta elit et viverra suscipit. Proin laoreet, nisl et auctor mollis, felis sapien aliquet felis, nec facilisis tellus enim vitae enim. Nam rhoncus enim diam, a consequat nisi bibendum pulvinar. Donec aliquam lectus vitae ante pulvinar facilisis. Curabitur sed sem est.",
             "format": "restricted_html",
             "summary": "",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ]
 }

@@ -19,8 +19,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,15 +30,15 @@
     ],
     "name": [
         {
-            "value": "\u65d7\u8230\u4f18\u54c1",
-            "lang": "zh-hans"
+            "value": "Premium",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "\u65d7\u8230\u4f18\u54c1",
+            "value": "Premium",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -49,22 +49,22 @@
     "changed": [
         {
             "value": "2017-11-06T08:43:04+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/category\/premium",
             "pid": 10,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

@@ -24,8 +24,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -35,15 +35,15 @@
     ],
     "name": [
         {
-            "value": "\u5305\u5305",
-            "lang": "zh-hans"
+            "value": "Bags",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "\u5305\u5305",
+            "value": "Bags",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -73,22 +73,22 @@
     "changed": [
         {
             "value": "2017-11-06T08:28:57+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/category\/accessories\/bags",
             "pid": 2,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

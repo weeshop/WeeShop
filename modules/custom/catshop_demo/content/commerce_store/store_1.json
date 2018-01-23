@@ -24,8 +24,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "type": [
@@ -54,8 +54,8 @@
     },
     "name": [
         {
-            "value": "\u5f20\u5c0f\u767d",
-            "lang": "zh-hans"
+            "value": "Edwinkent Yang",
+            "lang": "en"
         }
     ],
     "mail": [
@@ -66,7 +66,7 @@
     "default_currency": [
         {
             "target_id": "CNY",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "address": [
@@ -78,8 +78,8 @@
             "dependent_locality": "Tianhe Qu",
             "postal_code": "510000",
             "sorting_code": null,
-            "address_line1": "\u516d\u8fd0\u5c0f\u533a8\u680b\u9996\u5c42",
-            "address_line2": "\u5929\u6cb3\u5357\u8857\u9053",
+            "address_line1": "Tianhe Nan Street",
+            "address_line2": "Liu Yun garden unit 8",
             "organization": null,
             "given_name": null,
             "additional_name": null,
@@ -89,7 +89,7 @@
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ]
 }

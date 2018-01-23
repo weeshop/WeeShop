@@ -24,8 +24,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -35,15 +35,15 @@
     ],
     "name": [
         {
-            "value": "\u536b\u8863",
-            "lang": "zh-hans"
+            "value": "Hoodies",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "\u536b\u8863",
+            "value": "Hoodies",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -73,22 +73,22 @@
     "changed": [
         {
             "value": "2017-11-06T08:43:04+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/category\/clothing\/hoodies",
             "pid": 5,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

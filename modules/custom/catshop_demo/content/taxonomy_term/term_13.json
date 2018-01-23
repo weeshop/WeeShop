@@ -19,8 +19,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "vid": [
@@ -30,15 +30,15 @@
     ],
     "name": [
         {
-            "value": "GUCCI \u53e4\u9a70",
-            "lang": "zh-hans"
+            "value": "GUCCI",
+            "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "GUCCI \u53e4\u9a70",
+            "value": "GUCCI",
             "format": "restricted_html",
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "weight": [
@@ -49,22 +49,22 @@
     "changed": [
         {
             "value": "2017-11-07T11:52:48+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "path": [
         {
             "alias": "\/brand\/gucci",
             "pid": 13,
-            "langcode": "zh-hans",
-            "lang": "zh-hans"
+            "langcode": "en",
+            "lang": "en"
         }
     ]
 }

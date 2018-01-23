@@ -9,7 +9,7 @@
         "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/uid": [
             {
                 "href": "http:\/\/default\/user\/1?_format=hal_json",
-                "lang": "zh-hans"
+                "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
@@ -45,8 +45,8 @@
     ],
     "langcode": [
         {
-            "value": "zh-hans",
-            "lang": "zh-hans"
+            "value": "en",
+            "lang": "en"
         }
     ],
     "type": [
@@ -70,7 +70,7 @@
                         "value": "7ced0c8e-9228-49b9-8b2e-658d32db3645"
                     }
                 ],
-                "lang": "zh-hans"
+                "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/commerce_product_variation\/size_color\/product_id": [
@@ -153,8 +153,8 @@
     ],
     "title": [
         {
-            "value": "Hundreds Hoopin T-Shirt - M\u7801, \u9ed1\u8272",
-            "lang": "zh-hans"
+            "value": "Hundreds Hoopin T-Shirt - M size, Black color",
+            "lang": "en"
         }
     ],
     "price": [
@@ -166,27 +166,27 @@
     "status": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ],
     "created": [
         {
             "value": "2017-11-08T02:59:00+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
             "value": "2017-11-08T03:00:01+00:00",
-            "lang": "zh-hans",
+            "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
-            "lang": "zh-hans"
+            "lang": "en"
         }
     ]
 }

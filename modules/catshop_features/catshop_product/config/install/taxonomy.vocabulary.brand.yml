@@ -1,10 +1,10 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-name: 品牌
+name: Brand
 vid: brand
-description: 品牌
+description: Brand
 hierarchy: 0
 weight: 0

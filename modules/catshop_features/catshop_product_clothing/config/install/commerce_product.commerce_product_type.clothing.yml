@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -6,8 +6,8 @@ dependencies:
   module:
     - commerce_product
 id: clothing
-label: 服饰
-description: 服饰
+label: Clothing
+description: Subtype of product for clothing.
 variationType: size_color
 injectVariationFields: true
 traits: {  }

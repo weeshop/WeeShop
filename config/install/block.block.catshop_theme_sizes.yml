@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:size'
 settings:
   id: 'facet_block:size'
-  label: 尺码
+  label: Sizes
   provider: facets
   label_display: visible
 visibility:

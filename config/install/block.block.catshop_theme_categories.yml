@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:categories'
 settings:
   id: 'facet_block:categories'
-  label: 分类
+  label: Categories
   provider: facets
   label_display: visible
 visibility:

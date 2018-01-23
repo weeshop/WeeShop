@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,8 +14,8 @@ dependencies:
     - commerce_product
     - search_api
 id: product_search
-name: 产品搜索
-description: 对产品数据进行全文检索
+name: Product search
+description: Fulltext search for product
 read_only: false
 field_settings:
   title:

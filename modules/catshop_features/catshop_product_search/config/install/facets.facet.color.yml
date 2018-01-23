@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 id: color
-name: 颜色
+name: Color
 url_alias: color
 weight: 0
 min_count: 1

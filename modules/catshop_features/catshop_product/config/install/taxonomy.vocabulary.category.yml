@@ -1,10 +1,10 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-name: 产品分类
+name: Product Category
 vid: category
-description: 网站的产品总分类，显示在首页左侧，以及商品检索页的左侧。
+description: Categories for products.
 hierarchy: 1
 weight: 0

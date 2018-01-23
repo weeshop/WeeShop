@@ -1,10 +1,10 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   module:
     - commerce_price
 currencyCode: CNY
-name: 人民币
+name: RMB
 numericCode: '156'
 symbol: ￥
 fractionDigits: 2

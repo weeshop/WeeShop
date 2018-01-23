@@ -17,7 +17,7 @@ distribution:
   # institutions in a certain country) but also site-specific installation
   # profiles. Note that this language code will also be used when installing
   # the site via Drush.
-  langcode: zh-hans
+  # langcode: zh-hans
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.

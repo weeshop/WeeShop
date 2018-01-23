@@ -1,8 +1,8 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
 id: color
-label: 颜色
+label: Color
 elementType: commerce_product_rendered_attribute

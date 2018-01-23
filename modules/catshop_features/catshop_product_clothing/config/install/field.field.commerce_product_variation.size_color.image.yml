@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: commerce_product_variation.size_color.image
 field_name: image
 entity_type: commerce_product_variation
 bundle: size_color
-label: 图像
+label: Image
 description: ''
 required: true
 translatable: false

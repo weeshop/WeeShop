@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:brands'
 settings:
   id: 'facet_block:brands'
-  label: 品牌
+  label: Brand
   provider: facets
   label_display: visible
 visibility:

@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - commerce_product
 id: size_color
-label: 多尺码，多颜色
+label: Muti-sizes and muti-colors
 orderItemType: default
 generateTitle: true
 traits: {  }

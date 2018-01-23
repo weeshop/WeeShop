@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:color'
 settings:
   id: 'facet_block:color'
-  label: 颜色
+  label: Color
   provider: facets
   label_display: visible
 visibility:

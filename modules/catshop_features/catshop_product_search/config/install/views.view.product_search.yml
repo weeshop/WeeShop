@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ dependencies:
     - image
     - search_api
 id: product_search
-label: 产品搜索
+label: Product Search
 module: views
 description: ''
 tag: ''
@@ -301,7 +301,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 搜索
+            label: Search
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -342,7 +342,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 产品搜索
+      title: Product Search
       header: {  }
       footer: {  }
       empty: {  }

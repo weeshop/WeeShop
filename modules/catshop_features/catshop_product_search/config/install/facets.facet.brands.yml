@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 id: brands
-name: 品牌
+name: Brands
 url_alias: brands
 weight: 0
 min_count: 1

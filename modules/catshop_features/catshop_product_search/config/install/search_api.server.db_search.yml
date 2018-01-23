@@ -1,11 +1,11 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   module:
     - search_api_db
 id: db_search
-name: 数据库全文搜索
-description: 对数据库进行全文搜索
+name: Database fulltext search
+description: Fulltext search of database
 backend: search_api_db
 backend_config:
   database: 'default:default'

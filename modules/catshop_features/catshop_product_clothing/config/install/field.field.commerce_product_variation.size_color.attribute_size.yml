@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ id: commerce_product_variation.size_color.attribute_size
 field_name: attribute_size
 entity_type: commerce_product_variation
 bundle: size_color
-label: 尺码
+label: Categories
 description: ''
 required: true
 translatable: false

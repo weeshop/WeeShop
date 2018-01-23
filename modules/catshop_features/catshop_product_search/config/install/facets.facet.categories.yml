@@ -1,4 +1,4 @@
-langcode: zh-hans
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 id: categories
-name: 分类
+name: Categories
 url_alias: categories
 weight: 0
 min_count: 1

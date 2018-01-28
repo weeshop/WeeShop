@@ -91,6 +91,9 @@ dependencies:
   - devel
   - erd
 
+  # 微信登录功能
+  - social_auth_wechat (>= 8.x-2.x)
+
   # Custom modules
   - catshop_frontpage
   - catshop_product

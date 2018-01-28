@@ -21,4 +21,5 @@ RUN cd /app && composer remove "drupalcommerce/commerce_base" && \
                     "drupal/simple_oauth" \
                     "drupal/openapi" \
                     "drupal/erd" \
-                    "drupal/commerce_shipping" -vvv
+                    "drupal/commerce_shipping" \
+                    "drupal/social_api" "drupal/social_auth" "drupal/social_auth_wechat" "overtrue/wechat:3.x" -vvv

@@ -5,7 +5,7 @@ services:
   drupal:
     image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:latest
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - .:/app/web/profiles/custom/catshop
       # this takes advantage of the feature in Docker that a new anonymous

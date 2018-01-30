@@ -1,5 +1,5 @@
 {
-    "name": "kent/catshop",
+    "name": "catworking/catshop",
     "authors": [
         {
             "name": "solody",
@@ -22,15 +22,5 @@
         "drupal/social_auth": "^1.0",
         "drupal/social_auth_wechat": "2.x-dev",
         "overtrue/wechat": "3.x"
-    },
-    "repositories": {
-        "0": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
     }
 }

@@ -18,8 +18,8 @@
         "drupal/restui": "^1.15",
         "drupal/search_api": "~1.0",
         "drupal/simple_oauth": "^3.4",
-        "drupal/social_api": "^1.1",
-        "drupal/social_auth": "^1.0",
+        "drupal/social_api": "2.x-dev",
+        "drupal/social_auth": "2.x-dev",
         "drupal/social_auth_wechat": "2.x-dev",
         "overtrue/wechat": "3.x"
     }

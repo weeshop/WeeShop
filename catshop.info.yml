@@ -92,7 +92,7 @@ dependencies:
   - erd
 
   # 微信登录功能
-  - social_auth_wechat (>= 8.x-2.x)
+  - social_auth_wechat
 
   # Custom modules
   - catshop_frontpage

@@ -6,6 +6,23 @@
             "email": "12943125@qq.com"
         }
     ],
+    "require": {
+        "drupal/commerce_shipping": "^2.0@beta",
+        "drupal/default_content": "^1.0@alpha",
+        "drupal/devel": "1.x-dev",
+        "drupal/erd": "^1.0@beta",
+        "drupal/facets": "1.x-dev",
+        "drupal/features": "^3.5",
+        "drupal/file_entity": "2.x-dev",
+        "drupal/openapi": "^1.0@alpha",
+        "drupal/restui": "^1.15",
+        "drupal/search_api": "~1.0",
+        "drupal/simple_oauth": "^3.4",
+        "drupal/social_api": "^1.1",
+        "drupal/social_auth": "^1.0",
+        "drupal/social_auth_wechat": "2.x-dev",
+        "overtrue/wechat": "3.x"
+    },
     "repositories": {
         "0": {
             "type": "composer",

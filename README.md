@@ -29,27 +29,18 @@
 使用docker-compose启动容器（请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)）
 ```bash
 cd path-to-catshop
+
+# 启动docker容器
 docker-compose up -d --force-recreate --remove-orphans --build
-```
 
-安装示例数据
-```bash
 # 进入docker容器
-docker-compose exec drupal bash -T
-
-# 进入应用程序目录
-cd /app/web
-# 初始化数据目录
-cp -r /app/web/sites_bak/* /app/web/sites
+docker-compose exec server bash -T
 
 # 安装实例
-su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install catshop  --langcode='en'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='MySite'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
-
-# 通过drush的方式安装示例数据模块
-su - application -c "cd /app/web/sites && /usr/local/bin/drupal moi catshop_demo"
+su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install commerce_base --langcode='zh-hans'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='CatShop'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
 ```
 
-浏览器访问 `http://localhost:8080`
+浏览器访问 `http://localhost`
 
 
 ## 重要Issuse 

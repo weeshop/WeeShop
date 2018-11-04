@@ -5,7 +5,7 @@ services:
   proxy:
     build: ./docker/proxy
     depends_on:
-      - admin
+      - server
       - client
     ports:
       - 80:80
@@ -17,7 +17,7 @@ services:
       - ./Client/webapp/dist:/app
     restart: always
     environment:
-      WEB_ALIAS_DOMAIN: client.catshop.com
+      WEB_ALIAS_DOMAIN: m.catshop.com
       WEB_DOCUMENT_INDEX: index.html
 
   server:
@@ -45,3 +45,4 @@ services:
     environment:
       TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: test

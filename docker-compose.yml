@@ -14,7 +14,7 @@ services:
   client:
     image: webdevops/nginx:alpine
     volumes:
-      - ./Client/webapp/dist:/app
+      - ./client/webapp/dist:/app
     restart: always
     environment:
       WEB_ALIAS_DOMAIN: m.catshop.com

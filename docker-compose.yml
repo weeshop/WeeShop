@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+
+  proxy:
+    build: ./docker/proxy
+    depends_on:
+      - admin
+      - client
+    ports:
+      - 80:80
+    restart: always
+
+  client:
+    image: webdevops/nginx:alpine
+    volumes:
+      - ./Client/webapp/dist:/app
+    restart: always
+    environment:
+      WEB_ALIAS_DOMAIN: client.catshop.com
+      WEB_DOCUMENT_INDEX: index.html
+
+  server:
+    image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:prod
+    volumes:
+      - ./commerce:/app
+    restart: always
+    environment:
+      WEB_ALIAS_DOMAIN: www.catshop.com
+      TZ: Asia/Shanghai
+      PHP_DATE_TIMEZONE: Asia/Shanghai
+      WEB_DOCUMENT_ROOT: /app/web
+      XDEBUG_REMOTE_CONNECT_BACK: 0
+      XDEBUG_REMOTE_HOST: docker.for.mac.host.internal
+      XDEBUG_REMOTE_AUTOSTART: 1
+      #php.opcache.enable: 0
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3389:3306"
+    volumes:
+      - "./data/mysql/data:/var/lib/mysql"
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 123

@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - commerce_product
-id: size
-label: Size
-elementType: commerce_product_rendered_attribute

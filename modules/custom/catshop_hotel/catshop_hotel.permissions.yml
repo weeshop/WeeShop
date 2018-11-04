@@ -1,4 +1,0 @@
-'administer catshop_hotel_type':
-  title: 'Administer hotel types'
-  description: 'Maintain the types of hotels available and the fields that are associated with those types.'
-  'restrict access': TRUE

@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - commerce_product
-id: color
-label: Color
-elementType: commerce_product_rendered_attribute

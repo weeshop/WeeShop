@@ -1,5 +1,0 @@
-catshop_home:
-  version: VERSION
-  css:
-    theme:
-      css/catshop_home.css: {}

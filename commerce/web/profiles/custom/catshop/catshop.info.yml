@@ -1,0 +1,70 @@
+name: CatShop
+type: profile
+core: 8.x
+description: 'CatShop distribution base on drupal commerce.'
+distribution:
+  name: 'CatShop'
+dependencies:
+  # Standard
+  - node
+  - history
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - taxonomy
+  - dblog
+  - search
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  - tour
+  - automated_cron
+
+  # Commerce
+  - address
+  - entity
+  - profile
+  - inline_entity_form
+  - state_machine
+  - commerce
+  - commerce_log
+  - commerce_checkout
+  - commerce_cart
+  - commerce_order
+  - commerce_product
+  - commerce_price
+  - commerce_store
+  - commerce_payment
+  - commerce_promotion
+  - commerce_tax
+  
+  # Contrib
+  - admin_toolbar
+  - swiftmailer
+
+  # adminimal_theme toolbar fix module
+  - adminimal_admin_toolbar
+themes:
+  - bartik
+  - seven
+  - adminimal_theme

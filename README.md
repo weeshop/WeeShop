@@ -26,9 +26,18 @@
 
 ## 快速体验
 
-使用docker-compose启动容器（请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)）
+本项目使用Docker进行快速部署实例，`无须PHP环境`，您的电脑啥都不需要安装，只需要安装`Docker`服务和`docker-compose`即可。
+
+如果docker镜像下载慢，请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)）
+
+先决条件：
+- 确保本机80端口没有被占用。
+- 把 `www.catshop.com` 指向本机。（暂不支持使用其他域名）
+
 ```bash
-cd path-to-catshop
+# 用git下载代码到当前目录
+git clone https://github.com/catworking/catshop.git
+cd catshop
 
 # 启动docker容器
 docker-compose up -d --force-recreate --remove-orphans --build
@@ -36,11 +45,17 @@ docker-compose up -d --force-recreate --remove-orphans --build
 # 进入docker容器
 docker-compose exec server bash -T
 
+# 进入容器后，在容器内继续运行下面的命令
+
+# 安装composer依赖
+cd /app/commerce
+composer install
+
 # 安装实例
 su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install catshop --langcode='zh-hans'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='CatShop'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
 ```
 
-浏览器访问 `http://localhost`
+浏览器访问 `http://www.catshop.com`
 
 
 ## 重要Issuse 

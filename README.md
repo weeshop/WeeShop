@@ -48,7 +48,7 @@ docker-compose exec server bash -T
 # 进入容器后，在容器内继续运行下面的命令
 
 # 安装composer依赖
-cd /app/commerce
+cd /app
 composer install
 
 # 安装实例

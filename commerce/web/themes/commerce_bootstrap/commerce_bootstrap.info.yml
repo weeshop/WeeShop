@@ -1,0 +1,36 @@
+# core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Bootstrap for Drupal Commerce'
+description: 'Bootstrap base theme for Drupal Commerce.'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries-override:
+  commerce_checkout/form:
+    css:
+      theme:
+        css/commerce_checkout.form.css: false
+
+libraries-extend:
+  commerce_authnet/form-authnet:
+    - commerce_bootstrap/commerce_authnet_extend
+
+# Information added by Drupal.org packaging script on 2018-07-27
+version: '8.x-1.0-beta1'
+core: '8.x'
+project: 'commerce_bootstrap'
+datestamp: 1532725987

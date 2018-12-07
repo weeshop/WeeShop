@@ -1,4 +1,167 @@
-commerce_base.front_page:
+# 一级菜单
+catshop.front_page:
   title: 'Home'
   route_name: '<front>'
   menu_name: main
+  weight: 10
+
+catshop.shopping:
+  title: 'Shopping'
+  route_name: '<front>'
+  menu_name: main
+  weight: 20
+  expanded: true
+
+catshop.selection:
+  title: 'Selection'
+  route_name: '<front>'
+  menu_name: main
+  weight: 30
+  expanded: true
+
+catshop.promotion:
+  title: 'Promotion'
+  route_name: '<front>'
+  menu_name: main
+  weight: 40
+
+catshop.blog:
+  title: 'Blog'
+  route_name: '<front>'
+  menu_name: main
+  weight: 50
+
+
+# 购物的二级菜单
+catshop.shopping.category1:
+  title: 'Category-1'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.shopping
+  expanded: true
+catshop.shopping.category2:
+  title: 'Category-2'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.shopping
+  expanded: true
+catshop.shopping.category3:
+  title: 'Category-3'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.shopping
+  expanded: true
+
+# 精选二级菜单
+catshop.selection.man:
+  title: 'Man'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.selection
+catshop.selection.woman:
+  title: 'Woman'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.selection
+
+# 三级菜单
+catshop.shopping.category1.one:
+  title: 'Category-1-1'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.shopping.category1
+catshop.shopping.category2.two:
+  title: 'Category-2-2'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.shopping.category2
+catshop.shopping.category3.thr:
+  title: 'Category-3-3'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.shopping.category3
+
+
+# 移动版主菜单
+# 一级菜单
+catshop.m.front_page:
+  title: 'Home'
+  route_name: '<front>'
+  menu_name: main_m
+  weight: 10
+
+catshop.m.shopping:
+  title: 'Shopping'
+  route_name: '<front>'
+  menu_name: main_m
+  weight: 20
+  expanded: true
+
+catshop.m.selection:
+  title: 'Selection'
+  route_name: '<front>'
+  menu_name: main_m
+  weight: 30
+  expanded: true
+
+catshop.m.promotion:
+  title: 'Promotion'
+  route_name: '<front>'
+  menu_name: main_m
+  weight: 40
+
+catshop.m.blog:
+  title: 'Blog'
+  route_name: '<front>'
+  menu_name: main_m
+  weight: 50
+
+
+# 购物的二级菜单
+catshop.m.shopping.category1:
+  title: 'Category-1'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.shopping
+  expanded: true
+catshop.m.shopping.category2:
+  title: 'Category-2'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.shopping
+  expanded: true
+catshop.m.shopping.category3:
+  title: 'Category-3'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.shopping
+  expanded: true
+
+# 精选二级菜单
+catshop.m.selection.man:
+  title: 'Man'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.selection
+catshop.m.selection.woman:
+  title: 'Woman'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.selection
+
+# 三级菜单
+catshop.m.shopping.category1.one:
+  title: 'Category-1-1'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.shopping.category1
+catshop.m.shopping.category2.two:
+  title: 'Category-2-2'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.shopping.category2
+catshop.m.shopping.category3.thr:
+  title: 'Category-3-3'
+  route_name: '<front>'
+  menu_name: main
+  parent: catshop.m.shopping.category3

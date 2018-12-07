@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for an image field widget.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - data: Render elements of the image widget.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_image_widget()
+ */
+#}
+{% if data.preview %}
+  <div{{ attributes.addClass('row') }}>
+    <div class="preview col-sm-2">
+      {{ data.preview }}
+    </div>
+    <div class="data col-sm-10">
+      {# Render widget data without the image preview that was output already. #}
+      {{ data|without('preview') }}
+    </div>
+  </div>
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ data }}
+  </div>
+{% endif %}

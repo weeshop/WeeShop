@@ -1,0 +1,7 @@
+{
+  "name": "drupal-bootstrap",
+  "version": "8.3.x-dev",
+  "license": "GPL+2",
+  "homepage": "https://www.drupal.org/project/bootstrap",
+  "private": true
+}

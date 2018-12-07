@@ -1,0 +1,102 @@
+/**
+ * Form styles.
+ */
+
+// Checkboxes / radio buttons.
+.checkbox, .radio {
+  // Remove top/bottom margins when in table context, because this is most
+  // likely a tableselect checkbox element.
+  table &.form-no-label {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+// Browsers do not recognize pseudo :after selectors, we must create a wrapper
+// around the select element to style it properly.
+// $see http://stackoverflow.com/q/21103542
+.select-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  .form-inline & {
+    width: auto;
+  }
+  .input-group & {
+    display: table-cell;
+    // Reset rounded corners
+    &:first-child .form-control:first-child {
+      @include border-left-radius($border-radius-base);
+    }
+    &:last-child .form-control:first-child {
+      @include border-right-radius($border-radius-base);
+    }
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 1;
+    padding-right: 2em;
+    &::-ms-expand {
+      opacity: 0;
+    }
+  }
+  &:after {
+    color: $brand-primary;
+    content: '▼';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: -.5em;
+    padding-right: .5em;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+
+    // Use a more stylish icon if the theme uses glyphicons.
+    .has-glyphicons & {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\e114'; // .glyphicon-chevron-down
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+    }
+    .has-error & {
+      color: $state-danger-text;
+    }
+    .has-success & {
+      color: $state-success-text;
+    }
+    .has-warning & {
+      color: $state-warning-text;
+    }
+  }
+}
+
+// Use CSS/SVG image for required mark.
+// @see https://www.drupal.org/node/2152217
+// @see https://www.drupal.org/node/2274631
+.form-required:after {
+  background-image: url(../images/required.svg);
+  background-size: 10px 7px;
+  content:"";
+  display: inline-block;
+  line-height:1;
+  height: 7px;
+  width: 10px;
+}
+
+// Form action buttons.
+.form-actions {
+  .btn, .btn-group {
+    margin-right: 10px;
+  }
+  .btn-group {
+    .btn {
+      margin-right: 0;
+    }
+  }
+}

@@ -57,6 +57,10 @@ su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install cat
 
 浏览器访问 `http://www.catshop.com`
 
+开启开发模式
+```bash
+su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:mode -vvv dev"
+```
 
 ## 重要Issuse 
 - Docker for windows, volume默认权限是755，而无法更改 [#issues39](https://github.com/docker/for-win/issues/39)

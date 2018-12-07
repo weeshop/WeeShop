@@ -1,0 +1,95 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a Bootstrap Modal component.
+ *
+ * Available variables:
+ * - attributes: Attributes for the outer modal div.
+ * - body: The body of the modal.
+ * - body_attributes: Attributes for the modal body div.
+ * - close_button: Flag indicating whether or not to show the close button in
+ *   the header.
+ * - content_attributes: Attributes for the modal content div.
+ * - description: (optional) A list of description properties containing:
+ *    - content: (optional) A description of the modal, may not be set.
+ *    - attributes: (optional) A list of HTML attributes to apply to the
+ *      modal description div. Will only be set when description is set.
+ *    - position: (optional) A display setting that can have these values:
+ *      - before: The description is displayed before the body. This is the
+ *        default value.
+ *      - after: The description is display after the body.
+ *      - invisible: The description is displayed after the element, hidden
+ *        visually but available to screen readers.
+ * - dialog_attributes: Attributes for the inner modal div.
+ * - footer: The footer of the modal.
+ * - footer_attributes: Attributes for the modal footer div.
+ * - header_attributes: Attributes for the modal header div.
+ * - size: The size of the modal. Can be empty, "modal-sm" or "modal-lg".
+ * - title: The title for the modal.
+ * - title_attributes: Attributes for the modal title.
+ *
+ * @ingroup templates
+ */
+#}
+{% if theme.settings.modal_enabled %}
+  {{ attach_library('bootstrap/modal') }}
+  {%
+    set classes = [
+      'modal',
+      theme.settings.modal_animation ? 'fade',
+    ]
+  %}
+  <div{{ attributes.addClass(classes) }} tabindex="-1" role="dialog">
+    {%
+      set dialog_classes = [
+        'modal-dialog',
+        size ? size|clean_class,
+      ]
+    -%}
+    <div{{ dialog_attributes.addClass(dialog_classes) }} role="document">
+      {% set content_classes = ['modal-content'] -%}
+      <div{{ content_attributes.addClass(content_classes) }}>
+        {% if title -%}
+          {% block title -%}
+            {% set header_classes = ['modal-header'] -%}
+            {% set title_classes = ['modal-title'] -%}
+            <div{{ header_attributes.addClass(header_classes) }}>
+              {% if close_button -%}
+                <button type="button" class="close" data-dismiss="modal" aria-label="{{ 'Close'|t }}"><span aria-hidden="true">&times;</span></button>
+              {% endif -%}
+              <h4{{ title_attributes.addClass(title_classes) }}>{{ title }}</h4>
+            </div>
+          {% endblock -%}
+        {% endif -%}
+
+        {% block body -%}
+          {% set body_classes = ['modal-body'] -%}
+          {%
+            set description_classes = [
+              'help-block',
+              description and description.position == 'invisible' ? 'sr-only',
+            ]
+          %}
+          <div{{ body_attributes.addClass(body_classes) }}>
+            {% if description and description.position == 'before' %}
+              <p{{ description.attributes.addClass(description_classes) }}>{{ description.content }}</p>
+            {% endif %}
+            {{ body }}
+            {% if description and description.position == 'after' or description.position == 'invisible' %}
+              <p{{ description.attributes.addClass(description_classes) }}>{{ description.content }}</p>
+            {% endif %}
+          </div>
+        {% endblock -%}
+
+        {% if footer is not empty -%}
+          {% block footer -%}
+            {% set footer_classes = ['modal-footer'] -%}
+            <div{{ footer_attributes.addClass(footer_classes) }}>
+              {{ footer }}
+            </div>
+          {% endblock -%}
+        {% endif -%}
+      </div>
+    </div>
+  </div>
+{% endif %}

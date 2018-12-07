@@ -1,0 +1,149 @@
+<?php
+
+/**
+ * @file
+ * The primary PHP file for the Drupal Bootstrap base theme.
+ *
+ * This file should only contain light helper functions and point to stubs in
+ * other files containing more complex functions.
+ *
+ * The stubs should point to files within the `./includes` directory named after
+ * the function itself minus the theme prefix. If the stub contains a group of
+ * functions, then please organize them so they are related in some way and name
+ * the file appropriately to at least hint at what it contains.
+ *
+ * All [pre]process functions, theme functions and template files lives inside
+ * the `./templates` directory. This is a highly automated and complex system
+ * designed to only load the necessary files when a given theme hook is invoked.
+ *
+ * Visit this project's official documentation site https://drupal-bootstrap.org
+ * or the markdown files inside the `./docs` directory.
+ *
+ * @see bootstrap_theme()
+ * @see \Drupal\bootstrap\Registry
+ */
+
+use Drupal\bootstrap\Bootstrap;
+
+/**
+ * Initialize the active theme.
+ */
+Bootstrap::initialize();
+
+/**
+ * {@inheritdoc}
+ *
+ * @see hook_bootstrap_colorize_text_alter()
+ */
+function bootstrap_bootstrap_colorize_text_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see hook_bootstrap_iconize_text_alter()
+ */
+function bootstrap_bootstrap_iconize_text_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see hook_bootstrap_layouts_class_options_alter()
+ */
+function bootstrap_bootstrap_layouts_class_options_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Plugin\Alter\ElementInfo::alter()
+ */
+function bootstrap_element_info_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Theme::alter()
+ */
+function bootstrap_form_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Plugin\Form\SystemThemeSettings::alterForm()
+ */
+function bootstrap_form_system_theme_settings_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ */
+function bootstrap_js_settings_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Plugin\Alter\LibraryInfo::alter()
+ */
+function bootstrap_library_info_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Plugin\Alter\PageAttachments::alter()
+ */
+function bootstrap_page_attachments_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Bootstrap::preprocess()
+ */
+function bootstrap_preprocess(&$variables, $hook, $info) {
+  Bootstrap::preprocess($variables, $hook, $info);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Bootstrap::getInfo()
+ */
+function bootstrap_theme() {
+  return Bootstrap::getThemeHooks();
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Plugin\Alter\ThemeRegistry::alter()
+ *
+ * @todo Remove once a proper replacement for the theme.registry service can be
+ * created in a bootstrap_core sub-module.
+ */
+function bootstrap_theme_registry_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @see \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions::alter()
+ */
+function bootstrap_theme_suggestions_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
+  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+}

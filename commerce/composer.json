@@ -47,6 +47,7 @@
         "drupal/adminimal_theme": "~1.0"
     },
     "require-dev": {
+        "drupal/twig_xdebug": "^1.0",
         "webflo/drupal-core-require-dev": "^8.6.0"
     },
     "conflict": {

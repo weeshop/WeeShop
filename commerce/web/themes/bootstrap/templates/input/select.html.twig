@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Theme override for a select element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the select tag.
+ * - input_group: Flag to display as an input group.
+ * - options: The option element children.
+ * - prefix: Markup to display before the input element.
+ * - suffix: Markup to display after the input element.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_select()
+ */
+#}
+{% spaceless %}
+  {% if input_group %}
+    <div class="input-group">
+  {% endif %}
+
+  {% if prefix %}
+    {{ prefix }}
+  {% endif %}
+
+  {# Browsers do not recognize pseudo :after selectors, we must create a wrapper
+   # around the select element to style it properly.
+   # @see http://stackoverflow.com/q/21103542
+   #}
+  {% if not attributes.offsetExists('multiple') %}
+    <div class="select-wrapper">
+  {% endif %}
+    {% set classes = ['form-control'] %}
+    <select{{ attributes.addClass(classes) }}>
+      {% for option in options %}
+        {% if option.type == 'optgroup' %}
+          <optgroup label="{{ option.label }}">
+            {% for sub_option in option.options %}
+              <option
+                value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
+            {% endfor %}
+          </optgroup>
+        {% elseif option.type == 'option' %}
+          <option
+            value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  {% if not attributes.offsetExists('multiple') %}
+    </div>
+  {% endif %}
+
+  {% if suffix %}
+    {{ suffix }}
+  {% endif %}
+
+  {% if input_group %}
+    </div>
+  {% endif %}
+{% endspaceless %}

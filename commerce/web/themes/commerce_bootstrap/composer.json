@@ -1,0 +1,16 @@
+{
+    "name": "drupal/commerce_bootstrap",
+    "description": "Bootstrap base theme for Drupal Commerce.",
+    "type": "drupal-theme",
+    "license": "GPL-2.0",
+    "homepage": "http://drupal.org/project/commerce_bootstrap",
+    "require": {
+        "drupal/bootstrap": "^3.5"
+    },
+    "support": {
+      "docs": "http://drupal-bootstrap.org",
+      "issues": "https://www.drupal.org/project/issues/commerce_bootstrap",
+      "irc": "irc://irc.freenode.org/drupal-commerce",
+      "source": "http://cgit.drupalcode.org/commerce_bootstrap"
+    }
+  }

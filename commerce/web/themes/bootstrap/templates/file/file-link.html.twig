@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ * - icon: An icon.
+ * - icon_only: Flag to display only the icon and not the label.
+ * - icon_position: Where an icon should be displayed.
+ *
+ * @ingroup templates
+ *
+ * @see \Drupal\bootstrap\Plugin\Preprocess\FileLink::preprocessVariables
+ */
+#}
+{% spaceless %}
+  {%
+    set classes = [
+      icon_only ? 'icon-only',
+      not icon_only ? 'icon-' ~ icon_position|clean_class
+    ]
+  %}
+  <span{{ attributes.addClass(classes) }}>
+    {% if icon_only %}
+      <span class="file-icon">{{ icon }}</span>
+      <span class="sr-only">
+        <span class="file-link">{{ link }}</span>
+        <span class="file-size">{{ file_size }}</span>
+      </span>
+    {% else %}
+      {% if icon_position == 'after' %}
+        <span class="file-link">{{ link }}</span><span class="file-size">{{ file_size }}</span><span class="file-icon">{{ icon }}</span>
+      {% else %}
+        <span class="file-icon">{{ icon }}</span><span class="file-link">{{ link }}</span><span class="file-size">{{ file_size }}</span>
+      {% endif %}
+    {% endif %}
+  </span>
+{% endspaceless %}

@@ -1,0 +1,80 @@
+# core: 8.x
+type: theme
+base theme: false
+
+name: 'Bootstrap'
+description: 'Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'bootstrap/theme'
+
+libraries-extend:
+  core/drupal.ajax:
+    - bootstrap/drupal.ajax
+  core/drupal.autocomplete:
+    - bootstrap/drupal.autocomplete
+  core/drupal.dialog.ajax:
+    - bootstrap/drupal.dialog.ajax
+  core/drupal.form:
+    - bootstrap/drupal.form
+  core/drupal.progress:
+    - bootstrap/drupal.progress
+  core/drupal.states:
+    - bootstrap/drupal.states
+  core/drupal.tabledrag:
+    - bootstrap/drupal.tabledrag
+  image_widget_crop/cropper.integration:
+    - bootstrap/image_widget_crop
+  views/views.ajax:
+    - bootstrap/views.ajax
+
+libraries-override:
+  core/drupal.batch: bootstrap/drupal.batch
+  core/drupal.dropbutton: bootstrap/dropdown
+  core/drupal.vertical-tabs: bootstrap/drupal.vertical-tabs
+  filter/drupal.filter: bootstrap/drupal.filter
+  system/admin: false
+  text/drupal.text: bootstrap/drupal.text
+
+# Remove individual stylesheets.
+  system/base:
+    css:
+      component:
+        css/components/ajax-progress.module.css: false
+        css/components/autocomplete-loading.module.css: false
+        css/components/tabledrag.module.css: false
+
+  file/drupal.file:
+    css:
+      theme:
+        css/file.admin.css: false
+
+  filter/drupal.filter.admin:
+    css:
+      theme:
+        css/filter.admin.css: false
+
+  node/drupal.node.preview:
+    css:
+      theme:
+        css/node.preview.css: false
+
+# Information added by Drupal.org packaging script on 2018-11-12
+version: '8.x-3.14'
+core: '8.x'
+project: 'bootstrap'
+datestamp: 1542006206

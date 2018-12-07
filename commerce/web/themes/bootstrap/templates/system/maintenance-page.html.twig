@@ -1,0 +1,64 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{% set navbar_attributes = create_attribute() %}
+{# Navbar #}
+{% block navbar %}
+{%
+  set navbar_classes = [
+    'navbar',
+    theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+    theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+  ]
+%}
+<header {{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+  <div class="{{ container }}">
+    <div class="row">
+      <section class="col-sm-12">
+        <div class="navbar-header">
+          {% if logo %}
+            <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+              <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+            </a>
+          {% endif %}
+
+          {% if site_name or site_slogan %}
+              {% if site_name %}
+                 <a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+              {% endif %}
+              {% if site_slogan %}
+                  <p class="navbar-text">{{ site_slogan }}</p>
+              {% endif %}
+          {% endif %}
+        </div>
+      </section>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{# Main #}
+<main role="main" class="main-container {{ container }}">
+  <div class="row">
+    <section class="col-sm-12">
+      {% if title %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+
+      {# Content #}
+      {% block content %}
+        <a id="main-content"></a>
+        {{ page.content }}
+      {% endblock %}
+    </section>
+  </div>
+</main>

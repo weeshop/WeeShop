@@ -21,7 +21,7 @@ services:
       WEB_DOCUMENT_INDEX: index.html
 
   server:
-    image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:prod
+    image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:dev
     volumes:
       - ./commerce:/app
     restart: always
@@ -31,7 +31,7 @@ services:
       PHP_DATE_TIMEZONE: Asia/Shanghai
       WEB_DOCUMENT_ROOT: /app/web
       XDEBUG_REMOTE_CONNECT_BACK: 0
-      XDEBUG_REMOTE_HOST: docker.for.mac.host.internal
+      XDEBUG_REMOTE_HOST: host.docker.internal
       XDEBUG_REMOTE_AUTOSTART: 1
       #php.opcache.enable: 0
 

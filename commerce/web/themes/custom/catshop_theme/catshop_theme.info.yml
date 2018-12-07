@@ -1,0 +1,27 @@
+core: 8.x
+type: theme
+base theme: false
+
+name: 'CatShop'
+description: 'CatShop内建的简约主题。'
+package: 'CatShop'
+
+logo: images/logo.png
+
+regions:
+  branding: '品牌'
+  navigation: '导航栏'
+  navigation_mobile: '导航栏（移动版）'
+  cart_icon: '购物车图标'
+  tools: '工具栏'
+  header: '头部'
+  highlighted: '高亮消息区'
+  content: '内容'
+  footer: '底部'
+  page_top: '页顶'
+  page_bottom: '页脚'
+
+libraries:
+  - catshop_theme/default
+  - catshop_theme/language_select
+

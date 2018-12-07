@@ -1,0 +1,44 @@
+/**
+ * AJAX (throbber) styling.
+ */
+
+// @todo This should probably be it's own mixin/component?
+@keyframes glyphicon-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+.glyphicon-spin {
+  display: inline-block;
+  animation: glyphicon-spin 1s infinite linear;
+}
+a .glyphicon-spin {
+  display: inline-block;
+  text-decoration: none;
+}
+
+html.js {
+  .btn .ajax-throbber {
+    margin-left: .5em;
+    margin-right: -.25em;
+  }
+
+  .form-item .input-group-addon {
+    .glyphicon {
+      color: @gray-light;
+      opacity: .5;
+      transition: 150ms color, 150ms opacity;
+      &.glyphicon-spin {
+        color: @brand-primary;
+        opacity: 1;
+      }
+    }
+    .input-group-addon {
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  // Hide empty wrappers from AJAX/Field APIs.
+  .ajax-new-content:empty {
+    display: none !important;
+  }
+}

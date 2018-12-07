@@ -1,0 +1,51 @@
+/**
+ * jQuery UI autocomplete widget style overrides.
+ *
+ * @todo Remove once jQuery UI is no longer used?
+ */
+
+// Mimics .dropdown-menu styles.
+.ui-autocomplete {
+  background: @dropdown-bg;
+  background-clip: padding-box;
+  border: 1px solid @dropdown-fallback-border;
+  border: 1px solid @dropdown-border;
+  border-radius: @border-radius-base;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  color: inherit;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  list-style: none;
+  min-width: 160px;
+  padding: 5px 0;
+  text-align: left;
+  z-index: @zindex-dropdown;
+
+  .ui-menu-item {
+    border: 0;
+    border-radius: 0;
+    clear: both;
+    color: @dropdown-link-color;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    line-height: @line-height-base;
+    margin: 0;
+    outline: 0;
+    padding: 3px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &.ui-state-hover {
+      background: @dropdown-link-hover-bg;
+      color: @dropdown-link-hover-color;
+    }
+
+    &.ui-state-active, &.ui-state-focus {
+      background: @dropdown-link-active-bg;
+      color: @dropdown-link-active-color;
+    }
+
+  }
+
+}

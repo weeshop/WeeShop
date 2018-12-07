@@ -1,0 +1,110 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
+ */
+#}
+{% import _self as menus %}
+
+{% set attrs_ul = create_attribute() %}
+{% set attrs_lv1_li = { 'class':['nav-item']} %}
+{% set attrs_lv1_a = { 'class':['nav-link', 'text-uppercase']} %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes) }}
+
+
+{% macro menu_links(items, attributes) %}
+  {% import _self as menus %}
+  {% if items %}
+
+    <ul{{ create_attribute().addClass(['navbar-nav']) }}>
+
+    {% for item in items %}
+
+      {% if item.below %}
+        <li{{ item.attributes.addClass(['nav-item', 'dropdown', 'mega-dropdown']) }}>
+      {% else %}
+        <li{{ item.attributes.addClass(['nav-item']) }}>
+      {% endif %}
+
+      {% if item.below %}
+        {% set has_l3 = false %}
+        {% for below_item in item.below %}
+          {% if below_item.below %}
+            {% set has_l3 = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if has_l3 %}
+          {{ link(item.title, item.url, { 'class':['nav-link', 'text-uppercase', 'dropdown-toggle']}) }}
+        {% else %}
+          {{ link(item.title, item.url, { 'class':['nav-link', 'text-uppercase']}) }}
+        {% endif %}
+        <span class="menu_arrow flaticon-down-arrow-1"></span>
+
+        {{ menus.menu_links_level2(item.below, attributes, has_l3) }}
+      {% else %}
+        {{ link(item.title, item.url, { 'class':['nav-link', 'text-uppercase']}) }}
+      {% endif %}
+
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% macro menu_links_level2(items, attributes, has_l3) %}
+  {% import _self as menus %}
+  {% if items %}
+
+    {% if has_l3 %}
+      <ul{{ create_attribute().addClass(['dropdown-menu', 'megamenu_mobile']) }}>
+    {% else %}
+      <ul{{ create_attribute().addClass(['dropdown-menu', 'mega-dropdown-menu']) }}>
+    {% endif %}
+
+      {% for item in items %}
+
+        {% if item.below %}
+          <li{{ item.attributes.addClass(['w-100', 'nav-item']) }}>
+            {{ link(item.title, item.url) }}
+            <span class="menu_arrow flaticon-down-arrow-1"></span>
+            {% for below_item in item.below %}
+              <ul>
+                {% for below_item in item.below %}
+                  <li class="w-100">{{ link(below_item.title, below_item.url) }}</li>
+                {% endfor %}
+              </ul>
+            {% endfor %}
+          </li>
+        {% else %}
+          <li{{ item.attributes.addClass(['w-100']) }}>
+            {{ link(item.title, item.url) }}
+          </li>
+        {% endif %}
+
+      {% endfor %}
+
+      </ul>
+  {% endif %}
+{% endmacro %}

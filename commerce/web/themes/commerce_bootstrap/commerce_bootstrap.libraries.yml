@@ -1,0 +1,3 @@
+commerce_authnet_extend:
+  js:
+    js/commerce_authnet.extend.js: {}

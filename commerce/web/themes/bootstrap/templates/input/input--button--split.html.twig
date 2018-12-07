@@ -1,0 +1,58 @@
+{% extends "input--button.html.twig" %}
+{#
+/**
+ * @file
+ * Theme suggestion for "button__split" input form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ * - icon: An icon.
+ * - icon_only: Flag to display only the icon and not the label.
+ * - icon_position: Where an icon should be displayed.
+ * - label: button label.
+ * - prefix: Markup to display before the input element.
+ * - suffix: Markup to display after the input element.
+ * - type: The type of input.
+ *
+ * @ingroup templates
+ *
+ * @see \Drupal\bootstrap\Plugin\Preprocess\InputButton
+ * @see \Drupal\bootstrap\Plugin\Preprocess\Input
+ * @see template_preprocess_input()
+ */
+#}
+{% spaceless %}
+  {%
+    set classes = [
+      'btn',
+      type == 'submit' ? 'js-form-submit',
+      icon and icon_position and not icon_only ? 'icon-' ~ icon_position,
+    ]
+  %}
+  {% block input %}
+    {% if icon_only %}
+      <button{{ attributes.addClass(classes, 'icon-only') }}>
+        <span class="sr-only">{{ label }}</span>
+        {{ icon }}
+      </button>
+    {% else %}
+      {% if icon_position == 'after' %}
+        <button{{ attributes.addClass(classes) }}>{{ label }}{{ icon }}</button>{{ children }}
+      {% else %}
+        <button{{ attributes.addClass(classes) }}>{{ icon }}{{ label }}</button>{{ children }}
+      {% endif %}
+    {% endif %}
+    {%
+      set classes = [
+        'btn',
+        'dropdown-toggle',
+      ]
+    %}
+    <button{{ split_button_attributes.addClass(classes) }} type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="caret"></span>
+      <span class="sr-only">{{ 'Toggle Dropdown'|t }}</span>
+    </button>
+    {{ children }}
+  {% endblock %}
+{% endspaceless %}

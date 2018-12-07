@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Default theme implementation for status messages.
+ *
+ * Displays status, error, and warning messages, grouped by type.
+ *
+ * An invisible heading identifies the messages for assistive technology.
+ * Sighted users see a colored box. See http://www.w3.org/TR/WCAG-TECHS/H69.html
+ * for info.
+ *
+ * Add an ARIA label to the contentinfo area so that assistive technology
+ * user agents will better describe this landmark.
+ *
+ * Available variables:
+ * - message_list: List of messages to be displayed, grouped by type.
+ * - status_headings: List of all status types.
+ * - display: (optional) May have a value of 'status' or 'error' when only
+ *   displaying messages of that specific type.
+ * - attributes: HTML attributes for the element, including:
+ *   - class: HTML classes.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_status_messages()
+ */
+#}
+{# Save original attribute classes. This is needed to override in loop below. #}
+{# @see https://www.drupal.org/project/bootstrap/issues/2892936 #}
+{% set classes = attributes.offsetGet('class')|default({}) %}
+{%
+  set status_heading = {
+    'status': 'Status message'|t,
+    'error': 'Error message'|t,
+    'warning': 'Warning message'|t,
+    'info': 'Informative message'|t,
+  }
+%}
+{%
+  set status_classes = {
+    'status': 'success',
+    'error': 'danger',
+    'warning': 'warning',
+    'info': 'info',
+  }
+%}
+{% for type, messages in message_list %}
+  {%
+    set message_classes = [
+      'alert',
+      'alert-' ~ status_classes[type],
+      'alert-dismissible',
+    ]
+  %}
+  {# Reset the attribute classes and then add the message specific classes. #}
+  <div{{ attributes.setAttribute('class', classes).addClass(message_classes).setAttribute('role', 'alert') }}>
+    <button role="button" class="close" data-dismiss="alert" aria-label="{{ 'Close'|t }}"><span aria-hidden="true">&times;</span></button>
+    {% if status_headings[type] %}
+      <h4 class="sr-only">{{ status_headings[type] }}</h4>
+    {% endif %}
+    {% if messages|length > 1 %}
+      <ul class="item-list item-list--messages">
+        {% for message in messages %}
+          <li class="item item--message">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {{ messages|first }}
+    {% endif %}
+  </div>
+{% endfor %}

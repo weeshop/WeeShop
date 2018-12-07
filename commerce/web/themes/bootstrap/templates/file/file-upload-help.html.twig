@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override to display help text for file fields.
+ *
+ * Available variables:
+ * - description: The normal description for this field, specified by the user.
+ * - descriptions: Lines of help text for uploading a file.
+ * - popover: Markup to display the descriptions as a popover instead.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_file_upload_help()
+ */
+#}
+{% if description %}
+  {{ description }}<br>
+{% endif %}
+{% if popover %}
+  {{ popover }}
+{% else %}
+  {{ descriptions|safe_join('<br>') }}
+{% endif %}

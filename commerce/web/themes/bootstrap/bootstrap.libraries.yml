@@ -1,0 +1,158 @@
+attributes:
+  js:
+    js/attributes.js: {}
+  dependencies:
+    - core/jquery
+    - core/underscore
+
+# This is automatically extended with JavaScript and CSS for CDN based themes.
+# If sub-theme uses a starterkit like LESS or SASS, then it should extend this
+# library to add in the compiled CSS and JavaScript sources.
+framework:
+  css: {}
+  js: {}
+  dependencies:
+    - core/jquery
+
+drupal.bootstrap:
+  js:
+    js/drupal.bootstrap.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - bootstrap/framework
+
+# Create a library placeholder for livereload.
+# This is altered dynamically based on the set URL.
+# @see \Drupal\bootstrap\Plugin\Alter\LibraryInfo::alter
+livereload:
+  js:
+    livereload.js: {}
+
+theme:
+  js:
+    js/theme.js: {}
+  dependencies:
+    - bootstrap/drupal.bootstrap
+    - bootstrap/attributes
+
+theme-settings:
+  js:
+    js/theme-settings.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+
+dropdown:
+  js:
+    js/dropdown.js: {}
+  dependencies:
+    - bootstrap/theme
+
+modal:
+  js:
+    js/modal.js: {}
+  dependencies:
+    - bootstrap/theme
+
+modal.jquery.ui.bridge:
+  js:
+    js/modal.jquery.ui.bridge.js: {}
+  dependencies:
+    - bootstrap/modal
+    - core/jquery.ui
+    - core/jquery.ui.widget
+    - core/jquery.ui.draggable
+    - core/jquery.ui.mouse
+    - core/jquery.ui.position
+    - core/jquery.ui.resizable
+
+popover:
+  js:
+    js/popover.js: {}
+  dependencies:
+    - bootstrap/theme
+
+tooltip:
+  js:
+    js/tooltip.js: {}
+  dependencies:
+    - bootstrap/theme
+
+# libraries-extend
+drupal.ajax:
+  js:
+    js/misc/ajax.js: {}
+
+drupal.autocomplete:
+  js:
+    js/misc/autocomplete.js: {}
+
+drupal.dialog.ajax:
+  js:
+    js/misc/dialog.ajax.js: {}
+
+drupal.form:
+  js:
+    js/misc/form.js: {}
+  dependencies:
+    - bootstrap/theme
+
+drupal.progress:
+  js:
+    js/misc/progress.js: {}
+
+drupal.states:
+  js:
+    js/misc/states.js: {}
+
+drupal.tabledrag:
+  js:
+    js/misc/tabledrag.js: {}
+
+image_widget_crop:
+  js:
+    js/modules/image_widget_crop/ImageWidgetCrop.js: {}
+
+views.ajax:
+  js:
+    js/modules/views/ajax_view.js: {}
+
+# libraries-override
+drupal.batch:
+  js:
+    js/misc/batch.js: { cache: false }
+  dependencies:
+    - bootstrap/theme
+    - core/drupal.ajax
+    - core/drupal.progress
+    - core/jquery.once
+
+drupal.filter:
+  version: VERSION
+  js:
+    js/modules/filter/filter.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+drupal.text:
+  js:
+    js/text/text.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
+drupal.vertical-tabs:
+  js:
+    js/misc/vertical-tabs.js: {}
+  dependencies:
+    - bootstrap/theme
+    - core/jquery.once
+    - core/drupal.form
+    - core/matchmedia

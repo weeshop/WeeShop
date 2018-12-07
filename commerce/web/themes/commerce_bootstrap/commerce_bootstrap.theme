@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * @file
+ * Commerce Bootstrap Base Theme
+ */
+
+ /**
+  * Implements hook_form_BASE_FORM_ID_alter().
+  */
+function commerce_bootstrap_form_commerce_order_item_add_to_cart_form_alter(&$form, FormStateInterface $form_state) {
+  // Do not attach input-addons for the add to cart AJAX elements.
+  if (!empty($form['purchased_entity']['widget'][0]['attributes'])) {
+    foreach (\Drupal\Core\Render\Element::children($form['purchased_entity']['widget'][0]['attributes']) as $child) {
+      foreach ($form['purchased_entity']['widget'][0]['attributes'][$child]['#options'] as $key => $option) {
+        $form['purchased_entity']['widget'][0]['attributes'][$child][$key]['#bootstrap_ignore_process'] = TRUE;
+      }
+      $form['purchased_entity']['widget'][0]['attributes'][$child]['#bootstrap_ignore_process'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function commerce_bootstrap_form_commerce_checkout_flow_multistep_default_alter(&$form, FormStateInterface $form_state) {
+  // Do not attach input-addons for the payment method elements.
+  if (!empty($form['payment_information']['payment_method'])) {
+    $form['payment_information']['payment_method']['#bootstrap_ignore_process'] = TRUE;
+    foreach ($form['payment_information']['payment_method']['#options'] as $key => $option) {
+      $form['payment_information']['payment_method'][$key]['#bootstrap_ignore_process'] = TRUE;
+    }
+  }
+}

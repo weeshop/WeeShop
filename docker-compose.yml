@@ -21,7 +21,7 @@ services:
       WEB_DOCUMENT_INDEX: index.html
 
   server:
-    image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:dev
+    image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:prod
     volumes:
       - ./commerce:/app
     restart: always

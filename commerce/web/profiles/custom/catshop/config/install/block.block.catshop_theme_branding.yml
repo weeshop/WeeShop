@@ -4,10 +4,10 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_branding
-theme: bartik
-region: header
+    - catshop_theme
+id: catshop_theme_branding
+theme: catshop_theme
+region: branding
 weight: 0
 provider: null
 plugin: system_branding_block

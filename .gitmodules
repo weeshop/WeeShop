@@ -2,3 +2,7 @@
 	path = commerce/web/modules/custom/enhanced_product
 	url = https://github.com/solody/enhanced_product.git
 	branch = master
+[submodule "commerce/web/modules/custom/enhanced_user"]
+	path = commerce/web/modules/custom/enhanced_user
+	url = https://github.com/solody/enhanced_user.git
+	branch = master

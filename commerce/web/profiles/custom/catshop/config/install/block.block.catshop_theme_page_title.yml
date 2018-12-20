@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
-id: bartik_page_title
-theme: bartik
+    - catshop_theme
+id: catshop_theme_page_title
+theme: catshop_theme
 region: content
 weight: -50
 provider: null

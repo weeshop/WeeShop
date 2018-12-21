@@ -2413,22 +2413,22 @@
         },
         {
             "name": "drupal/enhanced_product",
-            "version": "1.0.0-alpha1",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/enhanced_product",
-                "reference": "8.x-1.0-alpha1"
+                "reference": "8.x-1.0-alpha5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/enhanced_product-8.x-1.0-alpha1.zip",
-                "reference": "8.x-1.0-alpha1",
-                "shasum": "fb90926ac1fd2ead58eb8d1d22c90e357f0bc74f"
+                "url": "https://ftp.drupal.org/files/projects/enhanced_product-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "08c2ef5066d525d2468c5e1e0786d7b6ac68e10a"
             },
             "require": {
                 "drupal/commerce_product": "*",
                 "drupal/core": "*",
-                "drupal/readonly_field_widget": "*"
+                "drupal/readonly_field_widget": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
@@ -2436,8 +2436,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha1",
-                    "datestamp": "1544271180",
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1545386285",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2466,17 +2466,17 @@
         },
         {
             "name": "drupal/enhanced_user",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/enhanced_user",
-                "reference": "8.x-1.0-alpha2"
+                "reference": "8.x-1.0-alpha5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/enhanced_user-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "8b0b1138346551ed4212f1b7aa3b07b6b166140b"
+                "url": "https://ftp.drupal.org/files/projects/enhanced_user-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "5b03ceb29547847aead13682f3650b3b4f9a64ea"
             },
             "require": {
                 "drupal/core": "*",
@@ -2489,8 +2489,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1544411284",
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1545386285",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"

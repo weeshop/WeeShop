@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see template_preprocess_field()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }}>
+  <div id="sync1" class="owl-carousel owl-theme">
+    {% for item in items %}
+      <div{{ item.attributes.addClass(['item']) }}>
+        <div class="product_img">
+          <img src="{{ file_url(item.content['#item'].entity.uri.value) }}" alt="blue_jacket_img" class="vertical_middle img-fluid"/>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div id="sync2" class="owl-carousel owl-theme">
+    {% for item in items %}
+      <div{{ item.attributes.addClass(['item']) }}>
+        <div class="product_img">
+          <img src="{{ file_url(item.content['#item'].entity.uri.value) }}" alt="blue_jacket_img" class="vertical_middle img-fluid"/>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

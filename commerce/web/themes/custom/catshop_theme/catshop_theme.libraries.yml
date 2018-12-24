@@ -22,6 +22,7 @@ default:
     js/bootstrap.min.js: {}
     js/bootstrap-select.min.js: {}
     js/owl.carousel.min.js: {}
+    js/jquery-ui.min.js: {}
     js/jquery.mCustomScrollbar.min.js: {}
     js/cookie.js: {}
     revolution/js/jquery.themepunch.tools.min.js: {}
@@ -42,7 +43,6 @@ default:
     js/jquery.mousewheel.min.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.ui
 
 language_select:
   version: VERSION

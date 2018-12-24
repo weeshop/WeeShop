@@ -139,23 +139,11 @@
   <!-- START Breadcrumb   -->
   <section class="breadcrumb_section">
     <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item text-capitalize"><a href="earthyellow.html">Home</a> <i class="flaticon-arrows-4"></i></li>
-          <li class="breadcrumb-item active text-capitalize">Your Cart</li>
-        </ol>
-      </nav>
-      <h1 class="title_h1 font-weight-normal text-capitalize">Your Cart</h1>
+      {{ page.header }}
     </div>
   </section>
   <!-- END Breadcrumb   -->
-  <!-- START Cart Section   -->
-  <section class="cart_section login_section padding-top-60 padding-bottom-60 check_out">
-    <div class="container">
-      {{ page.content }}
-    </div>
-  </section>
-  <!-- END Cart Section  -->
+  {{ page.content }}
 </div>
 <!-- START Footer -->
 <footer class="wow fadeIn animated">

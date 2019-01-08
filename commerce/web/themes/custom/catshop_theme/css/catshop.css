@@ -18,3 +18,23 @@ form .background-btn {
 .region-highlighted {
     margin: 0 15px;
 }
+
+.status-massages {
+    margin: 1rem 0 2rem 0;
+    padding: 1rem;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+}
+
+.status-massages-error {
+    color: red;
+}
+
+.status-massages-error a {
+    text-decoration: underline;
+    color: red;
+}
+
+.catshop-page-content {
+    padding: 2rem 0;
+}

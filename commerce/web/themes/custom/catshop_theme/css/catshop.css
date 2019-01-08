@@ -1,3 +1,20 @@
 section.block {
     overflow: visible;
 }
+
+.form-actions {
+    padding: 1.5rem 0;
+}
+
+form .background-btn {
+    padding: 10px 19px;
+    cursor: pointer;
+}
+
+.has-featured-top .region-highlighted {
+    background: #f0f0f0;
+    background: rgba(30, 50, 10, 0.08);
+}
+.region-highlighted {
+    margin: 0 15px;
+}

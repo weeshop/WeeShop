@@ -624,8 +624,8 @@
      START Quantity Box
      ====================================== */
     // Quantity Box
-    $(".qty_number").append('<div class="inc button"><span>+</span></div><div class="dec button"><span>-</span></div>');
-    $(".button").on("click", function () {
+    $(".qty_number").append('<div class="inc button qty_number_button"><span>+</span></div><div class="dec button qty_number_button"><span>-</span></div>');
+    $(".qty_number_button").on("click", function () {
         var $button = $(this);
         var oldValue = $button.parent().find("input").val();
         if (oldValue === "") {

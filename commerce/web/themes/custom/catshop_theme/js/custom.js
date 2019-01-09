@@ -1331,42 +1331,6 @@
      ====================================== */
 
     /* ===================================
-     START rotate3d Type
-     ====================================== */
-     $('.mixer_3d').rotate3d({
-                'source': 'src/3d_images/Mixer/mixer',
-                'ext' : '.jpg',
-                'count' : 23,
-                'speed': 23
-              });
-              $('.coffee_3d').rotate3d({
-                'source': 'src/3d_images/Coffee_machine/coffee',
-                'ext' : '.jpg',
-                'count' : 15,
-                'speed': 15
-              });
-              $('.camera_3d').rotate3d({
-                'source': 'src/3d_images/Camera/camera',
-                'ext' : '.jpg',
-                'count' : 35,
-                'speed': 35
-              });
-              $('.watch_3d').rotate3d({
-                'source': 'src/3d_images/Watch/watch',
-                'ext' : '.jpg',
-                'count' : 71,
-                'speed': 15
-              });
-              $('.handheld_3d').rotate3d({
-                'source': 'src/3d_images/handheld/handheld',
-                'ext' : '.jpg',
-                'count' : 39,
-                'speed': 39
-              });
-    /* ===================================
-     END rotate3d Type
-     ====================================== */
-    /* ===================================
      START slick 
      ====================================== */
     

@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.main_m
   module:
     - system
   theme:
     - catshop_theme
-id: catshop_theme_main_menu
+id: catshop_theme_main_menu_m
 theme: catshop_theme
-region: navigation
+region: navigation_mobile
 weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:main_m'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:main_m'
+  label: 'Main navigation for mobile'
   provider: system
   label_display: '0'
   level: 1

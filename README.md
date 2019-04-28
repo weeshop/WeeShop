@@ -71,4 +71,5 @@ su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:mode -vvv d
 - 订单打印 [#2831952](https://www.drupal.org/project/commerce/issues/2831952)
 
 
-[粤ICP备18006542号-1](www.beian.miit.gov.cn)
+
+[粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

@@ -69,3 +69,7 @@ su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:mode -vvv d
   - 在 `docker-compose.yml` 中把 `/app/web/sites` 目录的volume注掉，让文件留在容器内
 
 - 订单打印 [#2831952](https://www.drupal.org/project/commerce/issues/2831952)
+
+
+
+[粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

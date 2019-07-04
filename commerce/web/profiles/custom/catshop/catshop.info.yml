@@ -65,8 +65,6 @@ dependencies:
   # adminimal_theme toolbar fix module
   - adminimal_admin_toolbar
 
-  - enhanced_user
-  - enhanced_product
 themes:
   - bartik
   - seven

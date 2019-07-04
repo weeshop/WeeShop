@@ -38,3 +38,7 @@
 	path = commerce/web/modules/custom/account
 	url = git@github.com:solody/account.git
 	branch = master
+[submodule "commerce/web/modules/custom/simple_stock"]
+	path = commerce/web/modules/custom/simple_stock
+	url = git@github.com:solody/simple_stock.git
+	branch = master

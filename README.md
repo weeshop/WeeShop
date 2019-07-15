@@ -1,5 +1,5 @@
-# CatShop
-优雅易用的PHP商城，PHP网店。 
+# WeeShop
+优雅易用的微信小程序商城，服务端使用php开发。 
 
 基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。
 
@@ -7,7 +7,7 @@
 
 感谢您的关注，CatShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。
-- 我们希望听见您的心声，请 [创建issue](https://github.com/catworking/catshop/issues/new) 来表达您的意见。
+- 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
 
 ## 文档
@@ -36,7 +36,7 @@
 
 ```bash
 # 用git下载代码到当前目录
-git clone https://github.com/catworking/catshop.git
+git clone https://github.com/weeshop/WeeShop.git
 cd catshop
 
 # 启动docker容器

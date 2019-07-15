@@ -33,6 +33,8 @@
         "drupal/adminimal_theme": "~1.0",
         "drupal/commerce": "~2.0",
         "drupal/commerce_recurring": "^1.0",
+        "drupal/commerce_shipping": "^2.0",
+        "drupal/commerce_stock": "^1.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6.0",
         "drupal/easy_breadcrumb": "^1.8",

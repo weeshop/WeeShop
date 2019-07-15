@@ -1,4 +1,4 @@
-# WeeShop
+# WeeShop | QQ群：714023327
 优雅易用的微信小程序商城，服务端使用php开发。 
 
 基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。

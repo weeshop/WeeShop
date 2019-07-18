@@ -26,7 +26,7 @@ services:
       - ./commerce:/app
     restart: always
     environment:
-      WEB_ALIAS_DOMAIN: www.catshop.com
+      WEB_ALIAS_DOMAIN: weeshop.dev
       TZ: Asia/Shanghai
       PHP_DATE_TIMEZONE: Asia/Shanghai
       WEB_DOCUMENT_ROOT: /app/web

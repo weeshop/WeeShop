@@ -32,18 +32,18 @@
 
 先决条件：
 - 确保本机80端口没有被占用。
-- 把 `www.catshop.com` 指向本机。（暂不支持使用其他域名）
+- 把 `weeshop.dev` 指向本机。（也可以使用其他域名）
 
 ```bash
 # 用git下载代码到当前目录
 git clone https://github.com/weeshop/WeeShop.git
-cd catshop
+cd WeeShop
 
 # 启动docker容器
 docker-compose up -d --force-recreate --remove-orphans --build
 
 # 进入docker容器
-docker-compose exec server bash -T
+docker-compose exec server bash
 
 # 进入容器后，在容器内继续运行下面的命令
 
@@ -55,7 +55,7 @@ composer install
 su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install catshop --langcode='en'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='CatShop'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
 ```
 
-浏览器访问 `http://www.catshop.com`
+浏览器访问 `http://weeshop.dev`
 
 开启开发模式
 ```bash

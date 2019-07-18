@@ -1,5 +1,5 @@
-# CatShop
-优雅易用的PHP商城，PHP网店。 
+# WeeShop | QQ群：714023327
+优雅易用的微信小程序商城，服务端使用php开发。 
 
 基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。
 
@@ -7,7 +7,7 @@
 
 感谢您的关注，CatShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。
-- 我们希望听见您的心声，请 [创建issue](https://github.com/catworking/catshop/issues/new) 来表达您的意见。
+- 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
 
 ## 文档
@@ -32,18 +32,18 @@
 
 先决条件：
 - 确保本机80端口没有被占用。
-- 把 `www.catshop.com` 指向本机。（暂不支持使用其他域名）
+- 把 `weeshop.dev` 指向本机。（也可以使用其他域名）
 
 ```bash
 # 用git下载代码到当前目录
-git clone https://github.com/catworking/catshop.git
-cd catshop
+git clone https://github.com/weeshop/WeeShop.git
+cd WeeShop
 
 # 启动docker容器
 docker-compose up -d --force-recreate --remove-orphans --build
 
 # 进入docker容器
-docker-compose exec server bash -T
+docker-compose exec server bash
 
 # 进入容器后，在容器内继续运行下面的命令
 
@@ -55,7 +55,7 @@ composer install
 su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install catshop --langcode='en'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='CatShop'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
 ```
 
-浏览器访问 `http://www.catshop.com`
+浏览器访问 `http://weeshop.dev`
 
 开启开发模式
 ```bash

@@ -5,7 +5,7 @@
 <p align="center">基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。</p>
 
 
-## WeeShop | QQ群：714023327
+<h2 align="center"> WeeShop | QQ群：714023327</h2>
 
 感谢您的关注，CatShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。

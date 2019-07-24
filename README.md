@@ -1,9 +1,11 @@
-# WeeShop | QQ群：714023327
-优雅易用的微信小程序商城，服务端使用php开发。 
+<p align="center"><a href="https://www.weeshop.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://avatars2.githubusercontent.com/u/50817500?s=400&u=4014b477b48c6c8a517a0231592a685e019ae807&v=4" alt="WeeShop"></a></p>
 
-基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。
+<p align="center">优雅易用的微信小程序商城，服务端使用php开发。 </p>
+<p align="center">完全开源，任意商用，无须购买授权。</p>
+<p align="center">基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。</p>
 
-由社区开发者维护，完全开源，任意商用，无须购买授权。
+
+<h2 align="center"> WeeShop | QQ群：714023327</h2>
 
 感谢您的关注，CatShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。

@@ -1,0 +1,39 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i':
+        type: external
+        minified: true
+        attributes:
+          crossorigin: anonymous
+      'assets/css/bootstrap.min.css': {}
+      'assets/css/font-awesome.min.css': {}
+      'assets/css/flaticon.css': {}
+      'assets/css/slicknav.min.css': {}
+      'assets/css/jquery-ui.min.css': {}
+      'assets/css/owl.carousel.min.css': {}
+      'assets/css/animate.css': {}
+      'assets/css/style.css': {}
+      'assets/css/weeshop_alpha.css': {}
+
+  js:
+    'assets/js/bootstrap.min.js': {}
+    'assets/js/jquery.slicknav.min.js': {}
+    'assets/js/owl.carousel.min.js': {}
+    'assets/js/jquery.nicescroll.min.js': {}
+    'assets/js/jquery.zoom.min.js': {}
+    'assets/js/jquery-ui.min.js': {}
+    'assets/js/main-modified.js': {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - weeshop_alpha/js-header
+
+js-header:
+  header: true
+  js:
+    'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js': {type: external}
+    'https://oss.maxcdn.com/respond/1.4.2/respond.min.js': {type: external}

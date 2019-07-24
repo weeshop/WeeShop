@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - bartik
+id: bartik_shopping_cart
+theme: bartik
+region: header
+weight: null
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: 'Shopping Cart'
+  provider: commerce_cart
+  label_display: '0'
+  item_text: items
+  dropdown: true
+visibility: {  }

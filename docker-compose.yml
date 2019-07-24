@@ -24,6 +24,7 @@ services:
     image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:prod
     volumes:
       - ./commerce:/app
+      - ./data/cert:/cert
     restart: always
     environment:
       WEB_ALIAS_DOMAIN: weeshop.dev

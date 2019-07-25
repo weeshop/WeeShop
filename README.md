@@ -12,7 +12,7 @@
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
 
-<img src="./docs/screenshort.jpg">
+<img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot.jpg">
 
 ## 文档
 - [用户指南](docs/user-guide/index.md)

@@ -26,3 +26,15 @@ function catshop_form_install_configure_submit($form, FormStateInterface $form_s
   $site_mail = $form_state->getValue('site_mail');
   ContactForm::load('feedback')->setRecipients([$site_mail])->trustData()->save();
 }
+
+ /**
+  * Implements hook_views_plugins_row_alter().
+  */
+ function catshop_views_plugins_row_alter(array &$plugins) {
+     // Just expose the data entity row for entity views.
+     foreach (\Drupal::entityTypeManager()->getDefinitions() as $entity_type_id => $entity_type) {
+         $tables = array_filter([$entity_type->getBaseTable(), $entity_type->getDataTable(), $entity_type->getRevisionTable(), $entity_type->getRevisionDataTable()]);
+         $plugins['data_entity']['base'] = isset($plugins['data_entity']['base']) ? $plugins['data_entity']['base'] : [];
+         $plugins['data_entity']['base'] = array_merge($plugins['data_entity']['base'], $tables);
+       }
+ }

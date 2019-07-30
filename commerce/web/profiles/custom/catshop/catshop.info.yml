@@ -65,8 +65,11 @@ dependencies:
   # adminimal_theme toolbar fix module
   - adminimal_admin_toolbar
 
+  - enhanced_product
+
 themes:
   - bartik
   - seven
   - adminimal_theme
+  - catshop_theme
   - weeshop_alpha

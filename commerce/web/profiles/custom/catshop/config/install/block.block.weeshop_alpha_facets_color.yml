@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.variations_product_variation_color
+  module:
+    - facets
+    - system
+  theme:
+    - weeshop_alpha
+id: weeshop_alpha_facets_color
+theme: weeshop_alpha
+region: sidebar
+weight: -6
+provider: null
+plugin: 'facet_block:variations_product_variation_color'
+settings:
+  id: 'facet_block:variations_product_variation_color'
+  label: Color
+  provider: facets
+  label_display: visible
+  block_id: weeshop_alpha_facets_color
+visibility:
+  request_path:
+    id: request_path
+    pages: /product-search
+    negate: false
+    context_mapping: {  }

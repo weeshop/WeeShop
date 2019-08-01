@@ -65,7 +65,7 @@ dependencies:
   # adminimal_theme toolbar fix module
   - adminimal_admin_toolbar
 
-  - enhanced_product
+  - product_search
 
 themes:
   - bartik

@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a facet result item.
+ *
+ * Available variables:
+ * - value: The item value.
+ * - raw_value: The raw item value.
+ * - show_count: If this facet provides count.
+ * - count: The amount of results.
+ * - is_active: The item is active.
+ * - facet: The facet for this result item.
+ *   - id: the machine name for the facet.
+ *   - label: The facet label.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if is_active %}
+  <strong style="color: #f51167;">
+{% endif %}
+  {{ value }}
+  {% if show_count %}
+    <span>({{ count }})</span>
+  {% endif %}
+{% if is_active %}
+  </strong>
+{% endif %}

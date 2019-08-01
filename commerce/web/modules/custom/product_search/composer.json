@@ -1,7 +1,7 @@
 {
     "name": "product_search",
     "type": "drupal-module",
-    "description": "My Awesome Module",
+    "description": "Provides product search functions for commerce product.",
     "keywords": [
     ],
     "homepage": "https://www.drupal.org/project/product_search",
@@ -9,5 +9,10 @@
     "support": {
         "issues": "https://www.drupal.org/project/issues/product_search",
         "source": "http://cgit.drupalcode.org/product_search"
+    },
+    "require": {
+        "drupal/facets": "^1.4",
+        "drupal/search_api": "~1.0",
+        "drupal/search_api_autocomplete": "^1.2"
     }
 }

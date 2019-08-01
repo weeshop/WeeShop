@@ -83,7 +83,7 @@ input[type=text].textfield {
   height: 44px;
   border: none;
   padding: 0 18px;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
   border-radius: 40px;
   margin-bottom: 20px;
   font-size: 14px;
@@ -177,4 +177,67 @@ input[type=text].textfield {
 
 .attribute-widgets .js-form-type-radio {
   margin-bottom: 0;
+}
+
+
+.facets_ckeckbox_li {
+  list-style-type: none;
+}
+
+
+.weeshop-view-exposed-form {
+  padding-bottom: 30px;
+}
+
+.category-section .product-section {
+  padding: 0;
+}
+
+.category-section .product-section > div.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.add-to-cart-panel {
+  background-color: rgba(255,255,255,.8);
+  padding: 10px;
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+}
+
+.add-to-cart-panel.show {
+  display: block;
+}
+
+.page-link { color: black;}
+.page-link:hover { color: #f51167;}
+
+.search-api-autocomplete-search {
+  background-color: rgba(255,255,255,.8);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.search-api-autocomplete-search .ui-menu-item a {
+  display: block;
+}
+
+
+.search-api-autocomplete-search .ui-menu-item a:hover,
+.search-api-autocomplete-search .ui-menu-item a.ui-state-active{
+  background-color: #f51167;
+  border: none;
+}
+
+.search-api-autocomplete-search .ui-menu-item a:hover .search-api-autocomplete-suggestion,
+.search-api-autocomplete-search .ui-menu-item a.ui-state-active .search-api-autocomplete-suggestion{
+  background-color: #f51167;
+}
+
+
+.js input.form-autocomplete,
+.js input.form-autocomplete.ui-autocomplete-loading {
+  background-position: 96% center;
 }

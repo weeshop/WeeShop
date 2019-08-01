@@ -8,7 +8,7 @@ dependencies:
 id: weeshop_alpha_help
 theme: weeshop_alpha
 region: content
-weight: -5
+weight: -8
 provider: null
 plugin: help_block
 settings:

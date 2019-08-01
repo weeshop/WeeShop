@@ -38,7 +38,7 @@ function weeshop_alpha_page_attachments_alter(array &$page) {
  * Implements hook_preprocess_page() for page.html.twig.
  */
 function weeshop_alpha_preprocess_page(array &$variables) {
-  $variables['page_type'] = '';
+  $variables['page_type'] = \Drupal::routeMatch()->getRouteName();
 }
 
 /**

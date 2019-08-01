@@ -8,7 +8,7 @@ dependencies:
 id: weeshop_alpha_checkout_progress
 theme: weeshop_alpha
 region: content
-weight: -3
+weight: -6
 provider: null
 plugin: commerce_checkout_progress
 settings:

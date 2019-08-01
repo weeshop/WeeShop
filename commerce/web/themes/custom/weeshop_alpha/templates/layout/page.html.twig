@@ -83,9 +83,9 @@
   {{ page.highlighted }}
 
   <main role="main">
-    {% if page_type == 'index' %}
+    {% if page_type == 'view.frontpage.page_1' %}
       {% include '@weeshop_alpha/includes/_frontpage.html.twig' with {'content': page.content} %}
-    {% elseif page_type == 'category' %}
+    {% elseif page_type == 'view.product_search.page_1' %}
       {% include '@weeshop_alpha/includes/_category.html.twig' with {'content': page.content, 'sidebar': page.sidebar} %}
     {% elseif page_type == 'product' %}
       {% include '@weeshop_alpha/includes/_product.html.twig' with {'content': page.content, 'sidebar': page.sidebar} %}

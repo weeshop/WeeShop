@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.categories
+  module:
+    - facets
+    - system
+  theme:
+    - weeshop_alpha
+id: weeshop_alpha_facets_categories
+theme: weeshop_alpha
+region: sidebar
+weight: -7
+provider: null
+plugin: 'facet_block:categories'
+settings:
+  id: 'facet_block:categories'
+  label: Categories
+  provider: facets
+  label_display: visible
+  block_id: weeshop_alpha_facets_categories
+visibility:
+  request_path:
+    id: request_path
+    pages: /product-search
+    negate: false
+    context_mapping: {  }

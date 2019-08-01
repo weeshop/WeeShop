@@ -41,6 +41,7 @@
         "drupal/facets": "^1.4",
         "drupal/omega": "^5.0",
         "drupal/search_api": "~1.0",
+        "drupal/search_api_solr": "^3.2",
         "drupal/swiftmailer": "~1.0",
         "drupal/token": "~1.0",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",

@@ -42,7 +42,7 @@
 
 先决条件：
 - 确保本机80端口没有被占用。
-- 把 `weeshop.dev` 指向本机。（也可以使用其他域名）
+- 把 `weeshop.test` 指向本机。（也可以使用其他域名）
 
 ```bash
 # 用git下载代码到当前目录
@@ -82,7 +82,7 @@ su - application -c \
 --account-pass='123'"
 ```
 
-浏览器访问 `http://weeshop.dev`
+浏览器访问 `http://weeshop.test`
 
 开启开发模式
 ```bash

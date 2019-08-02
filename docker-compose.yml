@@ -10,7 +10,7 @@ services:
       - 80:80
     restart: always
     environment:
-      WEB_ALIAS_DOMAIN: weeshop.dev
+      WEB_ALIAS_DOMAIN: weeshop.test
       TZ: Asia/Shanghai
       PHP_DATE_TIMEZONE: Asia/Shanghai
       WEB_DOCUMENT_ROOT: /app/web

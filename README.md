@@ -13,6 +13,7 @@
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
 
 <img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot.jpg">
+<img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot2.jpg">
 
 ## 文档
 - [用户指南](docs/user-guide/index.md)

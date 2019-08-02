@@ -13,7 +13,12 @@
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
 
 <img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot.jpg">
+
+简洁的美观的 UI 界面
+
 <img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot2.png">
+
+支持使用 `Apache Solr` 集群对商品进行`全文检索`，支持使用属性进行`分面搜索`，支持对搜索结果进行预提示。
 
 ## 文档
 - [用户指南](docs/user-guide/index.md)

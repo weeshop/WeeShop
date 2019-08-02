@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: color
-label: 'Color'
-elementType: radios

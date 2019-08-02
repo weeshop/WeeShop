@@ -39,6 +39,7 @@
         "drupal/core": "^8.6.0",
         "drupal/easy_breadcrumb": "^1.8",
         "drupal/facets": "^1.4",
+        "drupal/features": "^3.8",
         "drupal/omega": "^5.0",
         "drupal/search_api": "~1.0",
         "drupal/search_api_solr": "^3.2",

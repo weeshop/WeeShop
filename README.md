@@ -43,6 +43,10 @@
 git clone https://github.com/weeshop/WeeShop.git
 cd WeeShop
 
+# 拉取子库代码
+git submodule init
+git submodule update
+
 # 启动docker容器
 docker-compose up -d --force-recreate --remove-orphans --build
 
@@ -53,11 +57,23 @@ docker-compose exec server bash
 
 # 安装composer依赖
 cd /app
-composer install
+composer install -vvv
 
 # 安装实例
-```
-su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install catshop  --langcode='en'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='CatShop'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
+su - application -c \
+"cd /app/web/sites && /usr/local/bin/drupal site:install catshop  \
+--langcode='en'  \
+--db-type='mysql'  \
+--db-host='db'  \
+--db-name='drupal'  \
+--db-user='root'  \
+--db-pass='123'  \
+--db-port='3306'  \
+--site-name='CatShop'  \
+--site-mail='164713332@qq.com'  \
+--account-name='admin'  \
+--account-mail='164713332@qq.com'  \
+--account-pass='123'"
 ```
 
 浏览器访问 `http://weeshop.dev`

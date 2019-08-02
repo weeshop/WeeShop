@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: default
-label: Default
-orderItemType: default
-generateTitle: true
-traits: {  }
-locked: false

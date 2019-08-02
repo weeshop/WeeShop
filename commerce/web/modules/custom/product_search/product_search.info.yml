@@ -16,3 +16,4 @@ dependencies:
   - drupal:serialization
   - drupal:text
   - search_api_autocomplete:search_api_autocomplete
+  - features:features

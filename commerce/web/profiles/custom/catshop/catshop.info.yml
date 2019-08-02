@@ -66,6 +66,7 @@ dependencies:
   - adminimal_admin_toolbar
 
   - product_search
+  - features_ui
 
 themes:
   - bartik

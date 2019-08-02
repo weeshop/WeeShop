@@ -2,29 +2,12 @@ version: '3.1'
 
 services:
 
-  proxy:
-    build: ./docker/proxy
-    depends_on:
-      - server
-      - client
-    ports:
-      - 80:80
-    restart: always
-
-  client:
-    image: webdevops/nginx:alpine
-    volumes:
-      - ./client/webapp/dist:/app
-    restart: always
-    environment:
-      WEB_ALIAS_DOMAIN: m.catshop.com
-      WEB_DOCUMENT_INDEX: index.html
-
   server:
     image: registry.cn-hangzhou.aliyuncs.com/catshop/catshop:prod
     volumes:
       - ./commerce:/app
-      - ./data/cert:/cert
+    ports:
+      - 80:80
     restart: always
     environment:
       WEB_ALIAS_DOMAIN: weeshop.dev

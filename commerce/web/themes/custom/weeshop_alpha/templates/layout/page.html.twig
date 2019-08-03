@@ -70,7 +70,7 @@
   </header>
   <!-- Header section end -->
 
-
+  {% if page_type != 'view.frontpage.page_1' %}
   <!-- Page info -->
   <div class="page-top-info">
     <div class="container">
@@ -78,9 +78,11 @@
     </div>
   </div>
   <!-- Page info end -->
+  {% endif %}
 
-
+  {% if page.highlighted %}
   {{ page.highlighted }}
+  {% endif %}
 
   <main role="main">
     {% if page_type == 'view.frontpage.page_1' %}

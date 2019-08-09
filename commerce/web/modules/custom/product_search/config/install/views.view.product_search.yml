@@ -335,7 +335,7 @@ display:
               2: {  }
               3: {  }
           parse_mode: terms
-          min_length: 1
+          min_length: null
           fields: {  }
           plugin_id: search_api_fulltext
       sorts: {  }

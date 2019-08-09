@@ -4,7 +4,7 @@ description: 'Provides product search functions for commerce product.'
 core: 8.x
 package: 'Custom'
 dependencies:
-  - search_api:search_api_db_defaults
+  - search_api:search_api_db
   - facets:facets
   - facets:facets_range_widget
   - facets:facets_rest

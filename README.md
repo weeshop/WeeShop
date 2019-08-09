@@ -43,7 +43,7 @@
 
 本项目使用Docker进行快速部署实例，`无须PHP环境`，您的电脑啥都不需要安装，只需要安装`Docker`服务和`docker-compose`即可。
 
-如果docker镜像下载慢，请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)）
+如果docker镜像下载慢，请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)
 
 先决条件：
 - 确保本机80端口没有被占用。

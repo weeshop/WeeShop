@@ -1,14 +1,29 @@
-# WeeShop | QQ群：714023327
-优雅易用的微信小程序商城，服务端使用php开发。 
+<p align="center"><a href="https://www.weeshop.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://avatars2.githubusercontent.com/u/50817500?s=400&u=4014b477b48c6c8a517a0231592a685e019ae807&v=4" alt="WeeShop"></a></p>
 
-基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。
+<p align="center">优雅易用的微信小程序商城，服务端使用php开发。 </p>
+<p align="center">完全开源，任意商用，无须购买授权。</p>
+<p align="center">基于Laravel的基因，来自Symfony的底层技术，来自Drupal Commerce的核心技术，由Drupal中国开源社区维护。</p>
 
-由社区开发者维护，完全开源，任意商用，无须购买授权。
 
-感谢您的关注，CatShop的成功离不开您的意见和支持：
+<h2 align="center"> WeeShop | QQ群：714023327</h2>
+
+感谢您的关注，WeeShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
+
+<img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot.jpg">
+<img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot3.jpg">
+
+简洁的美观的 UI 界面
+
+<img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot2.png">
+
+支持使用 `Apache Solr` 集群对商品进行`全文检索`，支持使用属性进行`分面搜索`，支持对搜索结果进行预提示。
+
+本工程为 WeeShop 后台与服务端，微信小程序端的工程在 [WeeShop/WeeApp](https://github.com/weeshop/WeeApp)。
+
+微信小程序商城是以本工程作为服务端进行开发的。
 
 ## 文档
 - [用户指南](docs/user-guide/index.md)
@@ -32,12 +47,16 @@
 
 先决条件：
 - 确保本机80端口没有被占用。
-- 把 `weeshop.dev` 指向本机。（也可以使用其他域名）
+- 把 `weeshop.test` 指向本机。（也可以使用其他域名）
 
 ```bash
 # 用git下载代码到当前目录
 git clone https://github.com/weeshop/WeeShop.git
 cd WeeShop
+
+# 拉取子库代码
+git submodule init
+git submodule update
 
 # 启动docker容器
 docker-compose up -d --force-recreate --remove-orphans --build
@@ -49,13 +68,26 @@ docker-compose exec server bash
 
 # 安装composer依赖
 cd /app
-composer install
+composer install -vvv
 
 # 安装实例
-su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:install catshop --langcode='en'  --db-type='mysql'  --db-host='db'  --db-name='drupal'  --db-user='root'  --db-pass='123'  --db-port='3306'  --site-name='CatShop'  --site-mail='164713332@qq.com'  --account-name='admin'  --account-mail='164713332@qq.com'  --account-pass='123'"
+su - application -c \
+"cd /app/web/sites && /usr/local/bin/drupal site:install catshop  \
+--langcode='en'  \
+--db-type='mysql'  \
+--db-host='db'  \
+--db-name='drupal'  \
+--db-user='root'  \
+--db-pass='123'  \
+--db-port='3306'  \
+--site-name='CatShop'  \
+--site-mail='164713332@qq.com'  \
+--account-name='admin'  \
+--account-mail='164713332@qq.com'  \
+--account-pass='123'"
 ```
 
-浏览器访问 `http://weeshop.dev`
+浏览器访问 `http://weeshop.test`
 
 开启开发模式
 ```bash
@@ -70,21 +102,6 @@ su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:mode -vvv d
 
 - 订单打印 [#2831952](https://www.drupal.org/project/commerce/issues/2831952)
 
-## 商品搜索功能的实现
 
-使用 `search_api` 和 `facets` 模块，实现商品索功能。
-
-创建一个名为 `product_search` 模块，用来保存相关功能代码资源。
-
-- 默认使用数据库搜索，通过安装 `search_api_db_defaults` 模块，
-  会自动创建一个名为 `default_server` 的 `search_api_db` backend类型索引服务器。
-- 默认创建一个产品搜索索引，用创建一个 config entity的方式实现。
-- 向产品搜索索引添加必要的字段。
-- 创建一个对 `产品搜索索引` 进行搜索的 `view`，并添加默认的必要字段。
-
-
-当有新的产品属性创建时，同时创建以下数据：
-- 查找产品索引，向其添加索引字段。
-- 创建相应的Block，并把它添加到边栏region。
 
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

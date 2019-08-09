@@ -7,7 +7,7 @@
 
 <h2 align="center"> WeeShop | QQ群：714023327</h2>
 
-感谢您的关注，CatShop的成功离不开您的意见和支持：
+感谢您的关注，WeeShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
@@ -20,6 +20,10 @@
 <img src="https://github.com/weeshop/WeeShop/raw/master/docs/screenshot2.png">
 
 支持使用 `Apache Solr` 集群对商品进行`全文检索`，支持使用属性进行`分面搜索`，支持对搜索结果进行预提示。
+
+本工程为 WeeShop 后台与服务端，微信小程序端的工程在 [WeeShop/WeeApp](https://github.com/weeshop/WeeApp)。
+
+微信小程序商城是以本工程作为服务端进行开发的。
 
 ## 文档
 - [用户指南](docs/user-guide/index.md)

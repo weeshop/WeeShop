@@ -45,6 +45,8 @@
 
 如果docker镜像下载慢，请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)
 
+如果不希望使用 docker 快速安装，也可以参考 [通过传统的手工方式安装](install.md)
+
 先决条件：
 - 确保本机80端口没有被占用。
 - 把 `weeshop.test` 指向本机。（也可以使用其他域名）

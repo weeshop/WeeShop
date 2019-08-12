@@ -7,6 +7,7 @@
 
 use Drupal\contact\Entity\ContactForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -38,3 +39,29 @@ function catshop_form_install_configure_submit($form, FormStateInterface $form_s
          $plugins['data_entity']['base'] = array_merge($plugins['data_entity']['base'], $tables);
        }
  }
+
+function catshop_toolbar() {
+  $items = [];
+  $items['weeshop'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('WeeShop'),
+      '#url' => Url::fromRoute('<front>'),
+      '#options' => [
+        'attributes' => [
+          'title' => t('WeeShop'),
+          'class' => ['toolbar-item', 'toolbar-icon'],
+          'id' => 'admin-logo'
+        ],
+      ],
+    ],
+    '#attached' => [
+      'library' => [
+        'catshop/admin-logo',
+      ],
+    ],
+    '#weight' => -90
+  ];
+  return $items;
+}

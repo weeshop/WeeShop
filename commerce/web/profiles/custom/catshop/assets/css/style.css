@@ -1,0 +1,8 @@
+a#admin-logo {
+  color: transparent;
+  background-image: url(../image/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 10px;
+}

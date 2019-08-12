@@ -1,0 +1,5 @@
+admin-logo:
+  version: VERSION
+  css:
+    component:
+      'assets/css/style.css': {}

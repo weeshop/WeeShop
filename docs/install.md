@@ -106,6 +106,48 @@ cd WeeShop
 git submodule init
 git submodule update
 ```
+Note: if you're using mutilple ssh RSAs, you might encounter the errors like below for submodule update.
+
+Load key "/c/Users/CenaZ/.ssh/id_rsa_github.pub": invalid format
+git@ssh.github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+In case you are not accessing your own repository, or cloning inside a cloned repository (using some "git submodule... " commands):
+In the home directory of your repository:
+
+$ ls -a
+1. Open ".gitmodules", and you will find something like this:
+
+[submodule "XXX"]
+    path = XXX
+    url = git@github.com:YYY/XXX.git
+Change the last line to be the HTTPS of the repository you need to pull:
+
+[submodule "XXX"]
+    path = XXX
+    https://github.com/YYY/XXX.git
+Save ".gitmodules", and run the command for submodules, and ".git" will be updated.
+
+2. Open ".git", go to "config" file, and you will find something like this:
+
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+    ignorecase = true
+    precomposeunicode = true
+[remote "origin"]
+    url = https://github.com/YYY/XXX.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+[submodule "XXX"]
+    url = git@github.com:YYY/XXX.git
+Change the last line to be the HTTPS of the repository you need to pull:
+
+    url = https://github.com/YYY/XXX.git
+So, in this case, the main problem is simply with the url. HTTPS of any repository can be found now on top of the repository page.
 
 ### 安装源码依赖
 

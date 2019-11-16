@@ -14,7 +14,7 @@ use Drupal\Core\Url;
  *
  * Allows the profile to alter the site configuration form.
  */
-function catshop_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
+function weeshop_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
   // Add a placeholder as example that one can choose an arbitrary site name.
   $form['site_information']['site_name']['#attributes']['placeholder'] = t('My store');
   $form['#submit'][] = 'commerce_base_form_install_configure_submit';
@@ -23,7 +23,7 @@ function catshop_form_install_configure_form_alter(&$form, FormStateInterface $f
 /**
  * Submission handler to sync the contact.form.feedback recipient.
  */
-function catshop_form_install_configure_submit($form, FormStateInterface $form_state) {
+function weeshop_form_install_configure_submit($form, FormStateInterface $form_state) {
   $site_mail = $form_state->getValue('site_mail');
   ContactForm::load('feedback')->setRecipients([$site_mail])->trustData()->save();
 }
@@ -31,7 +31,7 @@ function catshop_form_install_configure_submit($form, FormStateInterface $form_s
  /**
   * Implements hook_views_plugins_row_alter().
   */
- function catshop_views_plugins_row_alter(array &$plugins) {
+ function weeshop_views_plugins_row_alter(array &$plugins) {
      // Just expose the data entity row for entity views.
      foreach (\Drupal::entityTypeManager()->getDefinitions() as $entity_type_id => $entity_type) {
          $tables = array_filter([$entity_type->getBaseTable(), $entity_type->getDataTable(), $entity_type->getRevisionTable(), $entity_type->getRevisionDataTable()]);
@@ -40,7 +40,7 @@ function catshop_form_install_configure_submit($form, FormStateInterface $form_s
        }
  }
 
-function catshop_toolbar() {
+function weeshop_toolbar() {
   $items = [];
   $items['weeshop'] = [
     '#type' => 'toolbar_item',
@@ -58,7 +58,7 @@ function catshop_toolbar() {
     ],
     '#attached' => [
       'library' => [
-        'catshop/admin-logo',
+        'weeshop/admin-logo',
       ],
     ],
     '#weight' => -90

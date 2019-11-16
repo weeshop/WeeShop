@@ -15,7 +15,7 @@ use Drupal\user\RoleInterface;
  *
  * @see system_install()
  */
-function catshop_install() {
+function weeshop_install() {
   // Set front page to "node".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
 

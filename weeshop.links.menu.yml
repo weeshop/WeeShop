@@ -1,31 +1,31 @@
 # 一级菜单
-catshop.front_page:
+weeshop.front_page:
   title: 'Home'
   route_name: '<front>'
   menu_name: main
   weight: 10
 
-catshop.shopping:
+weeshop.shopping:
   title: 'Shopping'
   route_name: '<front>'
   menu_name: main
   weight: 20
   expanded: true
 
-catshop.selection:
+weeshop.selection:
   title: 'Selection'
   route_name: '<front>'
   menu_name: main
   weight: 30
   expanded: true
 
-catshop.promotion:
+weeshop.promotion:
   title: 'Promotion'
   route_name: '<front>'
   menu_name: main
   weight: 40
 
-catshop.blog:
+weeshop.blog:
   title: 'Blog'
   route_name: '<front>'
   menu_name: main
@@ -33,84 +33,84 @@ catshop.blog:
 
 
 # 购物的二级菜单
-catshop.shopping.category1:
+weeshop.shopping.category1:
   title: 'Category-1'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.shopping
+  parent: weeshop.shopping
   expanded: true
-catshop.shopping.category2:
+weeshop.shopping.category2:
   title: 'Category-2'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.shopping
+  parent: weeshop.shopping
   expanded: true
-catshop.shopping.category3:
+weeshop.shopping.category3:
   title: 'Category-3'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.shopping
+  parent: weeshop.shopping
   expanded: true
 
 # 精选二级菜单
-catshop.selection.man:
+weeshop.selection.man:
   title: 'Man'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.selection
-catshop.selection.woman:
+  parent: weeshop.selection
+weeshop.selection.woman:
   title: 'Woman'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.selection
+  parent: weeshop.selection
 
 # 三级菜单
-catshop.shopping.category1.one:
+weeshop.shopping.category1.one:
   title: 'Category-1-1'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.shopping.category1
-catshop.shopping.category2.two:
+  parent: weeshop.shopping.category1
+weeshop.shopping.category2.two:
   title: 'Category-2-2'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.shopping.category2
-catshop.shopping.category3.thr:
+  parent: weeshop.shopping.category2
+weeshop.shopping.category3.thr:
   title: 'Category-3-3'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.shopping.category3
+  parent: weeshop.shopping.category3
 
 
 # 移动版主菜单
 # 一级菜单
-catshop.m.front_page:
+weeshop.m.front_page:
   title: 'Home'
   route_name: '<front>'
   menu_name: main_m
   weight: 10
 
-catshop.m.shopping:
+weeshop.m.shopping:
   title: 'Shopping'
   route_name: '<front>'
   menu_name: main_m
   weight: 20
   expanded: true
 
-catshop.m.selection:
+weeshop.m.selection:
   title: 'Selection'
   route_name: '<front>'
   menu_name: main_m
   weight: 30
   expanded: true
 
-catshop.m.promotion:
+weeshop.m.promotion:
   title: 'Promotion'
   route_name: '<front>'
   menu_name: main_m
   weight: 40
 
-catshop.m.blog:
+weeshop.m.blog:
   title: 'Blog'
   route_name: '<front>'
   menu_name: main_m
@@ -118,50 +118,50 @@ catshop.m.blog:
 
 
 # 购物的二级菜单
-catshop.m.shopping.category1:
+weeshop.m.shopping.category1:
   title: 'Category-1'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.shopping
+  parent: weeshop.m.shopping
   expanded: true
-catshop.m.shopping.category2:
+weeshop.m.shopping.category2:
   title: 'Category-2'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.shopping
+  parent: weeshop.m.shopping
   expanded: true
-catshop.m.shopping.category3:
+weeshop.m.shopping.category3:
   title: 'Category-3'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.shopping
+  parent: weeshop.m.shopping
   expanded: true
 
 # 精选二级菜单
-catshop.m.selection.man:
+weeshop.m.selection.man:
   title: 'Man'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.selection
-catshop.m.selection.woman:
+  parent: weeshop.m.selection
+weeshop.m.selection.woman:
   title: 'Woman'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.selection
+  parent: weeshop.m.selection
 
 # 三级菜单
-catshop.m.shopping.category1.one:
+weeshop.m.shopping.category1.one:
   title: 'Category-1-1'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.shopping.category1
-catshop.m.shopping.category2.two:
+  parent: weeshop.m.shopping.category1
+weeshop.m.shopping.category2.two:
   title: 'Category-2-2'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.shopping.category2
-catshop.m.shopping.category3.thr:
+  parent: weeshop.m.shopping.category2
+weeshop.m.shopping.category3.thr:
   title: 'Category-3-3'
   route_name: '<front>'
   menu_name: main
-  parent: catshop.m.shopping.category3
+  parent: weeshop.m.shopping.category3

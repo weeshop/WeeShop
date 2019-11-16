@@ -1,8 +1,8 @@
 {
-  "name": "catworking/catshop-profile",
+  "name": "weeshop/weeshop",
   "type": "drupal-profile",
-  "description": "Commerce 2.x installation profile",
-  "homepage": "https://github.com/drupalcommerce/commerce_base",
+  "description": "WeeShop 1.x installation profile",
+  "homepage": "https://github.com/weeshop/WeeShop",
   "license": "GPL-2.0+",
   "require": {
       "drupal/commerce": "~2.0",

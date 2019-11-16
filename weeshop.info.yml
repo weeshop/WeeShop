@@ -1,9 +1,9 @@
-name: CatShop
+name: WeeShop
 type: profile
 core: 8.x
-description: 'CatShop distribution base on drupal commerce.'
+description: 'WeeShop distribution base on drupal commerce.'
 distribution:
-  name: 'CatShop'
+  name: 'WeeShop'
 dependencies:
   # Standard
   - node

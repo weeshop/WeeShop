@@ -1,5 +1,0 @@
-# Schema for the theme setting configuration file of the Bootstrap base theme.
-
-bootstrap.settings:
-  type: theme_settings
-  label: 'Bootstrap settings'

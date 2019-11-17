@@ -1,0 +1,44 @@
+[submodule "modules/custom/enhanced_product"]
+	path = modules/custom/enhanced_product
+	url = git@github.com:solody/enhanced_product.git
+	branch = master
+[submodule "modules/custom/enhanced_user"]
+	path = modules/custom/enhanced_user
+	url = git@github.com:solody/enhanced_user.git
+	branch = master
+[submodule "modules/custom/alipay"]
+	path = modules/custom/alipay
+	url = git@github.com:solody/alipay.git
+	branch = master
+[submodule "modules/custom/wechat_pay"]
+	path = modules/custom/wechat_pay
+	url = git@github.com:solody/wechat_pay.git
+	branch = master
+[submodule "modules/custom/simple_oauth_code"]
+	path = modules/custom/simple_oauth_code
+	url = git@github.com:solody/simple_oauth_code.git
+	branch = master
+[submodule "modules/custom/wechat_connect"]
+	path = modules/custom/wechat_connect
+	url = git@github.com:solody/wechat_connect.git
+	branch = master
+[submodule "modules/custom/user_phone"]
+	path = modules/custom/user_phone
+	url = git@github.com:solody/user_phone.git
+	branch = master
+[submodule "modules/custom/phone_verify"]
+	path = modules/custom/phone_verify
+	url = git@github.com:solody/phone_verify.git
+	branch = master
+[submodule "modules/custom/commerce_refund"]
+	path = modules/custom/commerce_refund
+	url = git@github.com:solody/commerce_refund.git
+	branch = master
+[submodule "modules/custom/account"]
+	path = modules/custom/account
+	url = git@github.com:solody/account.git
+	branch = master
+[submodule "modules/custom/simple_stock"]
+	path = modules/custom/simple_stock
+	url = git@github.com:solody/simple_stock.git
+	branch = master

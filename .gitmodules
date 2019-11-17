@@ -42,3 +42,6 @@
 	path = modules/custom/simple_stock
 	url = git@github.com:solody/simple_stock.git
 	branch = master
+[submodule "themes/custom/weeshop_alpha"]
+	path = themes/custom/weeshop_alpha
+	url = git@github.com:weeshop/weeshop_alpha.git

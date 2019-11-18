@@ -45,3 +45,6 @@
 [submodule "themes/custom/weeshop_alpha"]
 	path = themes/custom/weeshop_alpha
 	url = git@github.com:weeshop/weeshop_alpha.git
+[submodule "modules/custom/commerce_checkout_api"]
+	path = modules/custom/commerce_checkout_api
+	url = git@github.com:solody/commerce_checkout_api.git

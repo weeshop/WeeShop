@@ -41,40 +41,42 @@
 
 ## 快速体验
 
-本项目使用Docker进行快速部署实例，`无须PHP环境`，您的电脑啥都不需要安装，只需要安装`Docker`服务和`docker-compose`即可。
+#### 创建 WeeShop 工程
+
+本项目支持用 Composer 创建工程，使用下面的命令，会在当前目录下创建一个 `myshop` 目录，并在其中下载 WeeShop 相关的代码，包括它们的依赖：
+
+```bash
+composer create-project weeshop/project-base myshop --stability dev --no-interaction
+```
+
+这条命令实际上是简单地下载 WeeShop 模板工程仓库 [weeshop/project-base](https://github.com/weeshop/project-base) 的代码，
+并安装其所定义的 Composer 依赖，所以，实际上你也可以直接克隆该仓库，把它作为你新项目的起点。
+
+#### 使用 Docker 镜像运行代码
+
+本项目提供了预置的 Docker 镜像，并编排到了模板工程根目录的 `docker-compose.yml` 中。
+
+如果使用 `docker-compose`，你将无须关心PHP环境问题，您的电脑啥都不需要安装，除了基本的 `Docker` 服务和 `docker-compose`。
 
 如果docker镜像下载慢，请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)
 
 如果不希望使用 docker 快速安装，也可以参考 [通过传统的手工方式安装](docs/install.md)
 
 先决条件：
-- 确保本机80端口没有被占用。
-- 把 `weeshop.test` 指向本机。（也可以使用其他域名）
+- 确保本机8080端口没有被占用。这是因为 `docker-compose.yml` 中需要映射 Web 容器的 80 端口到物理机的 8080 端口。
+- 修改系统 hosts 配置，把 `weeshop.test` 指向本机。也可以使用其他你喜欢的域名，但你可能需要修改一下 `docker-compose.yml` 中的环境变量 `WEB_ALIAS_DOMAIN`。
 
 ```bash
-# 用git下载代码到当前目录
-git clone https://github.com/weeshop/WeeShop.git
-cd WeeShop
-
-# 拉取子库代码
-git submodule init
-git submodule update
-
 # 启动docker容器
-docker-compose up -d --force-recreate --remove-orphans --build
+docker-compose up -d
 
 # 进入docker容器
-docker-compose exec server bash
+docker-compose exec web bash
 
 # 进入容器后，在容器内继续运行下面的命令
-
-# 安装composer依赖
-cd /app
-composer install -vvv
-
 # 安装实例
 su - application -c \
-"cd /app/web/sites && /usr/local/bin/drupal site:install catshop  \
+"cd /app/web/sites && /usr/local/bin/drupal site:install weeshop  \
 --langcode='en'  \
 --db-type='mysql'  \
 --db-host='db'  \
@@ -82,19 +84,15 @@ su - application -c \
 --db-user='root'  \
 --db-pass='123'  \
 --db-port='3306'  \
---site-name='CatShop'  \
+--site-name='My WeeShop'  \
 --site-mail='164713332@qq.com'  \
 --account-name='admin'  \
 --account-mail='164713332@qq.com'  \
 --account-pass='123'"
 ```
 
-浏览器访问 `http://weeshop.test`
+浏览器访问 `http://weeshop.test:8080`，开始体验吧！
 
-开启开发模式
-```bash
-su - application -c "cd /app/web/sites && /usr/local/bin/drupal site:mode -vvv dev"
-```
 
 ## 重要Issuse 
 - Docker for windows, volume默认权限是755，而无法更改 [#issues39](https://github.com/docker/for-win/issues/39)

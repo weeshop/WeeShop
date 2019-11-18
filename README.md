@@ -64,7 +64,6 @@ composer create-project weeshop/project-base myshop --stability dev --no-interac
 
 先决条件：
 - 确保本机8080端口没有被占用。这是因为 `docker-compose.yml` 中需要映射 Web 容器的 80 端口到物理机的 8080 端口。
-- 修改系统 hosts 配置，把 `weeshop.test` 指向本机。也可以使用其他你喜欢的域名，但你可能需要修改一下 `docker-compose.yml` 中的环境变量 `WEB_ALIAS_DOMAIN`。
 
 ```bash
 # 启动docker容器
@@ -76,7 +75,7 @@ docker-compose exec web bash
 # 进入容器后，在容器内继续运行下面的命令
 # 安装实例
 su - application -c \
-"cd /app/web/sites && /usr/local/bin/drupal site:install weeshop  \
+"cd /app/web/sites && /usr/local/bin/drupal site:install  --force --no-interaction weeshop  \
 --langcode='en'  \
 --db-type='mysql'  \
 --db-host='db'  \
@@ -91,7 +90,7 @@ su - application -c \
 --account-pass='123'"
 ```
 
-浏览器访问 `http://weeshop.test:8080`，开始体验吧！
+浏览器访问 `http://localhost:8080`，开始体验吧！
 
 
 ## 重要Issuse 

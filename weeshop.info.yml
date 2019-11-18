@@ -57,7 +57,7 @@ dependencies:
   - commerce_payment
   - commerce_promotion
   - commerce_tax
-  
+
   # Contrib
   - admin_toolbar
   - swiftmailer
@@ -72,5 +72,4 @@ themes:
   - bartik
   - seven
   - adminimal_theme
-  - catshop_theme
   - weeshop_alpha

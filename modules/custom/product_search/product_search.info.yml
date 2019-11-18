@@ -1,0 +1,19 @@
+name: 'Product Search'
+type: module
+description: 'Provides product search functions for commerce product.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - search_api:search_api_db
+  - facets:facets
+  - facets:facets_range_widget
+  - facets:facets_rest
+  - commerce:commerce_product
+  - enhanced_product:enhanced_product
+  - drupal:views
+  - drupal:image
+  - drupal:rest
+  - drupal:serialization
+  - drupal:text
+  - search_api_autocomplete:search_api_autocomplete
+  - features:features

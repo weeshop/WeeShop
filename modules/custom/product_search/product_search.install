@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Contains product_search.install.
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function product_search_install() {
+
+}

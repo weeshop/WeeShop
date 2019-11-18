@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: zh-hans
+label: 'Chinese, Simplified'
+direction: ltr
+weight: 1
+locked: false

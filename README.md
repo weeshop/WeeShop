@@ -88,6 +88,11 @@ su - application -c \
 --account-name='admin'  \
 --account-mail='164713332@qq.com'  \
 --account-pass='123'"
+
+# 更新翻译
+su - application -c "cd /app/web/sites && \
+/usr/local/bin/drush -vvv locale:check && \
+/usr/local/bin/drush -vvv locale:update"
 ```
 
 浏览器访问 `http://localhost:8080`，开始体验吧！

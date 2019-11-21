@@ -11,7 +11,7 @@
       "drupal/adminimal_admin_toolbar": "~1.0",
       "drupal/adminimal_theme": "~1.0",
       "drupal/account": "1.x-dev",
-      "drupal/alipay": "dev-8.x-3.x",
+      "drupal/alipay": "3.x-dev",
       "drupal/commerce_checkout_api": "1.x-dev",
       "drupal/commerce_refund": "1.x-dev",
       "drupal/enhanced_product": "1.x-dev",

@@ -22,6 +22,6 @@
       "drupal/user_phone": "1.x-dev",
       "drupal/wechat_connect": "1.x-dev",
       "drupal/wechat_pay": "1.x-dev",
-      "drupal/weeshop_alpha": "1.x-dev"
+      "drupal/weeshop_alpha": "^1.0"
     }
 }

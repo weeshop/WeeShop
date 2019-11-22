@@ -1,8 +1,8 @@
 {
-  "name": "weeshop/weeshop",
+  "name": "drupal/weeshop",
   "type": "drupal-profile",
   "description": "WeeShop 1.x installation profile",
-  "homepage": "https://github.com/weeshop/WeeShop",
+  "homepage": "https://www.drupal.org/project/weeshop",
   "license": "GPL-2.0+",
   "require": {
       "drupal/commerce": "~2.0",

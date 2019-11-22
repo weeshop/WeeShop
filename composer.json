@@ -4,6 +4,8 @@
   "description": "WeeShop 1.x installation profile",
   "homepage": "https://www.drupal.org/project/weeshop",
   "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "drupal/commerce": "~2.0",
     "drupal/admin_toolbar": "~1.0",

@@ -1,5 +1,5 @@
 {
-  "name": "drupal/weeshop",
+  "name": "weeshop/weeshop",
   "type": "drupal-profile",
   "description": "WeeShop 1.x installation profile",
   "homepage": "https://www.drupal.org/project/weeshop",

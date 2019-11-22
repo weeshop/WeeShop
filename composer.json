@@ -24,6 +24,9 @@
     "drupal/user_phone": "1.x-dev",
     "drupal/wechat_connect": "1.x-dev",
     "drupal/wechat_pay": "1.x-dev",
-    "drupal/weeshop_alpha": "^1.0"
+    "drupal/weeshop_alpha": "^1.0",
+    "drupal/facets": "^1.4",
+    "drupal/search_api": "~1.0",
+    "drupal/search_api_autocomplete": "^1.2"
   }
 }

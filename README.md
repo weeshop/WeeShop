@@ -12,12 +12,12 @@
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
 
-<img src="https://github.com/weeshop/documentation/raw/master/docs/screenshot.jpg">
-<img src="https://github.com/weeshop/documentation/raw/master/docs/screenshot3.jpg">
+<img src="https://github.com/weeshop/documentation/raw/master/source/images/screenshot.jpg">
+<img src="https://github.com/weeshop/documentation/raw/master/source/images/screenshot3.jpg">
 
 简洁的美观的 UI 界面
 
-<img src="https://github.com/weeshop/documentation/raw/master/docs/screenshot2.png">
+<img src="https://github.com/weeshop/documentation/raw/master/source/images/screenshot2.png">
 
 支持使用 `Apache Solr` 集群对商品进行`全文检索`，支持使用属性进行`分面搜索`，支持对搜索结果进行预提示。
 

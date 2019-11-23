@@ -68,18 +68,34 @@ composer create-project weeshop/project-base:dev-8.x-1.x WeeShop --stability dev
 ```bash
 # 启动docker容器
 docker-compose up -d
+```
 
+#### 安装方式一：使用图形界面
+
+这时你可以访问 `http://localhost:8080`，打开图形安装界面根据提示输入信息进行安装：
+- 主机: db
+- 端口：3306
+- 用户：root
+- 密码：123
+- 数据库：weeshop
+
+
+#### 安装方式二：使用命令行
+
+如果你喜欢用命令行的方式，你可以使用下面的命令行来安装
+
+```bash
 # 进入docker容器
 docker-compose exec web bash
 
 # 进入容器后，在容器内继续运行下面的命令
-# 安装实例
+# 安装实例， account-name 和 account-pass 分别是登录后台的用户名和密码
 su - application -c \
 "cd /app/web/sites && /usr/local/bin/drupal site:install  --force --no-interaction weeshop  \
 --langcode='en'  \
 --db-type='mysql'  \
 --db-host='db'  \
---db-name='drupal'  \
+--db-name='weeshop'  \
 --db-user='root'  \
 --db-pass='123'  \
 --db-port='3306'  \
@@ -97,6 +113,9 @@ su - application -c "cd /app/web/sites && \
 
 浏览器访问 `http://localhost:8080`，开始体验吧！
 
+#### 登录管理后台
+
+安装完成后，通过 `http://localhost:8080/user/login` 登录后台。
 
 ## 重要Issuse 
 - Docker for windows, volume默认权限是755，而无法更改 [#issues39](https://github.com/docker/for-win/issues/39)

@@ -39,6 +39,7 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
+  - locale
 
   # Commerce
   - address

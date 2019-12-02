@@ -91,7 +91,7 @@ docker-compose exec web bash
 # 进入容器后，在容器内继续运行下面的命令
 # 安装实例， account-name 和 account-pass 分别是登录后台的用户名和密码
 su - application -c \
-"cd /app/web/sites && /usr/local/bin/drupal site:install  --force --no-interaction weeshop  \
+"cd /app/web/sites && /usr/local/bin/drupal site:install --force --no-interaction weeshop  \
 --langcode='en'  \
 --db-type='mysql'  \
 --db-host='db'  \

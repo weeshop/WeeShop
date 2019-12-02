@@ -48,3 +48,9 @@
 [submodule "modules/custom/commerce_checkout_api"]
 	path = modules/custom/commerce_checkout_api
 	url = git@github.com:solody/commerce_checkout_api.git
+[submodule "modules/custom/weeshop_demo"]
+	path = modules/custom/weeshop_demo
+	url = git@github.com:weeshop/weeshop_demo.git
+[submodule "modules/custom/migrate_inline_image"]
+	path = modules/custom/migrate_inline_image
+	url = git@github.com:solody/migrate_inline_image.git

@@ -10,7 +10,7 @@
 感谢您的关注，WeeShop的成功离不开您的意见和支持：
 - 马上Star此项目，最好同时Fork此项目，以帮助让更多的人看到此项目。
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
-- 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。 
+- 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。
 
 <img src="https://github.com/weeshop/documentation/raw/master/source/images/screenshot.jpg">
 <img src="https://github.com/weeshop/documentation/raw/master/source/images/screenshot3.jpg">
@@ -26,8 +26,8 @@
 微信小程序商城是以本工程作为服务端进行开发的。
 
 ## 文档
-- [用户指南](docs/user-guide/index.md)
-- [开发者指南](docs/dev-guide/index.md)
+- [用户指南](https://www.weeshop.org/user_guide/)
+- [开发者指南](https://www.weeshop.org/dev_guide/)
 
 ## 特性
 - 灵活的商品属性系统，可表达任意类型的商品，包括虚拟商品。
@@ -60,7 +60,7 @@ composer create-project weeshop/project-base:dev-8.x-1.x WeeShop --stability dev
 
 如果docker镜像下载慢，请自行了解 [如何加速docker镜像下载](https://www.baidu.com/s?wd=docker%E5%8A%A0%E9%80%9F)
 
-如果不希望使用 docker 快速安装，也可以参考 [通过传统的手工方式安装](docs/install.md)
+如果不希望使用 docker 快速安装，也可以参考 [通过传统的手工方式安装](https://www.weeshop.org/user_guide/install.html)
 
 先决条件：
 - 确保本机8080端口没有被占用。这是因为 `docker-compose.yml` 中需要映射 Web 容器的 80 端口到物理机的 8080 端口。
@@ -117,9 +117,9 @@ su - application -c "cd /app/web/sites && \
 
 安装完成后，通过 `http://localhost:8080/user/login` 登录后台。
 
-## 重要Issuse 
+## 重要Issuse
 - Docker for windows, volume默认权限是755，而无法更改 [#issues39](https://github.com/docker/for-win/issues/39)
-  
+
   - 解决办法，使用Mac或Linux系统
   - 在 `docker-compose.yml` 中把 `/app/web/sites` 目录的volume注掉，让文件留在容器内
 

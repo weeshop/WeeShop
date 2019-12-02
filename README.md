@@ -26,8 +26,8 @@
 微信小程序商城是以本工程作为服务端进行开发的。
 
 ## 文档
-- [用户指南](https://www.weeshop.org/user_guide/)
-- [开发者指南](https://www.weeshop.org/dev_guide/)
+- [用户指南](https://www.weeshop.org/)
+- [开发者指南](https://www.weeshop.org/)
 
 ## 特性
 - 灵活的商品属性系统，可表达任意类型的商品，包括虚拟商品。

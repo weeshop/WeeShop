@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_adverts
+    - system
+  theme:
+    - weeshop_alpha
+id: weeshop_alpha_adverts_swiper
+theme: weeshop_alpha
+region: content
+weight: -7
+provider: null
+plugin: adverts_swiper
+settings:
+  id: adverts_swiper
+  label: 'Adverts swiper'
+  provider: product_adverts
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

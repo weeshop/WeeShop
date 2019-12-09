@@ -68,6 +68,8 @@ dependencies:
 
   - product_search
   - features_ui
+  - product_adverts
+  - weeshop_service
 
 themes:
   - bartik

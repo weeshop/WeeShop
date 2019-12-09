@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_adverts
+    - system
+  theme:
+    - weeshop_alpha
+id: weeshop_alpha_adverts_top_products
+theme: weeshop_alpha
+region: content
+weight: -4
+provider: null
+plugin: adverts_top_products
+settings:
+  id: adverts_top_products
+  label: 'Adverts top products'
+  provider: product_adverts
+  label_display: '0'
+  quantity: '10'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

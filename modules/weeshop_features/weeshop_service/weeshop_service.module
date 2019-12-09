@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * module file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function weeshop_service_theme() {
+  return [
+    'weeshop_service_banner_block' => [
+      'variables' => [
+        'services' => []
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

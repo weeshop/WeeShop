@@ -1,0 +1,28 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+<!-- Features section -->
+<section class="features-section">
+  <div class="container-fluid">
+    <div class="row">
+      {% for service in services  %}
+      <div class="col-md-4 p-0 feature">
+        <div class="feature-inner">
+          <div class="feature-icon">
+            <img src="{{ service.image }}" alt="#">
+          </div>
+          <h2>{{ service.title }}</h2>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Features section end -->

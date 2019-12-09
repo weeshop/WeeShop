@@ -1,0 +1,14 @@
+name: Service
+description: 'Items of shopping service.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - image
+  - language
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+package: WeeShop

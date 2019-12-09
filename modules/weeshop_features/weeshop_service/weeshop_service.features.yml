@@ -1,0 +1,10 @@
+bundle: weeshop
+required:
+  - core.base_field_override.node.service.promote
+  - language.content_settings.node.service
+  - node.type.service
+  - core.entity_form_display.node.service.default
+  - core.entity_view_display.node.service.default
+  - core.entity_view_display.node.service.teaser
+  - field.field.node.service.body
+  - field.field.node.service.field_image

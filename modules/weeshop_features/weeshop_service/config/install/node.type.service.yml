@@ -1,0 +1,16 @@
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Service
+type: service
+description: 'Shopping service item.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

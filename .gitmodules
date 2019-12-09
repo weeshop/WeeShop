@@ -54,3 +54,6 @@
 [submodule "modules/custom/migrate_inline_image"]
 	path = modules/custom/migrate_inline_image
 	url = git@github.com:solody/migrate_inline_image.git
+[submodule "modules/custom/product_adverts"]
+	path = modules/custom/product_adverts
+	url = git@github.com:solody/product_adverts.git

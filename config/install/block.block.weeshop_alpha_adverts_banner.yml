@@ -17,9 +17,9 @@ settings:
   label: 'Adverts banner'
   provider: product_adverts
   label_display: '0'
-  product_advert: '2'
+  product_advert: '3'
   show_new_tag: 1
-  text_color: '#ffffff'
+  text_color: '#999999'
 visibility:
   request_path:
     id: request_path

@@ -5,8 +5,6 @@ dependencies:
     - commerce_product.commerce_product_type.default
     - core.entity_view_mode.commerce_product.teaser
     - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.stores
-    - field.field.commerce_product.default.variations
   module:
     - commerce_product
     - image

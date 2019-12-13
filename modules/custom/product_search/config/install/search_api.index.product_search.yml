@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.storage.commerce_product.body
-    - field.storage.commerce_product.variations
     - field.storage.commerce_product_variation.attribute_color
     - field.storage.commerce_product_variation.attribute_size
     - search_api.server.default_server

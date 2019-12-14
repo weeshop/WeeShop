@@ -12,6 +12,8 @@
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。
 
+<iframe src="//player.bilibili.com/player.html?aid=79111768&cid=135385259&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 <img src="https://www.weeshop.org/images/screenshot.jpg">
 <img src="https://www.weeshop.org/images/screenshot3.jpg">
 

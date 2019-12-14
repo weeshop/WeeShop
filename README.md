@@ -13,7 +13,11 @@
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。
 
 [WeeShop v1.0.0 beta4 安装过程视频演示](https://www.bilibili.com/video/av79111768/)
-[![](https://i1.hdslb.com/bfs/archive/c11af36df397aa86bfc351bbdecb264d0f86b734.jpg_400x300.jpg)](https://www.bilibili.com/video/av79111768/)
+
+<a href="https://www.bilibili.com/video/av79111768/">
+  <img src="https://i1.hdslb.com/bfs/archive/c11af36df397aa86bfc351bbdecb264d0f86b734.jpg_400x300.jpg">
+</a>
+
 
 <img src="https://www.weeshop.org/images/screenshot.jpg">
 <img src="https://www.weeshop.org/images/screenshot3.jpg">

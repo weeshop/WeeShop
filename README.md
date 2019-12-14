@@ -12,8 +12,8 @@
 - 我们希望听见您的心声，请 [创建issue](https://github.com/weeshop/WeeShop/issues/new) 来表达您的意见。
 - 我们万分欢迎您参与开发，请阅读 [如何加入开发]()。
 
-<iframe src="//player.bilibili.com/player.html?aid=79111768&cid=135385259&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<video preload="" width="100%" height="100%" webkit-playsinline="" playsinline="" class="show" style="display: inline;"><source src="//upos-hz-mirrorks3u.acgvideo.com/upgcxcode/59/52/135385259/135385259-1-6.mp4?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&amp;uipk=5&amp;nbs=1&amp;deadline=1576315191&amp;gen=playurl&amp;os=ks3u&amp;oi=1902996712&amp;trid=1306595f973a43e0bbe181026dea546fh&amp;platform=html5&amp;upsig=c1ae3c7cc4c9f64c0401141292fe9e7b&amp;uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&amp;mid=0" type="video/mp4"></video>
+[WeeShop v1.0.0 beta4 安装过程视频演示](https://www.bilibili.com/video/av79111768/)
+[![](https://i1.hdslb.com/bfs/archive/c11af36df397aa86bfc351bbdecb264d0f86b734.jpg_400x300.jpg)](https://www.bilibili.com/video/av79111768/)
 
 <img src="https://www.weeshop.org/images/screenshot.jpg">
 <img src="https://www.weeshop.org/images/screenshot3.jpg">

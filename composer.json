@@ -29,6 +29,7 @@
     "drupal/search_api": "~1.0",
     "drupal/search_api_autocomplete": "^1.2",
     "drupal/product_adverts": "^1.0",
-    "weeshop/weeshop_demo": "^1.0"
+    "weeshop/weeshop_demo": "^1.0",
+    "drupal/enhanced_promotion": "1.x-dev"
   }
 }

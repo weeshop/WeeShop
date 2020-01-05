@@ -2,6 +2,7 @@ name: WeeShop
 type: profile
 core: 8.x
 description: 'WeeShop distribution base on drupal commerce.'
+version: 1.0-beta6
 distribution:
   name: 'WeeShop'
 dependencies:
@@ -71,6 +72,9 @@ dependencies:
   - product_adverts
   - weeshop_service
   - weeshop_demo
+  - wechat_pay
+  - alipay
+  - enhanced_promotion
 
 themes:
   - bartik

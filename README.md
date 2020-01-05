@@ -112,6 +112,10 @@ su - application -c \
 --account-mail='164713332@qq.com'  \
 --account-pass='123'"
 
+# 安装测试数据
+su - application -c \
+"cd /app/web/sites && /usr/local/bin/drupal weeshop_demo:import"
+
 # 更新翻译
 su - application -c "cd /app/web/sites && \
 /usr/local/bin/drush -vvv locale:check && \

@@ -15,7 +15,7 @@ use Drupal\Core\Url;
 function weeshop_install_tasks(&$install_state) {
   $tasks = [
     '_weeshop_final_site_setup' => [
-      'display_name' => t('Data importing.'),
+      'display_name' => t('Data Importing'),
       'type' => 'batch',
       'display' => TRUE,
     ]

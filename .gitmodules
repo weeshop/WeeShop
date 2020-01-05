@@ -60,3 +60,6 @@
 [submodule "modules/custom/adverts"]
 	path = modules/custom/adverts
 	url = git@github.com:solody/adverts.git
+[submodule "modules/custom/enhanced_promotion"]
+	path = modules/custom/enhanced_promotion
+	url = git@github.com:solody/enhanced_promotion.git

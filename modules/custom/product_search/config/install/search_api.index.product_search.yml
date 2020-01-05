@@ -47,7 +47,6 @@ field_settings:
     type: integer
     dependencies:
       config:
-        - field.storage.commerce_product.variations
         - field.storage.commerce_product_variation.attribute_color
       module:
         - commerce_product
@@ -58,7 +57,6 @@ field_settings:
     type: integer
     dependencies:
       config:
-        - field.storage.commerce_product.variations
         - field.storage.commerce_product_variation.attribute_size
       module:
         - commerce_product

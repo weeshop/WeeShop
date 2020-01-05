@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: main_m
-label: 'Main navigation for mobile'
-description: 'Site section links for mobile.'
-locked: true

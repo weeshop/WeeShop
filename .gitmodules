@@ -63,3 +63,6 @@
 [submodule "modules/custom/enhanced_promotion"]
 	path = modules/custom/enhanced_promotion
 	url = git@github.com:solody/enhanced_promotion.git
+[submodule "modules/custom/merchant"]
+	path = modules/custom/merchant
+	url = git@github.com:solody/merchant.git

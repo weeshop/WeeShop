@@ -79,5 +79,5 @@ dependencies:
 themes:
   - bartik
   - seven
-  - adminimal_theme
+  - weeshop_adminimal
   - weeshop_alpha

@@ -4,9 +4,9 @@ dependencies:
   module:
     - user
   theme:
-    - adminimal_theme
-id: adminimal_theme_login
-theme: adminimal_theme
+    - weeshop_adminimal
+id: weeshop_adminimal_login
+theme: weeshop_adminimal
 region: content
 weight: 10
 provider: null

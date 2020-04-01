@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - adminimal_theme
-id: adminimal_theme_primary_local_tasks
-theme: adminimal_theme
+    - weeshop_adminimal
+id: weeshop_adminimal_primary_local_tasks
+theme: weeshop_adminimal
 region: header
 weight: 0
 provider: null

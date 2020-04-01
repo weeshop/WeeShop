@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - adminimal_theme
-id: adminimal_theme_content
-theme: adminimal_theme
+    - weeshop_adminimal
+id: weeshop_adminimal_content
+theme: weeshop_adminimal
 region: content
 weight: 0
 provider: null

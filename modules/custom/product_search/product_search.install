@@ -5,10 +5,15 @@
  * Contains product_search.install.
  */
 
+use Drupal\user\RoleInterface;
+
 
 /**
  * Implements hook_theme().
  */
 function product_search_install() {
-
+  $permissions = [
+    'use search_api_autocomplete for product_search'
+  ];
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $permissions);
 }

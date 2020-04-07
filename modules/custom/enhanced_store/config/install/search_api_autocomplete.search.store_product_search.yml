@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.product_search
+    - views.view.store_product_search
+  module:
+    - views
+    - search_api_autocomplete
+id: store_product_search
+label: 'Store Product Search'
+index_id: product_search
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes:
+      'entity:commerce_product':
+        default: ''
+  server:
+    fields: {  }
+suggester_weights:
+  live_results: 0
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:store_product_search':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: false
+  autosubmit: true
+  submit_button_selector: ':submit'
+  delay: null

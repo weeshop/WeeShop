@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Contains enhanced_store.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_help().
+ */
+function enhanced_store_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the enhanced_store module.
+    case 'help.page.enhanced_store':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enhanced features for commerce store.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function enhanced_store_theme() {
+  return [
+    'enhanced_store' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+
+/**
+ * Implements hook_install().
+ */
+function enhanced_store_install()
+{
+  $permissions = [
+    'view commerce_store',
+    'use search_api_autocomplete for store_product_search'
+  ];
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $permissions);
+}

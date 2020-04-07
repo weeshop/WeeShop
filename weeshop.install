@@ -46,4 +46,17 @@ function weeshop_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+
+  // Set Default user picture.
+  _weeshop_set_default_user_picture();
+}
+
+function _weeshop_set_default_user_picture() {
+  $avatar_path = \Drupal::config('system.file')->get('default_scheme') . '://default_user_picture.png';
+  $file = file_save_data(file_get_contents(__DIR__.'/assets/image/default_user_picture.png'), $avatar_path, \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE);
+  \Drupal::configFactory()->getEditable('field.field.user.user.user_picture')
+    ->set('settings.default_image.uuid', $file->uuid())
+    ->set('alt', 'Default user picture')
+    ->set('title', 'Default user picture')
+    ->save(TRUE);
 }

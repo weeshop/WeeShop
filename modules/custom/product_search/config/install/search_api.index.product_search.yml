@@ -9,6 +9,7 @@ dependencies:
   module:
     - enhanced_product
     - commerce_product
+    - commerce_store
     - search_api
 id: product_search
 name: 'Product Search'
@@ -31,6 +32,26 @@ field_settings:
     dependencies:
       module:
         - enhanced_product
+  name:
+    label: 'Stores » Store » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'stores:entity:name'
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+        - commerce_store
+        - commerce_store
+  store_id:
+    label: 'Stores » Store » ID'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'stores:entity:store_id'
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+        - commerce_store
+        - commerce_store
   title:
     label: Title
     datasource_id: 'entity:commerce_product'
@@ -46,20 +67,22 @@ field_settings:
     property_path: 'variations:entity:attribute_color'
     type: integer
     dependencies:
-      config:
-        - field.storage.commerce_product_variation.attribute_color
       module:
         - commerce_product
+        - commerce_product
+      config:
+        - field.storage.commerce_product_variation.attribute_color
   variation_attribute_size:
     label: 'Variations » Product variation » Size'
     datasource_id: 'entity:commerce_product'
     property_path: 'variations:entity:attribute_size'
     type: integer
     dependencies:
-      config:
-        - field.storage.commerce_product_variation.attribute_size
       module:
         - commerce_product
+        - commerce_product
+      config:
+        - field.storage.commerce_product_variation.attribute_size
 datasource_settings:
   'entity:commerce_product':
     bundles:
@@ -72,6 +95,7 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   entity_status: {  }
+  language_with_fallback: {  }
   rendered_item: {  }
   tokenizer:
     all_fields: true

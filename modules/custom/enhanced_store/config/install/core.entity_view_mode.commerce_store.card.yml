@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_store
+id: commerce_store.card
+label: Card
+targetEntityType: commerce_store
+cache: true

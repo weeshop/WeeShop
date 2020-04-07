@@ -19,7 +19,7 @@ default_value_callback: ''
 settings:
   file_extensions: 'png gif jpg jpeg'
   file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
-  max_filesize: '30 KB'
+  max_filesize: '100 KB'
   alt_field: false
   title_field: false
   max_resolution: 85x85

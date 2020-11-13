@@ -72,8 +72,6 @@ dependencies:
   - product_adverts
   - weeshop_service
   - weeshop_demo
-  - wechat_pay
-  - alipay
   - enhanced_promotion
 
 themes:

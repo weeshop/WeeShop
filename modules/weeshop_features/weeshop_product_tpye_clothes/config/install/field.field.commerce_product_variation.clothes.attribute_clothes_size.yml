@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.clothes_size
+    - commerce_product.commerce_product_variation_type.clothes
+    - field.storage.commerce_product_variation.attribute_clothes_size
+id: commerce_product_variation.clothes.attribute_clothes_size
+field_name: attribute_clothes_size
+entity_type: commerce_product_variation
+bundle: clothes
+label: 'Clothes size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - clothes_size
+field_type: entity_reference

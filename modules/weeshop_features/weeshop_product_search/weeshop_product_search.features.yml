@@ -1,0 +1,3 @@
+bundle: weeshop
+excluded:
+  - block.block.weeshop_alpha_facets_categories

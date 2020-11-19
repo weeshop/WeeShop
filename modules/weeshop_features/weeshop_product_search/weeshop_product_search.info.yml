@@ -1,0 +1,23 @@
+name: 'Product Search'
+description: 'Provides product search functions for commerce product.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - commerce_price
+  - commerce_product
+  - commerce_store
+  - enhanced_product
+  - facets
+  - facets_rest
+  - image
+  - rest
+  - search_api
+  - search_api_autocomplete
+  - search_api_db
+  - serialization
+  - system
+  - text
+  - views
+  - weeshop_product_tpye_clothes
+package: WeeShop

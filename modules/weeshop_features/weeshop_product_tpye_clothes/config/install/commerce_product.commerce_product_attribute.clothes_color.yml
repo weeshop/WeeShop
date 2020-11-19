@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: clothes_color
+label: 'Clothes color'
+elementType: radios

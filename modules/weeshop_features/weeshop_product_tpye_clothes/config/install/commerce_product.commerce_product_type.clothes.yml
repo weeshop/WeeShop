@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: clothes
+label: Clothes
+description: 'Product type with size and color attributes.'
+variationType: clothes
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

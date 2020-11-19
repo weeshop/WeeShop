@@ -11,6 +11,10 @@
     "drupal/admin_toolbar": "~1.0",
     "drupal/swiftmailer": "~1.0",
     "drupal/adminimal_admin_toolbar": "~1.0",
-    "drupal/adminimal_theme": "~1.0"
+    "drupal/adminimal_theme": "~1.0",
+    "drupal/features": "^3.11",
+    "drupal/facets": "^1.4",
+    "drupal/search_api": "~1.0",
+    "drupal/search_api_autocomplete": "^1.2"
   }
 }

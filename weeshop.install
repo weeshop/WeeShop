@@ -49,6 +49,12 @@ function weeshop_install() {
 
   // Set Default user picture.
   _weeshop_set_default_user_picture();
+
+
+  $permissions = [
+    'use search_api_autocomplete for product_search'
+  ];
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $permissions);
 }
 
 function _weeshop_set_default_user_picture() {

@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothes
+    - field.field.commerce_product.clothes.body
+  module:
+    - comment
+    - commerce_product
+    - image
+    - text
+    - weeshop_alpha_components
+id: commerce_product.clothes.default
+targetEntityType: commerce_product
+bundle: clothes
+mode: default
+content:
+  body:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  brand:
+    label: above
+    type: entity_reference_label
+    region: content
+    weight: 6
+    settings:
+      link: true
+    third_party_settings: {  }
+  categories:
+    label: above
+    type: entity_reference_label
+    region: content
+    weight: 5
+    settings:
+      link: true
+    third_party_settings: {  }
+  comments:
+    label: above
+    type: comment_default
+    region: content
+    weight: 7
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+  detail_images:
+    label: hidden
+    type: weeshop_alpha_components_photo_gallery
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  image:
+    label: above
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 4
+    region: content
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

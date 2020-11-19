@@ -98,7 +98,7 @@ docker-compose exec web bash
 # 进入容器后，在容器内继续运行下面的命令
 # 安装实例， account-name 和 account-pass 分别是登录后台的用户名和密码
 su - application -c \
-"cd /app/web/sites && /usr/local/bin/drupal site:install --force --no-interaction weeshop  \
+"cd /app/web/sites && ../../vendor/bin/drupal site:install --force --no-interaction weeshop  \
 --langcode='en'  \
 --db-type='mysql'  \
 --db-host='db'  \
@@ -143,6 +143,15 @@ su - application -c "cd /app/web/sites && \
 
 - 订单打印 [#2831952](https://www.drupal.org/project/commerce/issues/2831952)
 
+## 产品类型
+基于 Drupal 的实体视图模式渲染模板机制，每新建一个产品类型，都是一个技术化的复杂的任务。
+为了更好地完成新建产品类型的任务，有必要对该工作定下一些规则的说明。
 
+### 几点重要信息
+
+- `视图模式(view mode)`只作用于实体的字段编排，字段本身上与视图模式无关的。
+- 字段输出什么内容，取决于实体所使用的视图模式所选择的字段格式化器，它对字段的输入有着完全的控制权，
+但最终它还是调用theme系统来使用模板渲染输出的。
+- 当一个字段有着独立并复杂的输出时，要考虑实现 `字段格式化器(FieldFormatter)`，切勿过度使用`模板template`实现效果。
 
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

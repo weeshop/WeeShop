@@ -1,0 +1,16 @@
+name: 'Product type clothes'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - commerce
+  - commerce_price
+  - commerce_product
+  - enhanced_product
+  - field
+  - image
+  - language
+  - path
+  - text
+  - weeshop_alpha_components
+package: WeeShop

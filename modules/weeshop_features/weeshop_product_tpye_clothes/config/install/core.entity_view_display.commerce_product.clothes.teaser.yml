@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothes
+    - core.entity_view_mode.commerce_product.teaser
+    - field.field.commerce_product.clothes.body
+  module:
+    - commerce_product
+    - image
+id: commerce_product.clothes.teaser
+targetEntityType: commerce_product
+bundle: clothes
+mode: teaser
+content:
+  image:
+    label: hidden
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  body: true
+  brand: true
+  categories: true
+  comments: true
+  created: true
+  detail_images: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

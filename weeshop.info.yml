@@ -67,12 +67,13 @@ dependencies:
   # adminimal_theme toolbar fix module
   - adminimal_admin_toolbar
 
-  - product_search
   - features_ui
   - product_adverts
   - weeshop_service
   - weeshop_demo
   - enhanced_promotion
+  - weeshop_alpha_components
+  - weeshop_product_search
 
 themes:
   - bartik

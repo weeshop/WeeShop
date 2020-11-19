@@ -6,7 +6,7 @@ dependencies:
     - system
   theme:
     - weeshop_alpha
-id: advertstopproducts
+id: storeadvertstopproducts
 theme: weeshop_alpha
 region: content
 weight: -3

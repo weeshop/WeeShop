@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothes
+id: commerce_product.clothes
+target_entity_type_id: commerce_product
+target_bundle: clothes
+default_langcode: site_default
+language_alterable: false

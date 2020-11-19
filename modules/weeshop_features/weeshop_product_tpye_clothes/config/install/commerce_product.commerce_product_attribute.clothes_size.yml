@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: clothes_size
+label: 'Clothes size'
+elementType: radios

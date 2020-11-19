@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.variations_product_variation_color
+    - facets.facet.variations_product_variation_clothes_color
   module:
     - facets
     - system
   theme:
     - weeshop_alpha
-id: weeshop_alpha_facets_color
+id: weeshop_alpha_facets_clothes_color
 theme: weeshop_alpha
 region: sidebar
-weight: -6
+weight: 0
 provider: null
-plugin: 'facet_block:variations_product_variation_color'
+plugin: 'facet_block:variations_product_variation_clothes_color'
 settings:
-  id: 'facet_block:variations_product_variation_color'
-  label: Color
+  id: 'facet_block:variations_product_variation_clothes_color'
+  label: 'Clothes color'
   provider: facets
   label_display: visible
-  block_id: weeshop_alpha_facets_color
+  block_id: weeshop_alpha_facets_clothes_color
 visibility:
   request_path:
     id: request_path

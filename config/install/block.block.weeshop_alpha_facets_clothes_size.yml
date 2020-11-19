@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.variations_product_variation_size
+    - facets.facet.variations_product_variation_clothes_size
   module:
     - facets
     - system
   theme:
     - weeshop_alpha
-id: weeshop_alpha_facets_size
+id: weeshop_alpha_facets_clothes_size
 theme: weeshop_alpha
 region: sidebar
-weight: -5
+weight: 0
 provider: null
-plugin: 'facet_block:variations_product_variation_size'
+plugin: 'facet_block:variations_product_variation_clothes_size'
 settings:
-  id: 'facet_block:variations_product_variation_size'
-  label: Size
+  id: 'facet_block:variations_product_variation_clothes_size'
+  label: 'Clothes size'
   provider: facets
   label_display: visible
-  block_id: weeshop_alpha_facets_size
+  block_id: weeshop_alpha_facets_clothes_size
 visibility:
   request_path:
     id: request_path

@@ -18,7 +18,7 @@
     "drupal/facets": "^1.4",
     "drupal/search_api": "~1.0",
     "drupal/enhanced_product": "^1.0",
-    "drupal/product_advert": "^1.0",
+    "drupal/product_adverts": "^1.0",
     "drupal/weeshop_alpha_components": "^1.0",
     "drupal/weeshop_demo": "^1.0"
   }

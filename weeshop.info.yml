@@ -2,7 +2,7 @@ name: WeeShop
 type: profile
 core: 8.x
 description: 'WeeShop distribution base on drupal commerce.'
-version: 1.0-beta7
+version: 1.0-beta8
 distribution:
   name: 'WeeShop'
 dependencies:

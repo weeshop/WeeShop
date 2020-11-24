@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+    - commerce_shipping
+third_party_settings:
+  commerce_cart:
+    cart_form_view: commerce_cart_form
+    cart_block_view: commerce_cart_block
+    cart_expiration: {  }
+  commerce_checkout:
+    checkout_flow: shipping
+  commerce_shipping:
+    shipment_type: default
+label: Default
+id: default
+workflow: order_fulfillment
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+traits: {  }
+locked: false

@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.clothes
+    - field.field.commerce_product_variation.clothes.attribute_clothes_color
+    - field.field.commerce_product_variation.clothes.attribute_clothes_size
+    - field.field.commerce_product_variation.clothes.weight
+  module:
+    - commerce_price
+    - commerce_stock_field
+id: commerce_product_variation.clothes.default
+targetEntityType: commerce_product_variation
+bundle: clothes
+mode: default
+content:
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  stock:
+    label: inline
+    type: commerce_stock_level_simple
+    region: content
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  attribute_clothes_color: true
+  attribute_clothes_size: true
+  langcode: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true
+  title: true
+  weight: true

@@ -1,0 +1,9 @@
+name: 'Order type'
+type: module
+core: 8.x
+dependencies:
+  - commerce_cart
+  - commerce_checkout
+  - commerce_order
+  - commerce_shipping
+package: WeeShop

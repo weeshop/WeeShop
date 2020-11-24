@@ -8,6 +8,8 @@
   "prefer-stable": true,
   "require": {
     "drupal/commerce": "~2.0",
+    "drupal/commerce_wishlist" : "^3.0",
+    "drupal/commerce_shipping" : "^2.0",
     "drupal/admin_toolbar": "~1.0",
     "drupal/swiftmailer": "~1.0",
     "drupal/adminimal_admin_toolbar": "~1.0",
@@ -15,6 +17,9 @@
     "drupal/features": "^3.11",
     "drupal/facets": "^1.4",
     "drupal/search_api": "~1.0",
-    "drupal/search_api_autocomplete": "^1.2"
+    "drupal/enhanced_product": "^1.0",
+    "drupal/product_advert": "^1.0",
+    "drupal/weeshop_alpha_components": "^1.0",
+    "drupal/weeshop_demo": "^1.0"
   }
 }

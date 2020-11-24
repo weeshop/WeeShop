@@ -7,6 +7,7 @@ dependencies:
   module:
     - comment
     - commerce_product
+    - commerce_wishlist
     - image
     - text
     - weeshop_alpha_components
@@ -78,7 +79,11 @@ content:
     label: above
     settings:
       combine: true
-    third_party_settings: {  }
+    third_party_settings:
+      commerce_wishlist:
+        show_wishlist: true
+        weight_wishlist: 99
+        label_wishlist: ''
 hidden:
   created: true
   langcode: true

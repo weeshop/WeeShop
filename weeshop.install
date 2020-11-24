@@ -50,11 +50,11 @@ function weeshop_install() {
   // Set Default user picture.
   _weeshop_set_default_user_picture();
 
-
   $permissions = [
     'use search_api_autocomplete for product_search'
   ];
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $permissions);
+  _weeshop_set_shipping();
 }
 
 function _weeshop_set_default_user_picture() {
@@ -65,4 +65,34 @@ function _weeshop_set_default_user_picture() {
     ->set('alt', 'Default user picture')
     ->set('title', 'Default user picture')
     ->save(TRUE);
+}
+
+function _weeshop_set_shipping(){
+  \Drupal::configFactory()->getEditable('commerce_order.commerce_order_type.default')
+    ->set('workflow', 'order_fulfillment')
+    ->set('third_party_settings.commerce_checkout.checkout_flow', 'shipping')
+    ->set('third_party_settings.commerce_shipping.shipment_type', 'default')
+    ->save(TRUE);
+  // Create the order field.
+  $field_definition = commerce_shipping_build_shipment_field_definition('default');
+  \Drupal::service('commerce.configurable_field_manager')->createField($field_definition);
+
+  \Drupal\commerce_shipping\Entity\ShippingMethod::create([
+    'stores' => [1,2,3],
+    'plugin' => [
+      'target_plugin_id' => 'flat_rate',
+      'target_plugin_configuration' => [
+        'rate_label' => '固定邮费',
+        'rate_description' => '',
+        'rate_amount' => [
+          'number' => '10',
+          'currency_code' => 'CNY'
+        ],
+        'services' => ['default'],
+        'default_package_type' => 'custom_box',
+        'workflow' => 'shipment_default',
+      ]
+    ],
+    'name' => '普通快递'
+  ])->save();
 }

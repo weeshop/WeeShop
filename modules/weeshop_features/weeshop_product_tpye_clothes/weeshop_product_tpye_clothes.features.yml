@@ -1,2 +1,6 @@
 bundle: weeshop
+excluded:
+  - block.block.weeshop_alpha_facets_categories
+  - block.block.weeshop_alpha_facets_clothes_color
+  - block.block.weeshop_alpha_facets_clothes_size
 required: true

@@ -59,6 +59,12 @@ dependencies:
   - commerce_payment
   - commerce_promotion
   - commerce_tax
+  - commerce_wishlist
+  - commerce_stock_ui
+  - commerce_stock_local
+  - commerce_stock_field
+  - commerce_stock_enforcement
+  - commerce_shipping
 
   # Contrib
   - admin_toolbar

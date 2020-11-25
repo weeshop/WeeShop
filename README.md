@@ -53,10 +53,10 @@
 本项目支持用 Composer 创建工程，使用下面的命令，会在当前目录下创建一个 `myshop` 目录，并在其中下载 WeeShop 相关的代码，包括它们的依赖：
 
 ```bash
-composer create-project weeshop/project-base:dev-8.x-1.x WeeShop --stability dev --no-interaction -vvv
+composer create-project weeshop/weeshop-project WeeShop --stability dev --no-interaction -vvv
 ```
 
-这条命令实际上是简单地下载 WeeShop 模板工程仓库 [weeshop/project-base](https://github.com/weeshop/project-base) 的代码，
+这条命令实际上是简单地下载 WeeShop 模板工程仓库 [weeshop/weeshop-project](https://github.com/weeshop/weeshop-project) 的代码，
 并安装其所定义的 Composer 依赖，所以，实际上你也可以直接克隆该仓库，把它作为你新项目的起点。
 
 #### 使用 Docker 镜像运行代码

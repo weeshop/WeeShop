@@ -23,13 +23,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
-  comment:
-    label: above
-    type: comment_default
-    weight: 20
-    settings:
-      pager_id: 0
-    third_party_settings: {  }
   field_image:
     type: image
     weight: -1

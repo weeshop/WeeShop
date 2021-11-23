@@ -2,7 +2,7 @@ name: WeeShop Adminimal
 type: theme
 description: 'Admin theme for WeeShop.'
 package: WeeShop
-core: 8.x
+core_version_requirement: '^8.9 || ^9'
 libraries:
   - weeshop_adminimal/global-styling
 

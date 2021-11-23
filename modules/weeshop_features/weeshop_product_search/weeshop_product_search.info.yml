@@ -1,7 +1,7 @@
 name: 'Product Search'
 description: 'Provides product search functions for commerce product.'
 type: module
-core: 8.x
+core_version_requirement: '^8.9 || ^9'
 dependencies:
   - block
   - commerce_price

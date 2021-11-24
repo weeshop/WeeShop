@@ -33,7 +33,7 @@ class ServiceBannerBlock extends BlockBase {
       $image_file = $node->get('field_image')->entity;
       $services[] = [
         'title' => $node->label(),
-        'image' => $image_file->url(),
+        'image' => $image_file->createFileUrl(),
         'node' => $node
       ];
     }

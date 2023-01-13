@@ -11,8 +11,7 @@ dependencies:
   - history
   - block
   - breakpoint
-  - ckeditor
-  - color
+  - ckeditor5
   - config
   - comment
   - contextual
@@ -20,7 +19,6 @@ dependencies:
   - menu_link_content
   - datetime
   - block_content
-  - quickedit
   - editor
   - help
   - image
@@ -29,13 +27,14 @@ dependencies:
   - path
   - page_cache
   - dynamic_page_cache
+  - big_pipe
   - taxonomy
   - dblog
   - search
+  - shortcut
   - toolbar
   - field_ui
   - file
-  - rdf
   - views
   - views_ui
   - tour

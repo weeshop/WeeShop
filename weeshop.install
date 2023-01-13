@@ -2,12 +2,13 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the commerce_base installation profile.
+ * Install, update and uninstall functions for the installation profile.
  */
 
-use Drupal\user\Entity\User;
+use Drupal\commerce_shipping\Entity\ShippingMethod;
+use Drupal\Core\Entity\EntityStorageException;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\user\RoleInterface;
-use Drupal\user\UserInterface;
 
 /**
  * Implements hook_install().
@@ -16,22 +17,18 @@ use Drupal\user\UserInterface;
  *
  * @see system_install()
  */
-function weeshop_install() {
-  // Set front page to "node".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
-
-  // Allow visitor account creation with administrative approval.
-  $user_settings = \Drupal::configFactory()->getEditable('user.settings');
-  $user_settings->set('register', UserInterface::REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
+function weeshop_install(): void {
+  // First, do everything that is done in the standard profile.
+  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
+  standard_install();
 
   // Enable default permissions for system roles.
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access comments']);
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access comments', 'post comments', 'skip comment approval']);
-
-  // Assign user 1 the "administrator" role.
-  $user = User::load(1);
-  $user->roles[] = 'administrator';
-  $user->save();
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, [
+    'access comments',
+    'post comments',
+    'skip comment approval',
+  ]);
 
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access site-wide contact form']);
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access site-wide contact form']);
@@ -40,55 +37,81 @@ function weeshop_install() {
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['search content']);
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['search content']);
 
-  // Enable the admin theme.
-  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
-
   // Set Default user picture.
   _weeshop_set_default_user_picture();
 
   $permissions = [
-    'use search_api_autocomplete for product_search'
+    'use search_api_autocomplete for product_search',
   ];
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $permissions);
   _weeshop_set_shipping();
 }
 
-function _weeshop_set_default_user_picture() {
-  $avatar_path = \Drupal::config('system.file')->get('default_scheme') . '://default_user_picture.png';
-  $file = file_save_data(file_get_contents(__DIR__.'/assets/image/default_user_picture.png'), $avatar_path, \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE);
-  \Drupal::configFactory()->getEditable('field.field.user.user.user_picture')
-    ->set('settings.default_image.uuid', $file->uuid())
-    ->set('alt', 'Default user picture')
-    ->set('title', 'Default user picture')
-    ->save(TRUE);
+/**
+ * Set default picture to user.user_picture field.
+ */
+function _weeshop_set_default_user_picture(): void {
+  $avatar_path = Drupal::config('system.file')->get('default_scheme') . '://default_user_picture.png';
+
+  /** @var \Drupal\file\FileRepositoryInterface $fileRepository */
+  $fileRepository = Drupal::service('file.repository');
+  try {
+    $file = $fileRepository->writeData(
+      file_get_contents(__DIR__ . '/assets/image/default_user_picture.png'),
+      $avatar_path,
+      FileSystemInterface::EXISTS_REPLACE
+    );
+
+    Drupal::configFactory()->getEditable('field.field.user.user.user_picture')
+      ->set('settings.default_image.uuid', $file->uuid())
+      ->set('alt', 'Default user picture')
+      ->set('title', 'Default user picture')
+      ->save(TRUE);
+  }
+  catch (Exception $e) {
+    Drupal::messenger()->addError(t('default_user_picture.png count not be saved to :path, :e', [
+      ':path' => $avatar_path,
+      ':e' => $e->getMessage(),
+    ]));
+  }
 }
 
-function _weeshop_set_shipping(){
-  \Drupal::configFactory()->getEditable('commerce_order.commerce_order_type.default')
+/**
+ * Set shipping for default order type.
+ */
+function _weeshop_set_shipping(): void {
+  Drupal::configFactory()->getEditable('commerce_order.commerce_order_type.default')
     ->set('workflow', 'order_fulfillment')
     ->set('third_party_settings.commerce_checkout.checkout_flow', 'shipping')
     ->set('third_party_settings.commerce_shipping.shipment_type', 'default')
     ->save(TRUE);
   // Create the order field.
   $field_definition = commerce_shipping_build_shipment_field_definition('default');
-  \Drupal::service('commerce.configurable_field_manager')->createField($field_definition);
+  Drupal::service('commerce.configurable_field_manager')->createField($field_definition);
 
-  \Drupal\commerce_shipping\Entity\ShippingMethod::create([
-    'stores' => [1,2,3],
-    'plugin' => [
-      'target_plugin_id' => 'flat_rate',
-      'target_plugin_configuration' => [
-        'rate_label' => '固定邮费',
-        'rate_description' => '',
-        'rate_amount' => [
-          'number' => '10',
-          'currency_code' => 'CNY'
+  try {
+    ShippingMethod::create([
+      'stores' => [1, 2, 3],
+      'plugin' => [
+        'target_plugin_id' => 'flat_rate',
+        'target_plugin_configuration' => [
+          'rate_label' => 'Fixed rate',
+          'rate_description' => '',
+          'rate_amount' => [
+            'number' => '10',
+            'currency_code' => 'CNY',
+          ],
+          'services' => ['default'],
+          'default_package_type' => 'custom_box',
+          'workflow' => 'shipment_default',
         ],
-        'services' => ['default'],
-        'default_package_type' => 'custom_box',
-        'workflow' => 'shipment_default',
-      ]
-    ],
-    'name' => '普通快递'
-  ])->save();
+      ],
+      'name' => 'Standard express',
+    ])->save();
+  }
+  catch (EntityStorageException $e) {
+    Drupal::messenger()->addError(t('Shipping method for default order type could not be saved., :e', [
+      ':e' => $e->getMessage(),
+    ]));
+  }
 }

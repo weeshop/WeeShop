@@ -1,4 +1,3 @@
-# 一级菜单
 weeshop.front_page:
   title: 'Home'
   route_name: '<front>'

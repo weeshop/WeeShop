@@ -5,6 +5,7 @@
  * Enables modules and site configuration for a commerce_base site installation.
  */
 
+use Drupal\Core\Entity\EntityStorageException;
 use Drupal\contact\Entity\ContactForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -12,15 +13,14 @@ use Drupal\Core\Url;
 /**
  * Implements hook_install_tasks().
  */
-function weeshop_install_tasks(&$install_state) {
-  $tasks = [
+function weeshop_install_tasks(&$install_state): array {
+  return [
     '_weeshop_final_site_setup' => [
       'display_name' => t('Data Importing'),
       'type' => 'batch',
       'display' => TRUE,
-    ]
+    ],
   ];
-  return $tasks;
 }
 
 /**
@@ -28,7 +28,7 @@ function weeshop_install_tasks(&$install_state) {
  *
  * Allows the profile to alter the site configuration form.
  */
-function weeshop_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
+function weeshop_form_install_configure_form_alter(&$form, FormStateInterface $form_state): void {
   // Add a placeholder as example that one can choose an arbitrary site name.
   $form['site_information']['site_name']['#attributes']['placeholder'] = t('Your WeeShop site name');
   // Add 'Social' fieldset and options.
@@ -52,25 +52,42 @@ function weeshop_form_install_configure_form_alter(&$form, FormStateInterface $f
 /**
  * Submission handler to sync the contact.form.feedback recipient.
  */
-function weeshop_form_install_configure_submit($form, FormStateInterface $form_state) {
-  \Drupal::state()->set('weeshop_install_demo_content', $form_state->getValue('demo_content'));
+function weeshop_form_install_configure_submit($form, FormStateInterface $form_state): void {
+  Drupal::state()->set('weeshop_install_demo_content', $form_state->getValue('demo_content'));
   $site_mail = $form_state->getValue('site_mail');
-  ContactForm::load('feedback')->setRecipients([$site_mail])->trustData()->save();
+  try {
+    ContactForm::load('feedback')->setRecipients([$site_mail])->trustData()->save();
+  }
+  catch (EntityStorageException $e) {
+    Drupal::messenger()->addError(t('Saving setting of contact form module occurs error. :error', [
+      ':error' => $e->getMessage(),
+    ]));
+  }
 }
 
- /**
-  * Implements hook_views_plugins_row_alter().
-  */
- function weeshop_views_plugins_row_alter(array &$plugins) {
-     // Just expose the data entity row for entity views.
-     foreach (\Drupal::entityTypeManager()->getDefinitions() as $entity_type_id => $entity_type) {
-         $tables = array_filter([$entity_type->getBaseTable(), $entity_type->getDataTable(), $entity_type->getRevisionTable(), $entity_type->getRevisionDataTable()]);
-         $plugins['data_entity']['base'] = isset($plugins['data_entity']['base']) ? $plugins['data_entity']['base'] : [];
-         $plugins['data_entity']['base'] = array_merge($plugins['data_entity']['base'], $tables);
-       }
- }
+/**
+ * Implements hook_views_plugins_row_alter().
+ */
+function weeshop_views_plugins_row_alter(array &$plugins): void {
+  // Just expose the data entity row for entity views.
+  foreach (Drupal::entityTypeManager()->getDefinitions() as $entity_type) {
+    $tables = array_filter([
+      $entity_type->getBaseTable(),
+      $entity_type->getDataTable(),
+      $entity_type->getRevisionTable(),
+      $entity_type->getRevisionDataTable(),
+    ]);
+    $plugins['data_entity']['base'] = $plugins['data_entity']['base'] ?? [];
+    $plugins['data_entity']['base'] = array_merge($plugins['data_entity']['base'], $tables);
+  }
+}
 
-function weeshop_toolbar() {
+/**
+ * Implements hook_toolbar().
+ *
+ * Add WeeShop logo to the toolbar.
+ */
+function weeshop_toolbar(): array {
   $items = [];
   $items['weeshop'] = [
     '#type' => 'toolbar_item',
@@ -82,7 +99,7 @@ function weeshop_toolbar() {
         'attributes' => [
           'title' => t('WeeShop'),
           'class' => ['toolbar-item', 'toolbar-icon'],
-          'id' => 'admin-logo'
+          'id' => 'admin-logo',
         ],
       ],
     ],
@@ -91,23 +108,31 @@ function weeshop_toolbar() {
         'weeshop/admin-logo',
       ],
     ],
-    '#weight' => -90
+    '#weight' => -90,
   ];
   return $items;
 }
 
-
-function _weeshop_final_site_setup(array &$install_state) {
-  \Drupal::logger('weeshop_demo')->notice('已经执行了 _weeshop_final_site_setup()');
+/**
+ * Import demo data after installation.
+ *
+ * @param array $install_state
+ *   Installation state data.
+ *
+ * @return array
+ *   Return the batch definition.
+ */
+function _weeshop_final_site_setup(array &$install_state): array {
+  Drupal::logger('weeshop_demo')->notice('已经执行了 _weeshop_final_site_setup()');
   $batch_operations = [];
-  $demo_content = \Drupal::state()->get('weeshop_install_demo_content');
-  \Drupal::logger('weeshop_demo')->notice('$demo_content的取值为：'.$demo_content);
+  $demo_content = Drupal::state()->get('weeshop_install_demo_content');
+  Drupal::logger('weeshop_demo')->notice('$demo_content的取值为：' . $demo_content);
   if ($demo_content === 1) {
     $batch_operations[] = ['_weeshop_demo_execute_migrations', ['import']];
   }
 
   return [
     'title' => t('正在导入数据'),
-    'operations' => $batch_operations
+    'operations' => $batch_operations,
   ];
 }

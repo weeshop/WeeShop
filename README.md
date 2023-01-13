@@ -96,30 +96,21 @@ docker-compose up -d
 docker-compose exec web bash
 
 # 进入容器后，在容器内继续运行下面的命令
-# 安装实例， account-name 和 account-pass 分别是登录后台的用户名和密码
-su - application -c \
-"cd /app/web/sites && ../../vendor/bin/drupal site:install --force --no-interaction weeshop  \
---langcode='en'  \
---db-type='mysql'  \
---db-host='db'  \
---db-name='weeshop'  \
---db-user='root'  \
---db-pass='123'  \
---db-port='3306'  \
---site-name='My WeeShop'  \
---site-mail='164713332@qq.com'  \
---account-name='admin'  \
---account-mail='164713332@qq.com'  \
---account-pass='123'"
-
-# 安装测试数据
-su - application -c \
-"cd /app/web/sites && /usr/local/bin/drupal weeshop_demo:import"
-
-# 更新翻译
-su - application -c "cd /app/web/sites && \
-/usr/local/bin/drush -vvv locale:check && \
-/usr/local/bin/drush -vvv locale:update"
+chmod u+w /app/web/sites/default &&
+cd /app && \
+vendor/bin/drush site:install weeshop \
+install_configure_form.enable_update_status_emails=NULL \
+install_configure_form.weeshop_install_demo_content=1 \
+--db-url=mysql://root:123@db:3306/drupal \
+--locale=en \
+--site-name='WeeShop' \
+--site-mail='164713332@qq.com' \
+--site-pass=ekpass \
+--account-name=admin \
+--account-mail=164713332@qq.com \
+--account-pass=ekpass
+vendor/bin/drush locale:check && \
+vendor/bin/drush locale:update
 ```
 
 浏览器访问 `http://localhost:8080`，开始体验吧！

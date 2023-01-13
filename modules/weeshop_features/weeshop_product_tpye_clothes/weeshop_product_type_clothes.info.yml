@@ -1,0 +1,23 @@
+name: 'Product type clothes'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - drupal:block
+  - drupal:comment
+  - commerce:commerce
+  - commerce:commerce_price
+  - commerce:commerce_product
+  - commerce_stock_field:commerce_stock_field
+  - commerce_wishlist:commerce_wishlist
+  - enhanced_product:enhanced_product
+  - facets:facets
+  - drupal:field
+  - drupal:image
+  - drupal:language
+  - drupal:path
+  - physical:physical
+  - drupal:system
+  - drupal:text
+  - weeshop_alpha_components:weeshop_alpha_components
+  - weeshop_product_search:weeshop_product_search
+package: WeeShop

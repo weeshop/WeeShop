@@ -79,6 +79,7 @@ dependencies:
   #- enhanced_promotion
   - weeshop_alpha_components
   - weeshop_product_search
+  - weeshop_molla_supports
 
 themes:
   - bartik

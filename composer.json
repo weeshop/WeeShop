@@ -28,6 +28,7 @@
         "drupal/weeshop_alpha_components": "1.x-dev",
         "drupal/weeshop_demo": "1.x-dev",
         "drupal/weeshop_alpha": "1.x-dev",
-        "drupal/weeshop_molla": "1.0.x-dev"
+        "drupal/weeshop_molla": "1.0.x-dev",
+        "drupal/weeshop_molla_supports": "1.0.x-dev"
     }
 }

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_welcome_message
+theme: weeshop_molla
+region: header_top_left
+weight: 0
+provider: null
+plugin: molla_welcome_message
+settings:
+  id: molla_welcome_message
+  label: 'Welcome message'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  message: 'Special collection already available!'
+visibility: {  }

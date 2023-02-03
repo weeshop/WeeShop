@@ -1,0 +1,11 @@
+session:
+  parameter: language
+url:
+  source: path_prefix
+  prefixes:
+    en: ''
+    zh-hans: zh-hans
+  domains:
+    en: ''
+    zh-hans: ''
+selected_langcode: site_default

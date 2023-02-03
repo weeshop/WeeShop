@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_language_switcher_interface_text
+theme: weeshop_molla
+region: header_top_right
+weight: 0
+provider: null
+plugin: 'molla_language_block:language_interface'
+settings:
+  id: 'molla_language_block:language_interface'
+  label: 'Language switcher (Interface text)'
+  label_display: '0'
+  provider: weeshop_molla_supports
+visibility: {  }

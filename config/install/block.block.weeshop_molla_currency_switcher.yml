@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_currency_switcher
+theme: weeshop_molla
+region: header_top_right
+weight: 0
+provider: null
+plugin: molla_currency_switcher
+settings:
+  id: molla_currency_switcher
+  label: 'Currency switcher'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  foo: 'Hello world!'
+visibility: {  }

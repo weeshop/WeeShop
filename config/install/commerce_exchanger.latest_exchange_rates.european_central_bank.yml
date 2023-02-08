@@ -1,0 +1,22 @@
+rates:
+  CNY:
+    EUR:
+      value: 0.137338
+      sync: 0
+    USD:
+      value: 0.137874
+      sync: 0
+  EUR:
+    USD:
+      value: 1.0039
+      sync: 0
+    CNY:
+      value: 7.2813
+      sync: 0
+  USD:
+    EUR:
+      value: 0.996115
+      sync: 0
+    CNY:
+      value: 7.253012
+      sync: 0

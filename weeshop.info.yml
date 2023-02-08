@@ -72,6 +72,7 @@ dependencies:
   # adminimal_theme toolbar fix module
   - adminimal_admin_toolbar
 
+  - commerce_currency_resolver
   - features_ui
   - product_adverts
   - weeshop_service

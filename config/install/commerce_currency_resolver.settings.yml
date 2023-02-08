@@ -1,0 +1,5 @@
+currency_mapping: cookie
+currency_geo: null
+currency_source: combo
+currency_exchange_rates: european_central_bank
+currency_default: USD

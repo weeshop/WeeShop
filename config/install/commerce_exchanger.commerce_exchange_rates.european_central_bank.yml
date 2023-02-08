@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_exchanger.latest_exchange_rates.european_central_bank
+id: european_central_bank
+label: 'European Central Bank'
+plugin: ecb
+configuration:
+  api_key: ''
+  auth:
+    username: ''
+    password: ''
+  cron: 1
+  use_cross_sync: true
+  base_currency: EUR
+  demo_amount: 100
+  mode: live
+  enterprise: false
+  manual: false
+  refresh_once: false
+  transform_rates: false

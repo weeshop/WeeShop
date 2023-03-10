@@ -68,6 +68,7 @@ dependencies:
   # Contrib
   - admin_toolbar
   - swiftmailer
+  - tb_megamenu
 
   # adminimal_theme toolbar fix module
   - adminimal_admin_toolbar

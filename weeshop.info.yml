@@ -40,6 +40,8 @@ dependencies:
   - tour
   - automated_cron
   - locale
+  - content_translation
+  - config_translation
 
   # Commerce
   - address

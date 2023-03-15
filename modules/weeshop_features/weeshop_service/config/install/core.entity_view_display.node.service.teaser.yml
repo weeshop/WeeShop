@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.service.body
+    - field.field.node.service.field_image
     - node.type.service
   module:
     - text
@@ -27,5 +28,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_image: true
   langcode: true
   search_api_excerpt: true

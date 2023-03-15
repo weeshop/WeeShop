@@ -27,6 +27,7 @@ widget:
     hide_reset_when_no_selection: false
 query_operator: or
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0

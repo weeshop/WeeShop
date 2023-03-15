@@ -3,12 +3,16 @@ description: 'Items of shopping service.'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
-  - drupal:field
-  - drupal:image
-  - drupal:language
-  - drupal:menu_ui
-  - drupal:node
-  - drupal:path
-  - drupal:text
-  - drupal:user
+  - 'commerce_stock:commerce_stock'
+  - 'drupal:block'
+  - 'drupal:field'
+  - 'drupal:file'
+  - 'drupal:image'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:system'
+  - 'drupal:text'
+  - 'drupal:user'
 package: WeeShop

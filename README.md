@@ -96,7 +96,7 @@ docker-compose up -d
 docker-compose exec web bash
 
 # 进入容器后，在容器内继续运行下面的命令
-chmod u+w /app/web/sites/default &&
+chmod u+w /app/web/sites/default && \
 cd /app && \
 vendor/bin/drush site:install weeshop \
 install_configure_form.enable_update_status_emails=NULL \

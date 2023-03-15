@@ -2,8 +2,8 @@ name: 'Order type'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
-  - commerce:commerce_cart
-  - commerce:commerce_checkout
-  - commerce:commerce_order
-  - commerce_shipping:commerce_shipping
+  - 'commerce:commerce_cart'
+  - 'commerce:commerce_checkout'
+  - 'commerce:commerce_order'
+  - 'commerce_shipping:commerce_shipping'
 package: WeeShop

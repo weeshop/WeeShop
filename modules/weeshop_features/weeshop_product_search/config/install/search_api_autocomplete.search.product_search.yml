@@ -16,6 +16,10 @@ suggester_settings:
     view_modes:
       'entity:commerce_product':
         default: ''
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
   server:
     fields: {  }
 suggester_weights:

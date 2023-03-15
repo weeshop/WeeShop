@@ -3,21 +3,21 @@ description: 'Provides product search functions for commerce product.'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
-  - drupal:block
-  - commerce:commerce_price
-  - commerce:commerce_product
-  - commerce:commerce_store
-  - enhanced_product:enhanced_product
-  - facets:facets
-  - facets_rest:facets_rest
-  - drupal:image
-  - drupal:rest
-  - search_api:search_api
-  - search_api_autocomplete:search_api_autocomplete
-  - search_api_db:search_api_db
-  - drupal:serialization
-  - drupal:system
-  - drupal:text
-  - drupal:views
-  - weeshop_product_type_clothes:weeshop_product_type_clothes
+  - 'commerce:commerce_price'
+  - 'commerce:commerce_product'
+  - 'commerce:commerce_store'
+  - 'drupal:block'
+  - 'drupal:image'
+  - 'drupal:rest'
+  - 'drupal:serialization'
+  - 'drupal:system'
+  - 'drupal:text'
+  - 'drupal:views'
+  - 'enhanced_product:enhanced_product'
+  - 'facets:facets'
+  - 'facets_rest:facets_rest'
+  - 'search_api:search_api'
+  - 'search_api_autocomplete:search_api_autocomplete'
+  - 'search_api_db:search_api_db'
+  - 'weeshop_product_type_clothes:weeshop_product_type_clothes'
 package: WeeShop

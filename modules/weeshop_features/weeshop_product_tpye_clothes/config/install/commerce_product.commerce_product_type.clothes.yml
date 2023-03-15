@@ -5,6 +5,7 @@ id: clothes
 label: Clothes
 description: 'Product type with size and color attributes.'
 variationType: clothes
+variationTypes: {  }
 multipleVariations: true
 injectVariationFields: true
 traits: {  }

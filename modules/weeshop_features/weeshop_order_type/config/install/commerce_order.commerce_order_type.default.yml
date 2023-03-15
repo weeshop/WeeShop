@@ -1,19 +1,6 @@
 langcode: en
 status: true
-dependencies:
-  module:
-    - commerce_cart
-    - commerce_checkout
-    - commerce_shipping
-third_party_settings:
-  commerce_cart:
-    cart_form_view: commerce_cart_form
-    cart_block_view: commerce_cart_block
-    cart_expiration: {  }
-  commerce_checkout:
-    checkout_flow: shipping
-  commerce_shipping:
-    shipment_type: default
+dependencies: {  }
 label: Default
 id: default
 workflow: order_fulfillment
@@ -24,3 +11,8 @@ sendReceipt: true
 receiptBcc: ''
 traits: {  }
 locked: false
+third_party_settings:
+  commerce_checkout:
+    checkout_flow: shipping
+  commerce_shipping:
+    shipment_type: default

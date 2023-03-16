@@ -81,6 +81,8 @@ dependencies:
   - weeshop_service
   - weeshop_demo
   #- enhanced_promotion
+  - enhanced_product
+  - enhanced_store
   - weeshop_alpha_components
   - weeshop_product_search
   - weeshop_molla_supports

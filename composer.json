@@ -24,6 +24,7 @@
         "drupal/geysir": "^1.3",
         "drupal/tb_megamenu": "^2.0",
         "drupal/enhanced_product": "dev-8.x-1.x",
+        "drupal/enhanced_store": "1.0.x-dev",
         "drupal/product_adverts": "1.x-dev",
         "drupal/weeshop_alpha_components": "1.x-dev",
         "drupal/weeshop_demo": "1.x-dev",

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.clothes
+id: commerce_product_variation.clothes.created
+field_name: created
+entity_type: commerce_product_variation
+bundle: clothes
+label: Created
+description: 'The time when the variation was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

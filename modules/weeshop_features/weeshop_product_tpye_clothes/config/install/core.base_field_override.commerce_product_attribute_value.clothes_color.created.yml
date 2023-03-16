@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.clothes_color
+id: commerce_product_attribute_value.clothes_color.created
+field_name: created
+entity_type: commerce_product_attribute_value
+bundle: clothes_color
+label: Created
+description: 'The time when the attribute value was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

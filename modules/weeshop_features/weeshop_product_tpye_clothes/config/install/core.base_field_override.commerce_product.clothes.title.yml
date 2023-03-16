@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothes
+id: commerce_product.clothes.title
+field_name: title
+entity_type: commerce_product
+bundle: clothes
+label: Title
+description: 'The product title.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

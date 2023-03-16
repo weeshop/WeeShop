@@ -9,6 +9,7 @@ dependencies:
   - 'commerce_wishlist:commerce_wishlist'
   - 'drupal:block'
   - 'drupal:comment'
+  - 'drupal:content_translation'
   - 'drupal:field'
   - 'drupal:image'
   - 'drupal:language'

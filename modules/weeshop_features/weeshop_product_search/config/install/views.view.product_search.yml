@@ -8,10 +8,10 @@ dependencies:
     - commerce_price
     - commerce_product
     - facets_rest
-    - image
     - rest
     - search_api
     - serialization
+    - svg_image
     - text
 id: product_search
 label: 'Product Search'

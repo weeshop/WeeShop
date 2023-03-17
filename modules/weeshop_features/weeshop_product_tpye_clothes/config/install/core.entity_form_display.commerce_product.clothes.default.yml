@@ -8,8 +8,8 @@ dependencies:
   module:
     - comment
     - commerce
-    - image
     - path
+    - svg_image
     - text
 id: commerce_product.clothes.default
 targetEntityType: commerce_product
@@ -79,6 +79,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  related_products:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -104,6 +114,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 8

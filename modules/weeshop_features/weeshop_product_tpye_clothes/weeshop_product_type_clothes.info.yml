@@ -19,6 +19,7 @@ dependencies:
   - 'enhanced_product:enhanced_product'
   - 'facets:facets'
   - 'physical:physical'
+  - 'svg_image:svg_image'
   - 'weeshop_alpha_components:weeshop_alpha_components'
   - 'weeshop_product_search:weeshop_product_search'
 package: WeeShop

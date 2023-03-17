@@ -19,5 +19,6 @@ dependencies:
   - 'search_api:search_api'
   - 'search_api_autocomplete:search_api_autocomplete'
   - 'search_api_db:search_api_db'
+  - 'svg_image:svg_image'
   - 'weeshop_product_type_clothes:weeshop_product_type_clothes'
 package: WeeShop

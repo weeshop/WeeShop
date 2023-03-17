@@ -7,7 +7,7 @@ dependencies:
     - field.field.commerce_product.clothes.body
   module:
     - commerce_product
-    - image
+    - svg_image
 id: commerce_product.clothes.teaser
 targetEntityType: commerce_product
 bundle: clothes
@@ -23,6 +23,15 @@ content:
       image_link: ''
       image_loading:
         attribute: lazy
+    third_party_settings: {  }
+  related_products:
+    label: above
+    type: entity_reference_entity_view
+    settings:
+      view_mode: teaser
+      link: false
+    region: content
+    weight: 3
     third_party_settings: {  }
   title:
     label: hidden

@@ -145,4 +145,16 @@ vendor/bin/drush locale:update
 但最终它还是调用theme系统来使用模板渲染输出的。
 - 当一个字段有着独立并复杂的输出时，要考虑实现 `字段格式化器(FieldFormatter)`，切勿过度使用`模板template`实现效果。
 
+## Modules pending for Drupal 10 upgrade
+
+- adminimal_admin_toolbar
+- commerce_stock
+- features
+- geysir
+- migrate_inline_image
+- migrate_manifest
+- product_adverts
+- tb_megamenu
+- weeshop_alpha_components
+
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

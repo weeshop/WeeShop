@@ -17,7 +17,7 @@ settings:
   label: 'Adverts top products'
   provider: product_adverts
   label_display: '0'
-  quantity: '10'
+  quantity: 10
 visibility:
   request_path:
     id: request_path

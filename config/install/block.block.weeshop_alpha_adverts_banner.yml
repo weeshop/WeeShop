@@ -18,7 +18,7 @@ settings:
   provider: product_adverts
   label_display: '0'
   product_advert: '3'
-  show_new_tag: 1
+  show_new_tag: true
   text_color: '#333333'
 visibility:
   request_path:

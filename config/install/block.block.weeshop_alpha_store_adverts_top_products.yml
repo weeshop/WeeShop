@@ -6,7 +6,7 @@ dependencies:
     - system
   theme:
     - weeshop_alpha
-id: storeadvertstopproducts
+id: weeshop_alpha_store_adverts_top_products
 theme: weeshop_alpha
 region: content
 weight: -3
@@ -17,7 +17,7 @@ settings:
   label: 'Store Adverts top products'
   provider: product_adverts
   label_display: '0'
-  quantity: '10'
+  quantity: 10
 visibility:
   request_path:
     id: request_path

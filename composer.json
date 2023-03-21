@@ -15,7 +15,7 @@
         "drupal/adminimal_admin_toolbar": "^1.0",
         "drupal/adminimal_theme": "^1.0",
         "drupal/features": "^3.12",
-        "drupal/facets": "^3.0",
+        "drupal/facets": "^2.0",
         "drupal/search_api": "^1.0",
         "drupal/search_api_autocomplete": "^1.0",
         "drupal/paragraphs": "^1.12",

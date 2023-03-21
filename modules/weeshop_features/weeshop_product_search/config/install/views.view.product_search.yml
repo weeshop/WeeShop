@@ -393,8 +393,8 @@ display:
         options:
           uses_fields: true
           formats:
-            json: json
-          show_facets: 1
+            - json
+          show_facets: true
       row:
         type: data_field
         options:

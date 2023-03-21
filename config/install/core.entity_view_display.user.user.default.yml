@@ -19,6 +19,9 @@ content:
     settings:
       image_style: thumbnail
       image_link: content
+      svg_attributes:
+        width: 100
+        height: 100
     third_party_settings: {  }
     label: hidden
 hidden: {  }

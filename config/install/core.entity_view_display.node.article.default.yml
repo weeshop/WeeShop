@@ -29,6 +29,9 @@ content:
     settings:
       image_style: large
       image_link: ''
+      svg_attributes:
+        width: 100
+        height: 100
     third_party_settings: {  }
     label: hidden
   field_tags:

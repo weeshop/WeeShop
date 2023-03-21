@@ -16,6 +16,5 @@ settings:
   label: 'Shopping Cart'
   provider: commerce_cart
   label_display: '0'
-  item_text: items
   dropdown: true
 visibility: {  }

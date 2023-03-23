@@ -27,7 +27,7 @@
         "drupal/enhanced_store": "1.0.x-dev",
         "drupal/product_adverts": "dev-8.x-1.x",
         "drupal/weeshop_alpha_components": "dev-8.x-1.x",
-        "drupal/weeshop_demo": "dev-8.x-1.x",
+        "drupal/weeshop_demo": "dev-2.0.x",
         "drupal/weeshop_alpha": "dev-8.x-1.x",
         "drupal/weeshop_molla": "1.0.x-dev",
         "drupal/weeshop_molla_supports": "1.0.x-dev",

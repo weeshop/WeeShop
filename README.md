@@ -151,7 +151,6 @@ vendor/bin/drush locale:update
 - commerce_stock
 - features
 - geysir
-- migrate_inline_image
 - migrate_manifest
 - tb_megamenu
 

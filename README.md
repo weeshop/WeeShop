@@ -153,8 +153,6 @@ vendor/bin/drush locale:update
 - geysir
 - migrate_inline_image
 - migrate_manifest
-- product_adverts
 - tb_megamenu
-- weeshop_alpha_components
 
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

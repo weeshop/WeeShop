@@ -2,6 +2,7 @@ name: 'Product type clothes'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
+  - 'color_field:color_field'
   - 'commerce:commerce'
   - 'commerce:commerce_price'
   - 'commerce:commerce_product'

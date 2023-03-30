@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.clothes_color
+    - field.field.commerce_product_attribute_value.clothes_color.field_color
+  module:
+    - color_field
+id: commerce_product_attribute_value.clothes_color.default
+targetEntityType: commerce_product_attribute_value
+bundle: clothes_color
+mode: default
+content:
+  field_color:
+    type: color_field_widget_html5
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

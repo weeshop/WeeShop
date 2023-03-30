@@ -31,6 +31,7 @@
         "drupal/weeshop_alpha": "dev-8.x-1.x",
         "drupal/weeshop_molla": "1.0.x-dev",
         "drupal/weeshop_molla_supports": "1.0.x-dev",
-        "drupal/commerce_currency_resolver": "^1.0"
+        "drupal/commerce_currency_resolver": "^1.0",
+        "drupal/color_field": "^3.0"
     }
 }

@@ -100,7 +100,7 @@ chmod u+w /app/web/sites/default && \
 cd /app && \
 vendor/bin/drush site:install weeshop \
 install_configure_form.enable_update_status_emails=NULL \
-install_configure_form.demo_content=1 \
+install_configure_form.demo_content=0 \
 --db-url=mysql://root:123@db:3306/drupal \
 --locale=en \
 --site-name='WeeShop' \

@@ -146,12 +146,14 @@ vendor/bin/drush locale:update
 - 当一个字段有着独立并复杂的输出时，要考虑实现 `字段格式化器(FieldFormatter)`，切勿过度使用`模板template`实现效果。
 
 ## Modules pending for Drupal 10 upgrade
-
+Pending in dev branch:
 - adminimal_admin_toolbar
 - commerce_stock
-- features
-- geysir
+- features (beta)
+
+Waiting:
+- geysir (porting)
 - migrate_manifest
-- tb_megamenu
+- tb_megamenu (porting)
 
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

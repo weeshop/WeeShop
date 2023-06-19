@@ -149,11 +149,9 @@ vendor/bin/drush locale:update
 Pending in dev branch:
 - adminimal_admin_toolbar
 - commerce_stock
-- features (beta)
 
 Waiting:
 - geysir (porting)
 - migrate_manifest
-- tb_megamenu (porting)
 
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

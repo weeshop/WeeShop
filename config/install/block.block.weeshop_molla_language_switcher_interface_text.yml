@@ -10,7 +10,7 @@ theme: weeshop_molla
 region: header_top_right
 weight: 0
 provider: null
-plugin: 'molla_language_block:language_interface'
+plugin: 'weeshop_molla_supports_molla_language:language_interface'
 settings:
   id: 'molla_language_block:language_interface'
   label: 'Language switcher (Interface text)'

@@ -10,7 +10,7 @@ theme: weeshop_molla
 region: header_top_left
 weight: 0
 provider: null
-plugin: molla_welcome_message
+plugin: weeshop_molla_supports_molla_welcome_message
 settings:
   id: molla_welcome_message
   label: 'Welcome message'

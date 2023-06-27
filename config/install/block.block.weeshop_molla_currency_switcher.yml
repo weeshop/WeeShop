@@ -10,7 +10,7 @@ theme: weeshop_molla
 region: header_top_right
 weight: 0
 provider: null
-plugin: molla_currency_switcher
+plugin: weeshop_molla_supports_molla_currency_switcher
 settings:
   id: molla_currency_switcher
   label: 'Currency switcher'

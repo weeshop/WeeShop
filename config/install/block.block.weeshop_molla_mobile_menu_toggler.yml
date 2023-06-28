@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_mobile_menu_toggler
+theme: weeshop_molla
+region: header_middle_left
+weight: 0
+provider: null
+plugin: weeshop_molla_supports_molla_mobile_menu_toggler
+settings:
+  id: weeshop_molla_supports_molla_mobile_menu_toggler
+  label: 'Molla mobile menu toggler'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  foo: 'Hello world!'
+visibility: {  }

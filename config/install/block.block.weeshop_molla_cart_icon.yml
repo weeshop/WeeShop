@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_cart_icon
+theme: weeshop_molla
+region: header_middle_right
+weight: -2
+provider: null
+plugin: weeshop_molla_supports_molla_cart_icon
+settings:
+  id: weeshop_molla_supports_molla_cart_icon
+  label: 'Molla cart icon'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  dropdown: '1'
+visibility: {  }

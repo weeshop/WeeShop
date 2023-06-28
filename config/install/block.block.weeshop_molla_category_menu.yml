@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_category_menu
+theme: weeshop_molla
+region: header_bottom_left
+weight: -6
+provider: null
+plugin: weeshop_molla_supports_molla_category_menu
+settings:
+  id: weeshop_molla_supports_molla_category_menu
+  label: 'Molla category menu'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  foo: 'Hello world!'
+visibility: {  }

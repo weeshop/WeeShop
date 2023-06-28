@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_account_icon
+theme: weeshop_molla
+region: header_middle_right
+weight: -4
+provider: null
+plugin: weeshop_molla_supports_molla_account_icon
+settings:
+  id: weeshop_molla_supports_molla_account_icon
+  label: 'Molla account icon'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  foo: 'Hello world!'
+visibility: {  }

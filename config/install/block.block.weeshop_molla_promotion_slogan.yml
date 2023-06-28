@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_promotion_slogan
+theme: weeshop_molla
+region: header_bottom_right
+weight: -5
+provider: null
+plugin: weeshop_molla_supports_molla_promotion_slogan
+settings:
+  id: weeshop_molla_supports_molla_promotion_slogan
+  label: 'Molla promotion slogan'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  slogan: '<i class="la la-lightbulb-o"></i><p class="text-truncate">Clearance<span class="highlight">&nbsp;Up to 30% Off</span></p>'
+visibility: {  }

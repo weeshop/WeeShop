@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_sign_in_up
+theme: weeshop_molla
+region: header_top_right
+weight: 0
+provider: null
+plugin: weeshop_molla_supports_molla_sign_in_up
+settings:
+  id: weeshop_molla_supports_molla_sign_in_up
+  label: 'Molla sign in up'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  foo: 'Hello world!'
+visibility: {  }

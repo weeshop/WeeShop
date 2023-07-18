@@ -148,6 +148,7 @@ vendor/bin/drush locale:update
 ## Modules pending for Drupal 10 upgrade
 Pending in dev branch:
 - adminimal_admin_toolbar
+- adminimal_theme
 
 Waiting:
 - migrate_manifest

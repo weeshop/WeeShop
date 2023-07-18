@@ -148,10 +148,8 @@ vendor/bin/drush locale:update
 ## Modules pending for Drupal 10 upgrade
 Pending in dev branch:
 - adminimal_admin_toolbar
-- commerce_stock
 
 Waiting:
-- geysir (porting)
 - migrate_manifest
 
 [粤ICP备18006542号-1](http://www.beian.miit.gov.cn)

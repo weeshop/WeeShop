@@ -10,7 +10,6 @@ dependencies:
     - commerce_wishlist
     - svg_image
     - text
-    - weeshop_alpha_components
 id: commerce_product.clothes.default
 targetEntityType: commerce_product
 bundle: clothes
@@ -47,13 +46,6 @@ content:
     settings:
       view_mode: default
       pager_id: 0
-    third_party_settings: {  }
-  detail_images:
-    label: hidden
-    type: weeshop_alpha_components_photo_gallery
-    weight: 1
-    region: content
-    settings: {  }
     third_party_settings: {  }
   image:
     label: above

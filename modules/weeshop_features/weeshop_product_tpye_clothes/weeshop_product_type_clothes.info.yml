@@ -1,6 +1,6 @@
 name: 'Product type clothes'
 type: module
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: '^9 || ^10'
 dependencies:
   - 'color_field:color_field'
   - 'commerce:commerce'
@@ -21,6 +21,5 @@ dependencies:
   - 'facets:facets'
   - 'physical:physical'
   - 'svg_image:svg_image'
-  - 'weeshop_alpha_components:weeshop_alpha_components'
   - 'weeshop_product_search:weeshop_product_search'
 package: WeeShop

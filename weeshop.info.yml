@@ -1,6 +1,6 @@
 name: WeeShop
 type: profile
-core_version_requirement: ^9
+core_version_requirement: '^9 || ^10'
 description: 'WeeShop distribution base on drupal commerce.'
 version: 2.0
 distribution:
@@ -72,9 +72,6 @@ dependencies:
   - swiftmailer
   - tb_megamenu
 
-  # adminimal_theme toolbar fix module
-  - adminimal_admin_toolbar
-
   - commerce_currency_resolver
   - features_ui
   - product_adverts
@@ -83,13 +80,10 @@ dependencies:
   #- enhanced_promotion
   - enhanced_product
   - enhanced_store
-  - weeshop_alpha_components
   - weeshop_product_search
   - weeshop_molla_supports
 
 themes:
-  - bartik
-  - seven
-  - weeshop_adminimal
-  - weeshop_alpha
+  - olivero
+  - claro
   - weeshop_molla

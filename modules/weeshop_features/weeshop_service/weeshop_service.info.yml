@@ -1,7 +1,7 @@
 name: Service
 description: 'Items of shopping service.'
 type: module
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: '^9 || ^10'
 dependencies:
   - 'commerce_stock:commerce_stock'
   - 'drupal:block'

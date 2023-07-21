@@ -12,8 +12,6 @@
         "drupal/commerce_shipping" : "^2.0",
         "drupal/admin_toolbar": "^3.0",
         "drupal/swiftmailer": "^2.0",
-        "drupal/adminimal_admin_toolbar": "^1.0",
-        "drupal/adminimal_theme": "^1.0",
         "drupal/features": "^3.12",
         "drupal/facets": "^2.0",
         "drupal/search_api": "^1.0",

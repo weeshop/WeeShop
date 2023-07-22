@@ -84,6 +84,5 @@ dependencies:
   - weeshop_molla_supports
 
 themes:
-  - olivero
-  - claro
+  - gin
   - weeshop_molla

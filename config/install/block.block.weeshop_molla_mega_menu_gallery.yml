@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_mega_menu_gallery
+theme: weeshop_molla
+region: mega_menu
+weight: 0
+provider: null
+plugin: weeshop_molla_supports_molla_mega_menu_gallery
+settings:
+  id: weeshop_molla_supports_molla_mega_menu_gallery
+  label: 'Molla mega_menu gallery'
+  label_display: visible
+  provider: weeshop_molla_supports
+  gallery:
+    -
+      image:
+        - 55
+      title: '123'
+      weight: -10
+      link: 'http://sdfasdf/asdf'
+    -
+      image:
+        - 56
+      title: '456'
+      weight: -10
+      link: 'http://sdfasdf/asdf'
+visibility: {  }

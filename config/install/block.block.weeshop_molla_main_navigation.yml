@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - tb_megamenu
+  theme:
+    - weeshop_molla
+id: weeshop_molla_main_navigation
+theme: weeshop_molla
+region: header_bottom_center
+weight: 0
+provider: null
+plugin: 'tb_megamenu_menu_block:main'
+settings:
+  id: 'tb_megamenu_menu_block:main'
+  label: 'Main navigation'
+  label_display: visible
+  provider: tb_megamenu
+visibility: {  }

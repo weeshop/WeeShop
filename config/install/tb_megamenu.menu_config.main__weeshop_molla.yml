@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - weeshop_molla
+  menu:
+    - main
+id: main__weeshop_molla
+menu: main
+theme: weeshop_molla
+block_config: |-
+  {
+      "animation": "fading",
+      "duration": 400,
+      "delay": 200,
+      "breakpoint": 1200,
+      "hide-mobile-menu": "",
+      "auto-arrow": "",
+      "always-show-submenu": "",
+      "number-columns": 1
+  }
+menu_config: |-
+  {
+      "weeshop.front_page": {
+          "rows_content": [
+              [
+                  {
+                      "col_content": [
+                          {
+                              "block_id": "weeshop_molla_mega_menu_gallery",
+                              "type": "block",
+                              "tb_item_config": []
+                          }
+                      ],
+                      "col_config": {
+                          "width": "12",
+                          "class": "",
+                          "hidewcol": "",
+                          "showblocktitle": "1"
+                      }
+                  }
+              ]
+          ],
+          "submenu_config": {
+              "width": "",
+              "class": "",
+              "group": "0"
+          },
+          "item_config": {
+              "class": "",
+              "xicon": "",
+              "caption": "",
+              "alignsub": "",
+              "group": "0",
+              "hidewcol": "0",
+              "hidesub": "0",
+              "label": ""
+          }
+      }
+  }

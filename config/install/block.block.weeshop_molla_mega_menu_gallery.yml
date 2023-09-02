@@ -16,17 +16,5 @@ settings:
   label: 'Molla mega_menu gallery'
   label_display: visible
   provider: weeshop_molla_supports
-  gallery:
-    -
-      image:
-        - 55
-      title: '123'
-      weight: -10
-      link: 'http://sdfasdf/asdf'
-    -
-      image:
-        - 56
-      title: '456'
-      weight: -10
-      link: 'http://sdfasdf/asdf'
+  gallery: {}
 visibility: {  }

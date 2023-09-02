@@ -5,15 +5,15 @@ dependencies:
     - weeshop_molla_supports
   theme:
     - weeshop_molla
-id: weeshop_molla_mobile_menu_toggler
+id: weeshop_molla_mobile_menu_toggle
 theme: weeshop_molla
 region: header_middle_left
 weight: 0
 provider: null
-plugin: weeshop_molla_supports_molla_mobile_menu_toggler
+plugin: weeshop_molla_supports_molla_mobile_menu_toggle
 settings:
-  id: weeshop_molla_supports_molla_mobile_menu_toggler
-  label: 'Molla mobile menu toggler'
+  id: weeshop_molla_supports_molla_mobile_menu_toggle
+  label: 'Molla mobile menu toggle'
   label_display: '0'
   provider: weeshop_molla_supports
   foo: 'Hello world!'

@@ -43,7 +43,7 @@ composer create-project weeshop/weeshop-project WeeShop --stability dev --no-int
 - 确保本机 8080 端口没有被占用。这是因为 `docker-compose.yml` 中需要映射 Web 容器的 80 端口到物理机的 8080 端口。
 
 ```bash
-# 启动docker容器
+# 启动 docker 容器
 docker compose up -d
 ```
 
@@ -62,7 +62,7 @@ docker compose up -d
 如果你喜欢用命令行的方式，你可以使用下面的命令行来安装
 
 ```bash
-# 进入docker容器
+# 进入 docker 容器
 docker compose exec web bash
 
 # 进入容器后，在容器内继续运行下面的命令

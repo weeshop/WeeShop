@@ -1,6 +1,6 @@
 <p align="center"><a href="https://www.weeshop.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://avatars2.githubusercontent.com/u/50817500?s=400&u=4014b477b48c6c8a517a0231592a685e019ae807&v=4" alt="WeeShop"></a></p>
 
-<p align="center">A E-commerce web system that based on Drupal Commerce</p>
+<p align="center">An E-commerce web system that based on Drupal Commerce</p>
 
 
 <h2 align="center"> WeeShop | QQ Group：714023327</h2>
@@ -18,7 +18,7 @@ Thank you for watching：
 - 完备的多语言系统，支持全球100多种语言。
 - 支持全球流行的各种支付手段，Paypal、支付宝、微信、银行卡等。
 - 使用全文检索技术，可以选择使用各种流行的全文检索方案，如Apache solr等。
-- 支持符合工业标准的RESTful接口，可配置多种认证方式HTTP Basic、Oauth2.0 等，轻松进行移动应用开发。
+- 支持符合工业标准的 RESTFul 接口，可配置多种认证方式HTTP Basic、Oauth2.0 等，轻松进行移动应用开发。
 
 ## 快速体验
 
@@ -40,7 +40,7 @@ composer create-project weeshop/weeshop-project WeeShop --stability dev --no-int
 如果不希望使用 docker 快速安装，也可以参考 [通过传统的手工方式安装](https://www.weeshop.org/user_guide/install.html)
 
 先决条件：
-- 确保本机8080端口没有被占用。这是因为 `docker-compose.yml` 中需要映射 Web 容器的 80 端口到物理机的 8080 端口。
+- 确保本机 8080 端口没有被占用。这是因为 `docker-compose.yml` 中需要映射 Web 容器的 80 端口到物理机的 8080 端口。
 
 ```bash
 # 启动docker容器

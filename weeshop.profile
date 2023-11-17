@@ -5,8 +5,8 @@
  * Enables modules and site configuration for a commerce_base site installation.
  */
 
-use Drupal\Core\Entity\EntityStorageException;
 use Drupal\contact\Entity\ContactForm;
+use Drupal\Core\Entity\EntityStorageException;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
@@ -123,16 +123,16 @@ function weeshop_toolbar(): array {
  *   Return the batch definition.
  */
 function _weeshop_final_site_setup(array &$install_state): array {
-  Drupal::logger('weeshop_demo')->notice('已经执行了 _weeshop_final_site_setup()');
+  Drupal::logger('weeshop_demo')->notice('Executing _weeshop_final_site_setup()');
   $batch_operations = [];
   $demo_content = Drupal::state()->get('weeshop_install_demo_content');
-  Drupal::logger('weeshop_demo')->notice('$demo_content的取值为：' . $demo_content);
+  Drupal::logger('weeshop_demo')->notice('Value of $demo_content is ' . $demo_content);
   if ($demo_content === 1) {
     $batch_operations[] = ['_weeshop_demo_execute_migrations', ['import']];
   }
 
   return [
-    'title' => t('正在导入数据'),
+    'title' => t('Importing data'),
     'operations' => $batch_operations,
   ];
 }

@@ -63,7 +63,7 @@ docker compose up -d
 
 ```bash
 # 进入docker容器
-docker-compose exec web bash
+docker compose exec web bash
 
 # 进入容器后，在容器内继续运行下面的命令
 chmod u+w /app/web/sites/default && \
@@ -89,13 +89,9 @@ vendor/bin/drush locale:update
 
 安装完成后，通过 `http://localhost:8080/user/login` 登录后台。
 
-## 重要Issuse
+## 重要 issues
 
 - 订单打印 [#2831952](https://www.drupal.org/project/commerce/issues/2831952)
-
-## 产品类型
-基于 Drupal 的实体视图模式渲染模板机制，每新建一个产品类型，都是一个技术化的复杂的任务。
-为了更好地完成新建产品类型的任务，有必要对该工作定下一些规则的说明。
 
 ## Modules pending for Drupal 10 upgrade
 Pending in dev branch:

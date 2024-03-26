@@ -69,7 +69,6 @@ dependencies:
 
   # Contrib
   - admin_toolbar
-  - swiftmailer
   - tb_megamenu
 
   - commerce_currency_resolver

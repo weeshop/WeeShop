@@ -11,7 +11,6 @@
         "drupal/commerce_wishlist" : "^3.0",
         "drupal/commerce_shipping" : "^2.0",
         "drupal/admin_toolbar": "^3.0",
-        "drupal/swiftmailer": "^2.0",
         "drupal/features": "^3.0",
         "drupal/facets": "^3.0",
         "drupal/search_api": "^1.0",

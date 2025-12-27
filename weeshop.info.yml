@@ -1,6 +1,6 @@
 name: WeeShop
 type: profile
-core_version_requirement: '^9 || ^10'
+core_version_requirement: '^11'
 description: 'WeeShop distribution base on drupal commerce.'
 version: '2.0'
 distribution:
@@ -71,6 +71,7 @@ dependencies:
   - tb_megamenu
 
   - commerce_currency_resolver
+  - commerce_exchanger
   - features_ui
   - product_adverts
   - weeshop_service

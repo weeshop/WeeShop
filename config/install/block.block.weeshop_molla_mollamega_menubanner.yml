@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_mollamega_menubanner
+theme: weeshop_molla
+region: mega_menu
+weight: -5
+provider: null
+plugin: weeshop_molla_supports_molla_mega_menu_banner
+settings:
+  id: weeshop_molla_supports_molla_mega_menu_banner
+  label: 'Molla mega_menu banner'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  content:
+    image:
+      - 90
+    text: sdfgsdf
+    link: 'http://www.baidu.com'
+visibility: {  }

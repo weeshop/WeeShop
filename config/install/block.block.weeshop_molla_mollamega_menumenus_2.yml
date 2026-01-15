@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - weeshop_molla_supports
+  theme:
+    - weeshop_molla
+id: weeshop_molla_mollamega_menumenus_2
+theme: weeshop_molla
+region: mega_menu
+weight: 0
+provider: null
+plugin: weeshop_molla_supports_molla_mega_menu_menus
+settings:
+  id: weeshop_molla_supports_molla_mega_menu_menus
+  label: 'Molla mega_menu menus 2'
+  label_display: '0'
+  provider: weeshop_molla_supports
+  menus:
+    -
+      title: 'Product category'
+      menu: molla_megamenu_product_category
+      weight: -10
+    -
+      title: 'Shop pages'
+      menu: molla_megamenu_shop_pages
+      weight: -10
+visibility: {  }

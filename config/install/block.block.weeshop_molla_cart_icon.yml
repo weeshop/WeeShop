@@ -16,5 +16,6 @@ settings:
   label: 'Molla cart icon'
   label_display: '0'
   provider: weeshop_molla_supports
-  dropdown: '1'
+  dropdown: true
+  show_if_empty: true
 visibility: {  }

@@ -5,24 +5,20 @@ dependencies:
     - weeshop_molla_supports
   theme:
     - weeshop_molla
-id: weeshop_molla_mollamega_menumenus
+id: weeshop_molla_mega_menu_menus_3
 theme: weeshop_molla
 region: mega_menu
-weight: -6
+weight: 0
 provider: null
 plugin: weeshop_molla_supports_molla_mega_menu_menus
 settings:
   id: weeshop_molla_supports_molla_mega_menu_menus
-  label: 'Molla mega_menu menus'
+  label: 'Molla mega_menu menus 3'
   label_display: '0'
   provider: weeshop_molla_supports
   menus:
     -
-      title: 'Shop with sidebar'
-      menu: molla_megamenu_shop_with_sidebar
-      weight: -10
-    -
-      title: 'Shop no sidebar'
-      menu: molla_megamenu_shop_no_sidebar
+      title: 'Product details'
+      menu: molla_megamenu_product_details
       weight: -10
 visibility: {  }

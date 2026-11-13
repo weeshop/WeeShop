@@ -67,6 +67,7 @@ dependencies:
 
   # Contrib
   - tb_megamenu
+  - gin_toolbar
 
   - commerce_currency_resolver
   - commerce_exchanger

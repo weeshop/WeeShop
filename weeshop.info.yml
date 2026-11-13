@@ -32,7 +32,6 @@ dependencies:
   - dblog
   - search
   - shortcut
-  - toolbar
   - field_ui
   - file
   - views
@@ -67,7 +66,6 @@ dependencies:
   - commerce_shipping
 
   # Contrib
-  - admin_toolbar
   - tb_megamenu
 
   - commerce_currency_resolver

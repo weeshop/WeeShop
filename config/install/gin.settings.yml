@@ -1,0 +1,24 @@
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
+third_party_settings:
+  shortcut:
+    module_link: true
+preset_accent_color: blue
+preset_focus_color: gin
+enable_darkmode: auto
+classic_toolbar: new
+secondary_toolbar_frontend: true
+high_contrast_mode: false
+accent_color: ''
+focus_color: ''
+layout_density: small
+show_description_toggle: false
+show_user_theme_settings: false
+sticky_action_buttons: false
